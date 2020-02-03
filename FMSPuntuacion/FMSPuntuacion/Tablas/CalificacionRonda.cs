@@ -4,10 +4,9 @@ using System.Text;
 using SQLite;
 namespace FMSPuntuacion.Tablas
 {
-    public interface ISQLTables
+    public class CalificacionRonda
     {
-        SQLiteConnection GetConnection();
-
-        SQLiteAsyncConnection GetAsyncConnection();
+        [PrimaryKey, AutoIncrement]
+        public int id { get; set; }
     }
 }

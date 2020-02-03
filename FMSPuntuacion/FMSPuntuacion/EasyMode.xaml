@@ -47,7 +47,7 @@
                     </StackLayout>
                 </Grid>
                 
-        </Grid>
+            </Grid>
 
         
 
@@ -391,7 +391,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80" />
                 </Grid.RowDefinitions>
-                <Button Text="Guardar" StyleClass="CSSButton" Clicked="GuardarEsayMode" BorderRadius="50" FontAttributes="Bold" />
+                <Button Text="Guardar" Clicked="GuardarEsayMode" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Medium" TextColor="White"/>
             </Grid>
         
         </Grid>

@@ -28,20 +28,36 @@
             <Grid Grid.Row="0" BackgroundColor="WhiteSmoke">
                 
                
-                    <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
-                    </StackLayout>
-                
-               
-                    <StackLayout HorizontalOptions="Center">
+                 <StackLayout HorizontalOptions="Center">
+                       <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
+                 </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
                         <Label x:Name="SumaHard" Text="{Binding sumaTotalP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                    </StackLayout>
+                </StackLayout>
                
                
-                    <StackLayout HorizontalOptions="Center">
+                <StackLayout HorizontalOptions="Center">
                         <Label x:Name="SumaHardP2" Text="{Binding sumaTotalP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                    </StackLayout>
-                
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModeP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
 
 
             </Grid>
@@ -502,14 +518,12 @@
 
             
             <Grid Grid.Row="12" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarTematica" StyleClass="CSSButton" BorderRadius="50" FontAttributes="Bold" />
+                <Button Text="Guardar" Clicked="GuardarTematica" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
             </Grid>
             
         </Grid>
     </ScrollView>
 
-    <ContentPage.Resources>
-        <StyleSheet Source="../Styles/Tema1.css"/>
-    </ContentPage.Resources>
+    
     
 </ContentPage>

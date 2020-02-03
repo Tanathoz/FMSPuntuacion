@@ -7,6 +7,8 @@ using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FMSPuntuacion.Tablas;
+using FMSPuntuacion.Models;
+
 namespace FMSPuntuacion.Vistas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,30 +18,33 @@ namespace FMSPuntuacion.Vistas
         public string Ganador { get; set;}
         public int totalP1 { get; set; }
         public int totalP2 { get; set; }
-        private SQLiteAsyncConnection conn;
+        public Resultados Resultados { get; set;}
+        public ResultadoViewModel resultadoViewModel;
         public Resultado ()
 		{
 			InitializeComponent ();
+            BindingContext = resultadoViewModel = new ResultadoViewModel();
+            Resultados = new Resultados();
             // CalculaGanador();
-            conn = DependencyService.Get<ISQLTables>().GetConnection();
+          //  conn = DependencyService.Get<ISQLTables>().GetConnection();
 		}
 
         async void  registrarResultado(object sender, EventArgs e)
         {
-            var datosRegistrar = new Resultados {
-                player1= Player1.Text,
-                player2= Player2.Text,
-                totalPlayer1 = Convert.ToInt32(TotalFinal.Text),
-                totalPlayer2 = Convert.ToInt32(TotalFinalP2.Text),
-                ganador = GanadorTexto.Text,
-                fecha = DateTime.Now.ToString("u")
 
-            };
+            Resultados.player1 = Player1.Text;
+            Resultados.player2 = Player2.Text;
+            Resultados.totalPlayer1 = Convert.ToInt32(TotalFinal.Text);
+            Resultados.totalPlayer2 = Convert.ToInt32(TotalFinalP2.Text);
+            Resultados.ganador = GanadorTexto.Text;
+            Resultados.fecha = DateTime.Now.ToString("u");
 
-            await conn.InsertAsync(datosRegistrar);
-
-            var Menu = new MenuOpciones();
-            await Navigation.PushAsync(Menu);
+            //await conn.InsertAsync(datosRegistrar);
+            MessagingCenter.Send(this, "AddItem", Resultados);
+            await Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
+            await Navigation.PopToRootAsync();
+          //  var Menu = new MenuOpciones();
+           // await Navigation.PushAsync(Menu);
         }
 
        

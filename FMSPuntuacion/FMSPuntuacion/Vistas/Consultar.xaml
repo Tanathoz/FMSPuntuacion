@@ -2,17 +2,73 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Consultar"
-             Title="Historial">
+             Title="Historial"      
+             >
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
 
-    <ScrollView>
-      
-    </ScrollView>
-
-    <ContentPage.Content>
+    <!--<Grid Grid.Row="0" Grid.Column="0" >
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Califica" />
+            <Button  WidthRequest="150" HeightRequest="150" BackgroundColor="Coral" Clicked="Resultado_OnClicked"/>
+        </StackLayout>
+    </Grid>-->
+    <!--<NavigationPage.TitleView>
+        <Frame
+          CornerRadius="{OnPlatform 12, UWP=1}"
+          BackgroundColor="{OnPlatform Transparent, Android={StaticResource WhiteColor}}"
+          HasShadow="False"
+          IsClippedToBounds="True"
+          Padding="0">
+            <Frame.Content>
+                <SearchBar
+                    x:Name="SearchBar"
+                    Placeholder="Search movie..."
+                    HorizontalOptions="FillAndExpand"
+                    SearchCommand="{Binding SearchCommand}"
+                    SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}">
+                    <SearchBar.Behaviors>
+                        <behaviors:SearchTextChangedBehavior />
+                    </SearchBar.Behaviors>
+                </SearchBar>
+            </Frame.Content>
+        </Frame>
+    </NavigationPage.TitleView>-->
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Transparent" Padding="20">
+            <SearchBar x:Name="SearchBar" TextChanged="SearchItem"/>
+            <ListView x:Name="ListaResultados" 
+                      ItemsSource="{Binding Items}"                
+                      RefreshCommand="{Binding LoadResultadoCommand}"
+                      BackgroundColor="Transparent"
+                      VerticalOptions="FillAndExpand"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement"
+				      ItemSelected="OnItemSelected"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <!--<MenuItem Text="Delete" IsDestructive="True" 
+                                          CommandParameter="{Binding .}"
+                                          Command="{Binding BindingContext.DeleteCommand,Source={x:Reference BrowseItemsPage}}" />-->
+                            </ViewCell.ContextActions>
+                            <StackLayout  Orientation="Horizontal">
+                                <Label Text="{Binding id}" IsVisible="False"/>
+                                <Label Text="{Binding player1}" Margin="10,0,0,0" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding player2}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding totalPlayer1}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding totalPlayer2}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding sitio}" TextColor="Black" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                                          
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

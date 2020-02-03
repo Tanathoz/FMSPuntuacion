@@ -8,6 +8,8 @@ namespace FMSPuntuacion
     public partial class App : Application
     {
         public static MasterDetailPage Modificador { get; set;}
+        
+
         public App()
         {
             InitializeComponent();

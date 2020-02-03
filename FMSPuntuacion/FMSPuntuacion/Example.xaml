@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FMSPuntuacion.HardMode"
-             Title="Hard Mode">
+             x:Class="FMSPuntuacion.Example">
+        
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -15,46 +15,36 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
-                <RowDefinition Height="80" />
+                <RowDefinition Height="Auto" />
 
             </Grid.RowDefinitions>
-
-
-            <Grid Grid.Row="0" >
-               
-                
+            
+            <Grid Grid.Row="0" BackgroundColor="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
                     <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac" />
-                    </StackLayout>
-              
-                
-                    <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                    </StackLayout>
-                
-               
-                    <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                    </StackLayout>
-                
+                        <Entry x:Name="Player1" Placeholder="Ingresa nombre de Player uno" 
+                                Text="{Binding Resultados.player1}"/>
 
+                    </StackLayout>
+                </Grid>
             </Grid>
-
-
+            
             <Grid Grid.Row="1" BackgroundColor="#032aac" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
+
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" >
                     <StackLayout HorizontalOptions="Center">
                         <Label Text="Patrones " FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                     </StackLayout>
                 </Grid>
-
             </Grid>
-
-
-
+            
             <Grid Grid.Row="2" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -74,7 +64,6 @@
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron2"
                             Title="Tocar"
@@ -171,7 +160,7 @@
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
-                    <Picker x:Name="escena" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
+                    <Picker x:Name="escena" Title="Tocar" SelectedIndexChanged="OnAddNumber">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -182,7 +171,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
-                    <Picker x:Name="skill" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
+                    <Picker x:Name="skill" Title="Tocar" SelectedIndexChanged="OnAddNumber">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -193,7 +182,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="2">
-                    <Picker x:Name="flow" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
+                    <Picker x:Name="flow" Title="Tocar" SelectedIndexChanged="OnAddNumber">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -210,14 +199,17 @@
 
             </Grid>
 
+
             <Grid Grid.Row="4" BackgroundColor="WhiteSmoke">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" >
-                    <StackLayout HorizontalOptions="Center" >
-                        <Label x:Name="Player2" Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold"  TextColor="#ff0000" />
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Entry x:Name="Player2" Placeholder="Ingresa nombre de Player dos" 
+                                Text="{Binding Resultados.player2}"
+                                />
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -225,7 +217,7 @@
             <Grid Grid.Row="5" BackgroundColor="#ff0000" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                   
+
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" >
                     <StackLayout HorizontalOptions="Center">
@@ -329,6 +321,7 @@
 
             </Grid>
 
+
             <Grid Grid.Row="7" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -351,7 +344,7 @@
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
-                    <Picker x:Name="escenaP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
+                    <Picker x:Name="escenaP2" Title="Tocar" SelectedIndexChanged="EasyModeP2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -362,7 +355,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
-                    <Picker x:Name="skillP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
+                    <Picker x:Name="skillP2" Title="Tocar" SelectedIndexChanged="EasyModeP2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -373,7 +366,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="2">
-                    <Picker x:Name="flowP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
+                    <Picker x:Name="flowP2" Title="Tocar" SelectedIndexChanged="EasyModeP2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -387,19 +380,27 @@
                     <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
                 </Grid>
 
-
-            </Grid>
-            
-            <Grid Grid.Row="8" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarHardMode"    BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
             </Grid>
            
+            
+                               
+            <Grid Grid.Row="8" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Button Text="Guardar"   BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="Save_Clicked" />
+            </Grid>
+            
         </Grid>
     </ScrollView>
-    
-    <ContentPage.Resources>
-        <StyleSheet Source="../Styles/Tema1.css"/>
-    </ContentPage.Resources>
 
-
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+    -->
+   
 </ContentPage>

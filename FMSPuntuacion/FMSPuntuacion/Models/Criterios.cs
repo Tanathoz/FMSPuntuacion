@@ -24,7 +24,8 @@ namespace FMSPuntuacion.Models
         public int sumaTotalP2 { get; set; }
         public int respuestasP1 { get; set; }
         public int respuestasP2 { get; set; }
-
         public string ganador { get; set; }
+        public int[] lstCalificacionesP1 = new int[5];
+        public List<int> lstCalificacionesP2 = new List<int>();      
     }
 }

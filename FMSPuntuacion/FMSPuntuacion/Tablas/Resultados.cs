@@ -12,6 +12,19 @@ namespace FMSPuntuacion.Tablas
         public string player1 { get; set; }
         [MaxLength(255)]
         public string player2 { get; set; }
+        public int EasyTotalP1 { get; set; }
+        public int EasyTotalP2 { get; set; }
+        public int HardTotalP1 { get; set; }
+        public int HardTotalP2 { get; set; }
+        public int TematicaTotalP1 { get; set; }
+        public int TematicaTotalP2 { get; set; }
+        public int PersonajesTotalP1 { get; set; }
+        public int PersonajesTotalP2 { get; set; }
+        public int SangreTotalP1 { get; set; }
+        public int SangreTotalP2 { get; set; }
+        public int DeluxeTotalP1 { get; set; }
+        public int DeluxeTotalP2 { get; set; }
+
         public int totalPlayer1 { get; set; }
         public int totalPlayer2 { get; set; }
         [MaxLength(255)]

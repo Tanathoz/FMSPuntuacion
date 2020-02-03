@@ -87,11 +87,21 @@ namespace FMSPuntuacion.Vistas
                 sumaTotalP1 = Convert.ToInt32(SumaHard.Text)+sumaVuelta2,
                 sumaTotalP2 = Convert.ToInt32(SumaHardP2.Text)+sumaVuelta2P2,
                 sumaTematicaP1 = sumaVuelta2,
-                sumaTematicaP2 = sumaVuelta2P2
+                sumaTematicaP2 = sumaVuelta2P2,
+                suma = Convert.ToInt32(SumaEasy.Text),
+                sumaP2 = Convert.ToInt32(SumaEasyP2.Text),
+                sumaHardModeP1 = Convert.ToInt32(HardMode.Text),
+                sumaHardModep2 = Convert.ToInt32(HardModeP2.Text)
             };
-
+            valores.lstCalificacionesP2.Add(sumaVuelta2P2);
             var personajes = new Personajes();
             personajes.BindingContext = valores;
+
+            if (sumaVuelta2 == 0 || sumaVuelta2P2 == 0)
+            {
+               await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }
+
             await Navigation.PushAsync(personajes);
         }
     }

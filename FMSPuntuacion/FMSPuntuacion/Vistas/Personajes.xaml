@@ -391,7 +391,7 @@
             </Grid>
 
             <Grid Grid.Row="8" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarPersonajes"  StyleClass="CSSButton" BorderRadius="50" FontAttributes="Bold" />
+                <Button Text="Guardar" Clicked="GuardarPersonajes"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" />
             </Grid>
 
         </Grid>

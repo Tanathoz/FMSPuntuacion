@@ -588,7 +588,7 @@
 
 
             <Grid Grid.Row="15" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarDeluxe" StyleClass="CSSButton" BorderRadius="50" FontAttributes="Bold" />
+                <Button Text="Guardar" Clicked="GuardarDeluxe" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" />
             </Grid>
 
         </Grid>

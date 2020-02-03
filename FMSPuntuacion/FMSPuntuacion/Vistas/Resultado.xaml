@@ -6,7 +6,6 @@
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
-
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="60" />
@@ -16,7 +15,6 @@
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="Auto" />
-
             </Grid.RowDefinitions>
 
 
@@ -59,6 +57,18 @@
                         <Label x:Name="Respuestas" Text="{Binding respuestasP1}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
                     </StackLayout>
                 </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="Suma Hard :" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1" >
+                    <StackLayout HorizontalOptions="Start">
+                        <Label x:Name="Total" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
             </Grid>
 
 
@@ -119,7 +129,7 @@
             </Grid>
 
             <Grid Grid.Row="3" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="registrarResultado"  StyleClass="CSSButton" BorderRadius="50" FontAttributes="Bold" />
+                <Button Text="Guardar" Clicked="registrarResultado"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" />
             </Grid>
 
         </Grid>

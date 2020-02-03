@@ -1,36 +1,49 @@
-﻿using System;
+﻿using FMSPuntuacion.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FMSPuntuacion.Models;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FMSPuntuacion.Tablas;
 
 namespace FMSPuntuacion
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class EasyMode : ContentPage
+	public partial class Example : ContentPage
 	{
-        public int suma =0;
+        public int suma = 0;
         public int sumaP2 = 0;
-		public EasyMode ()
+        private SQLiteAsyncConnection connex;
+        public Resultados Resultados { get; set; }
+
+        //public ResultadoViewModel resul = new ResultadoViewModel();
+        public Example ()
 		{
 			InitializeComponent ();
+            Resultados = new Resultados
+            {
+                player1 = "Chyre",
+                player2 = "AZdino",
+                totalPlayer1= suma,
+                totalPlayer2= sumaP2,
+                ganador = "replica",
+                sitio= "valencia",
+                fecha = "30 - 34"
+            };
+            BindingContext = this;
+           // connex = DependencyService.Get<ISQLTables>().GetConnection();
+             
 		}
-
-        async void OnCalificaClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new EasyMode {
-                BindingContext = new Criterios()
-            });
-        }
 
         async void OnAddNumber(object sender, EventArgs e)
         {
-            Total.Text ="Total :";
+            Total.Text = "Total :";
 
-            if (patron1.SelectedIndex >-1 && patron2.SelectedIndex>-1 && patron3.SelectedIndex>-1 && patron4.SelectedIndex>-1 && patron5.SelectedIndex>-1 && patron6.SelectedIndex>-1 && escena.SelectedIndex>-1 && skill.SelectedIndex > -1 && flow.SelectedIndex>-1) {
+            if (patron1.SelectedIndex > -1 && patron2.SelectedIndex > -1 && patron3.SelectedIndex > -1 && patron4.SelectedIndex > -1 && patron5.SelectedIndex > -1 && patron6.SelectedIndex > -1 && escena.SelectedIndex > -1 && skill.SelectedIndex > -1 && flow.SelectedIndex > -1)
+            {
                 suma = Convert.ToInt32(patron1.Items[patron1.SelectedIndex]) + Convert.ToInt32(patron2.Items[patron2.SelectedIndex]) + Convert.ToInt32(patron3.Items[patron3.SelectedIndex]) +
                                     Convert.ToInt32(patron4.Items[patron4.SelectedIndex]) + Convert.ToInt32(patron5.Items[patron5.SelectedIndex]) + Convert.ToInt32(patron6.Items[patron6.SelectedIndex]) +
                                     Convert.ToInt32(escena.Items[escena.SelectedIndex]) + Convert.ToInt32(skill.Items[skill.SelectedIndex]) + Convert.ToInt32(flow.Items[flow.SelectedIndex]);
@@ -38,7 +51,7 @@ namespace FMSPuntuacion
 
                 Total.Text += suma.ToString();
             }
-                       
+
         }
 
         async void EasyModeP2(object sender, EventArgs e)
@@ -57,28 +70,59 @@ namespace FMSPuntuacion
         {
             var valores = new Criterios
             {
-                player1 = Player1.Text,
-                player2 = Player2.Text,
+                //player1 = Player1.Text,
+               // player2 = Player2.Text,
                 suma = suma,
-                sumaP2=sumaP2             
-            };
+                sumaP2 = sumaP2
 
-            valores.lstCalificacionesP2.Add(suma);
+            };
             var hardMode = new HardMode();
             hardMode.BindingContext = valores;
 
-            if (suma == 0 || sumaP2 == 0)
-            {
-                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
-            }//else 
-            else if (valores.player1 == null || valores.player2 == null)
+            /* if (suma == 0 || sumaP2 == 0)
+             {
+                 Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación", "OK");
+             }else */
+            if (valores.player1 == null || valores.player2 == null)
             {
                 await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga Nombre", "OK");
             }
-            else{
+            else
+            {
                 await Navigation.PushAsync(hardMode);
             }
             //await Navigation.PushAsync(new HardMode(suma, sumaP2));
         }
-	}
+
+
+
+        protected void GuardarResultodo (object sender, EventArgs e)
+        {
+            var Datos = new Resultados { player1 = Player1.Text, player2 = Player2.Text, totalPlayer1 = suma, totalPlayer2 = sumaP2, ganador = "Fulanito", sitio = "Malaga", fecha = DateTime.Now.ToString() };
+            connex.InsertAsync(Datos);
+            limpiarFormulario();
+            Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
+
+        }
+
+        void limpiarFormulario()
+        {
+            Player1.Text = "";
+            Player2.Text = "";
+
+        }
+
+        async void Save_Clicked(object sender, EventArgs e)
+        {
+            Resultados.totalPlayer2 = sumaP2;
+            Resultados.totalPlayer1 = suma;
+
+            MessagingCenter.Send(this, "AddItem", Resultados);
+            await Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
+            await Navigation.PopToRootAsync();
+        }
+
+
+
+    }
 }

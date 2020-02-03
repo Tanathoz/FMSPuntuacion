@@ -23,10 +23,7 @@ namespace FMSPuntuacion
         public HardMode()
         {
             InitializeComponent();
-
-            //nameLabel.SetBinding(Label.TextProperty, "suma");
-           
-            //var easyInfo = (Criterios)BindingContext;        
+                
 		}
 
         async void SumaPuntosP1(object sender, EventArgs e)
@@ -38,7 +35,6 @@ namespace FMSPuntuacion
                 sumaHard = Convert.ToInt32(patron1.Items[patron1.SelectedIndex]) + Convert.ToInt32(patron2.Items[patron2.SelectedIndex]) + Convert.ToInt32(patron3.Items[patron3.SelectedIndex]) +
                                     Convert.ToInt32(patron4.Items[patron4.SelectedIndex]) + Convert.ToInt32(patron5.Items[patron5.SelectedIndex]) + Convert.ToInt32(patron6.Items[patron6.SelectedIndex]) +
                                     Convert.ToInt32(escena.Items[escena.SelectedIndex]) + Convert.ToInt32(skill.Items[skill.SelectedIndex]) + Convert.ToInt32(flow.Items[flow.SelectedIndex]);
-
 
                 Total.Text += sumaHard.ToString();
             }
@@ -67,12 +63,20 @@ namespace FMSPuntuacion
                 player2 = Player2.Text,
                 sumaTotalP1 = Convert.ToInt32(SumaEasy.Text)+ sumaHard,
                 sumaTotalP2 = Convert.ToInt32(SumaEasyP2.Text)+ sumaHardP2,
+                suma=Convert.ToInt32(SumaEasy.Text),
+                sumaP2= Convert.ToInt32(SumaEasyP2.Text),
                 sumaHardModeP1 = sumaHard,
                 sumaHardModep2 = sumaHardP2
             };
-
+            valores.lstCalificacionesP2.Add(sumaHardP2);
             var Tematicas = new FMSPuntuacion.Vistas.Tematica();
             Tematicas.BindingContext = valores;
+           // if (sumaHard == 0 || sumaHardP2 == 0)
+           // {
+             //   await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            //}
+
+
             await Navigation.PushAsync(Tematicas);
         }
 

@@ -85,9 +85,14 @@ namespace FMSPuntuacion.Vistas
                 valores.ganador= "Réplica, Diferencia de " + Math.Abs(valores.sumaTotalP1 - valores.sumaTotalP2) + " Puntos";
             }
 
-            
+            valores.lstCalificacionesP2.Add(sumaP2);
             var Resultado = new FMSPuntuacion.Vistas.Resultado();
             Resultado.BindingContext = valores;
+           // if (suma == 0 || sumaP2 == 0)
+           // {
+           //     await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+          //  }
+
             await Navigation.PushAsync(Resultado);
         }
     }

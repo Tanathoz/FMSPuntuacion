@@ -121,9 +121,15 @@ namespace FMSPuntuacion.Vistas
 
 
             };
-
+            valores.lstCalificacionesP2.Add((suma+sumaVuelta2P2));
             var Deluxe = new Deluxe();
             Deluxe.BindingContext = valores;
+            if (suma == 0 || sumaP2 == 0)
+            {
+               await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }
+
+
             await Navigation.PushAsync(Deluxe);
 
         }

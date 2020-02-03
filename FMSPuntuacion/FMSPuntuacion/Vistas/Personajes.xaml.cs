@@ -59,9 +59,16 @@ namespace FMSPuntuacion.Vistas
                 sumaHardModeP1 = suma,
                 sumaHardModep2 = sumaP2
             };
-            var Tematicas = new Sangre();
-            Tematicas.BindingContext = valores;
-            await Navigation.PushAsync(Tematicas);
+            valores.lstCalificacionesP2.Add(sumaP2);
+            var Sangre = new Sangre();
+            Sangre.BindingContext = valores;
+           // if (suma == 0 || sumaP2 == 0)
+           // {
+             //   await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+           // }
+
+
+            await Navigation.PushAsync(Sangre);
         }
     }
 }

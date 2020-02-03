@@ -39,15 +39,15 @@
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0">
                     <StackLayout>
-                        <Label Text="Musica" />
-                        <Image Source="music.png" WidthRequest="150" HeightRequest="150" />
+                        <Label Text="Inventario" />
+                        <ImageButton Source="music.png" WidthRequest="150" HeightRequest="150" BackgroundColor="Firebrick" Clicked="OnRegistrarClicked" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="1">
                     <StackLayout>
-                        <Label Text="Otra cosa" />
-                        <Image Source="fb.png" WidthRequest="150" HeightRequest="150" />
+                        <Label Text="Estadisticas" />
+                        <ImageButton Source="fb.png" WidthRequest="150" HeightRequest="150" BackgroundColor="Indigo" Clicked="OnConsultarClicked" />
                     </StackLayout>
                 </Grid>
 
