@@ -54,9 +54,7 @@ namespace FMSPuntuacion
         }
 
         async void GuardarHardMode(object sender, EventArgs e)
-        {
-            
-
+        {          
             var valores = new Criterios
             {
                 player1 = Player1.Text,

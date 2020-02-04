@@ -117,8 +117,15 @@ namespace FMSPuntuacion.Vistas
                 sumaSangreP1 = suma + sumaVuelta2,
                 sumaSangreP2 = sumaP2 + sumaVuelta2P2,
                 respuestasP1 = respuestaP1,
-                respuestasP2 = respuestaP2
-
+                respuestasP2 = respuestaP2,
+                suma = Convert.ToInt32(SumaEasy.Text),
+                sumaP2 = Convert.ToInt32(SumaEasyP2.Text),
+                sumaHardModeP1 = Convert.ToInt32(HardMode.Text),
+                sumaHardModep2 = Convert.ToInt32(HardModeP2.Text),
+                sumaTematicaP1 = Convert.ToInt32(TematicaP1.Text),
+                sumaTematicaP2 = Convert.ToInt32(TematicaP2.Text),
+                sumaPersonajesP1 = Convert.ToInt32(PersonajesP1.Text),
+                sumaPersonajesP2 = Convert.ToInt32(PersonajesP2.Text)
 
             };
             valores.lstCalificacionesP2.Add((suma+sumaVuelta2P2));

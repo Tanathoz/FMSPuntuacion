@@ -58,17 +58,56 @@
                     </StackLayout>
                 </Grid>
 
-                <Grid Grid.Row="3" Grid.Column="0">
-                    <StackLayout HorizontalOptions="Center">
-                        <Label Text="Suma Hard :" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="3" Grid.Column="1" >
-                    <StackLayout HorizontalOptions="Start">
-                        <Label x:Name="Total" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
-                    </StackLayout>
-                </Grid>
+               
 
+                <!-- Los campos para guardar en la base los datos-->
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP1" Text="{Binding sumaTematicaP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP2" Text="{Binding sumaTematicaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP1" Text="{Binding sumaPersonajesP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP2" Text="{Binding sumaPersonajesP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SangreP1" Text="{Binding sumaSangreP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SangreP2" Text="{Binding sumaSangreP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="DeluxeP1" Text="{Binding sumaDeluxeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="DeluxeP2" Text="{Binding sumaDeluxeP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
             </Grid>
 
 

@@ -57,6 +57,46 @@
                     <Label x:Name="RespuestaP2" Text="{Binding respuestasP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
                 </StackLayout>
 
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP1" Text="{Binding sumaTematicaP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP2" Text="{Binding sumaTematicaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP1" Text="{Binding sumaPersonajesP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP2" Text="{Binding sumaPersonajesP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+                
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SangreP1" Text="{Binding sumaSangreP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SangreP2" Text="{Binding sumaSangreP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
             </Grid>
 
             <Grid Grid.Row="2" BackgroundColor="White" >

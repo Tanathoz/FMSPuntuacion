@@ -69,7 +69,18 @@ namespace FMSPuntuacion.Vistas
                 sumaDeluxeP1 = suma,
                 sumaDeluxeP2 = sumaP2,
                 respuestasP1 = Convert.ToInt32(RespuestaP1.Text),
-                respuestasP2 = Convert.ToInt32(RespuestaP2.Text)
+                respuestasP2 = Convert.ToInt32(RespuestaP2.Text),
+                suma = Convert.ToInt32(SumaEasy.Text),
+                sumaP2 = Convert.ToInt32(SumaEasyP2.Text),
+                sumaHardModeP1 = Convert.ToInt32(HardMode.Text),
+                sumaHardModep2 = Convert.ToInt32(HardModeP2.Text),
+                sumaTematicaP1 = Convert.ToInt32(TematicaP1.Text),
+                sumaTematicaP2 = Convert.ToInt32(TematicaP2.Text),
+                sumaPersonajesP1 = Convert.ToInt32(PersonajesP1.Text),
+                sumaPersonajesP2 = Convert.ToInt32(PersonajesP2.Text),
+                sumaSangreP1 = Convert.ToInt32(SangreP1.Text),
+                sumaSangreP2 = Convert.ToInt32(SangreP2.Text)
+
             };
 
             if ((valores.sumaTotalP1 - valores.sumaTotalP2) > 5)

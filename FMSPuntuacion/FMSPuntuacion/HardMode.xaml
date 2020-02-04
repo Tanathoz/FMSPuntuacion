@@ -6,7 +6,6 @@
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
-
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="60" />
@@ -16,7 +15,6 @@
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="80" />
-
             </Grid.RowDefinitions>
 
 

@@ -56,7 +56,7 @@
 
 
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModeP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
                 </StackLayout>
 
 
