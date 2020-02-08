@@ -2,17 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-             x:Class="FMSPuntuacion.Vistas.Sangre"
-             Title="Minutos a Sangre">
+             x:Class="FMSPuntuacion.Vistas.Replica.Minutos"
+             Title="60 Segundos"
+             >
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
-
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="60" />
                 <RowDefinition Height="90" />
-                
+
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto" />
@@ -34,52 +34,17 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            
             <Grid Grid.Row="0" BackgroundColor="WhiteSmoke">
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaPersonajes" Text="{Binding sumaTotalP1}" FontSize="Medium" FontAttributes="Bold"  IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaPersonajesP2" Text="{Binding sumaTotalP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="TematicaP1" Text="{Binding sumaTematicaP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="TematicaP2" Text="{Binding sumaTematicaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="PersonajesP1" Text="{Binding sumaPersonajesP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="PersonajesP2" Text="{Binding sumaPersonajesP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Entry x:Name="Player1" Placeholder="Ingresa nombre de Player uno" 
+                                Text="{Binding Text}"/>
+                    </StackLayout>
+                </Grid>
             </Grid>
 
             <!-- Vuelta 1 player 1-->
@@ -88,12 +53,10 @@
                     <Label Text="Patrones " FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                 </StackLayout>
             </Grid>
-
             <Grid Grid.Row="2" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-
                 <Grid Grid.Row="0" Grid.Column="0">
                     <Picker x:Name="patron1" Title="Tocar" >
                         <Picker.ItemsSource>
@@ -178,7 +141,6 @@
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-
             </Grid>
 
             <Grid Grid.Row="3" BackgroundColor="White" >
@@ -243,9 +205,17 @@
             </Grid>
 
             <Grid Grid.Row="4" BackgroundColor="WhiteSmoke">
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
-                </StackLayout>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Entry x:Name="Player2" Placeholder="Ingresa nombre de Player dos" 
+                                Text="{Binding Text}"
+                                />
+                    </StackLayout>
+                </Grid>
             </Grid>
             <!-- vuelta 1 player 2 -->
             <Grid Grid.Row="5" BackgroundColor="#ff0000" >
@@ -364,7 +334,6 @@
                 <Grid Grid.Row="1" Grid.Column="5">
                     <controls:CheckBox x:Name="respuesta6" HorizontalOptions="EndAndExpand" />
                 </Grid>
-
             </Grid>
 
             <Grid Grid.Row="7" BackgroundColor="White" >
@@ -433,7 +402,7 @@
                 </StackLayout>
             </Grid>
 
-<!-- Vuelta 2 Player 2-->
+            <!-- Vuelta 2 Player 2-->
             <Grid Grid.Row="9" BackgroundColor="#ff0000" >
                 <StackLayout HorizontalOptions="Center">
                     <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
@@ -590,6 +559,7 @@
                 <Grid Grid.Row="2"  Grid.Column="1">
                     <Label x:Name="Total3" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
                 </Grid>
+
             </Grid>
 
             <Grid Grid.Row="12" BackgroundColor="WhiteSmoke">
@@ -597,7 +567,8 @@
                     <Label  Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
                 </StackLayout>
             </Grid>
-<!-- VUELTA 2 PLAYER 1-->
+
+            <!-- VUELTA 2 PLAYER 1-->
             <Grid Grid.Row="13" BackgroundColor="#032aac" >
                 <StackLayout HorizontalOptions="Center">
                     <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
@@ -774,18 +745,23 @@
                 <Grid Grid.Row="2"  Grid.Column="1">
                     <Label x:Name="Total4" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
                 </Grid>
-
             </Grid>
 
             <Grid Grid.Row="16" BackgroundColor="White">
                 <Button Text="Guardar" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
             </Grid>
 
-        </Grid> 
+        </Grid>
 
-
+        
+        
     </ScrollView>
-    <ContentPage.Resources>
-        <StyleSheet Source="../Styles/Tema1.css"/>
-    </ContentPage.Resources>
+    <!--
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content> -->
 </ContentPage>

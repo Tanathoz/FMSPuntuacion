@@ -1,17 +1,17 @@
-﻿using System;
+﻿using FMSPuntuacion.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FMSPuntuacion.Models;
-using FMSPuntuacion.Vistas;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FMSPuntuacion.Vistas
+namespace FMSPuntuacion.Vistas.Replica
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Sangre : ContentPage
+	public partial class Minutos : ContentPage
 	{
         public int suma = 0;
         public int sumaP2 = 0;
@@ -19,7 +19,7 @@ namespace FMSPuntuacion.Vistas
         public int sumaVuelta2P2 = 0;
         public int respuestaP1 = 0;
         public int respuestaP2 = 0;
-        public Sangre ()
+        public Minutos ()
 		{
 			InitializeComponent ();
 		}
@@ -34,7 +34,7 @@ namespace FMSPuntuacion.Vistas
                                     Convert.ToInt32(patron4.Items[patron4.SelectedIndex]) + Convert.ToInt32(patron5.Items[patron5.SelectedIndex]) + Convert.ToInt32(patron6.Items[patron6.SelectedIndex]) +
                                     Convert.ToInt32(escena.Items[escena.SelectedIndex]) + Convert.ToInt32(skill.Items[skill.SelectedIndex]) + Convert.ToInt32(flow.Items[flow.SelectedIndex]);
 
-                
+
                 Total.Text += suma.ToString();
             }
 
@@ -61,7 +61,7 @@ namespace FMSPuntuacion.Vistas
                     respuestaP2++;
                 if (respuesta6.Checked)
                     respuestaP2++;
-                TotalP2.Text += sumaP2.ToString() + "+ "+respuestaP2;
+                TotalP2.Text += sumaP2.ToString() + "+ " + respuestaP2;
             }
         }
 
@@ -70,9 +70,9 @@ namespace FMSPuntuacion.Vistas
             Total3.Text = "Total :";
             if (patron13.SelectedIndex > -1 && patron14.SelectedIndex > -1 && patron15.SelectedIndex > -1 && patron16.SelectedIndex > -1 && patron17.SelectedIndex > -1 && patron18.SelectedIndex > -1 && escena3.SelectedIndex > -1 && skill3.SelectedIndex > -1 && flow3.SelectedIndex > -1)
             {
-                sumaVuelta2P2 =     Convert.ToInt32(patron13.Items[patron13.SelectedIndex]) + Convert.ToInt32(patron14.Items[patron14.SelectedIndex]) + Convert.ToInt32(patron15.Items[patron15.SelectedIndex]) +
+                sumaVuelta2P2 = Convert.ToInt32(patron13.Items[patron13.SelectedIndex]) + Convert.ToInt32(patron14.Items[patron14.SelectedIndex]) + Convert.ToInt32(patron15.Items[patron15.SelectedIndex]) +
                                     Convert.ToInt32(patron16.Items[patron16.SelectedIndex]) + Convert.ToInt32(patron17.Items[patron17.SelectedIndex]) + Convert.ToInt32(patron18.Items[patron18.SelectedIndex]) +
-                                    Convert.ToInt32(escena3.Items[escena3.SelectedIndex]) + Convert.ToInt32(skill3.Items[skill3.SelectedIndex]) + Convert.ToInt32(flow3.Items[flow3.SelectedIndex]);            
+                                    Convert.ToInt32(escena3.Items[escena3.SelectedIndex]) + Convert.ToInt32(skill3.Items[skill3.SelectedIndex]) + Convert.ToInt32(flow3.Items[flow3.SelectedIndex]);
                 Total3.Text += sumaVuelta2P2.ToString();
             }
 
@@ -99,11 +99,9 @@ namespace FMSPuntuacion.Vistas
                     respuestaP1++;
                 if (respuesta12.Checked)
                     respuestaP1++;
-                Total4.Text += sumaVuelta2.ToString()+ "+ "+respuestaP1;
+                Total4.Text += sumaVuelta2.ToString() + "+ " + respuestaP1;
             }
         }
-
-
 
         async void GuardarSangre(object sender, EventArgs e)
         {
@@ -111,30 +109,22 @@ namespace FMSPuntuacion.Vistas
             {
                 player1 = Player1.Text,
                 player2 = Player2.Text,
-                sumaTotalP1 = Convert.ToInt32(SumaPersonajes.Text)+suma+sumaVuelta2,
-                sumaTotalP2 = Convert.ToInt32(SumaPersonajesP2.Text)+sumaP2+sumaVuelta2P2,
+                sumaTotalP1 = suma + sumaVuelta2,
+                sumaTotalP2 = sumaP2 + sumaVuelta2P2,
                 sumaSangreP1 = suma + sumaVuelta2,
                 sumaSangreP2 = sumaP2 + sumaVuelta2P2,
                 respuestasP1 = respuestaP1,
-                respuestasP2 = respuestaP2,
-                suma = Convert.ToInt32(SumaEasy.Text),
-                sumaP2 = Convert.ToInt32(SumaEasyP2.Text),
-                sumaHardModeP1 = Convert.ToInt32(HardMode.Text),
-                sumaHardModep2 = Convert.ToInt32(HardModeP2.Text),
-                sumaTematicaP1 = Convert.ToInt32(TematicaP1.Text),
-                sumaTematicaP2 = Convert.ToInt32(TematicaP2.Text),
-                sumaPersonajesP1 = Convert.ToInt32(PersonajesP1.Text),
-                sumaPersonajesP2 = Convert.ToInt32(PersonajesP2.Text)
-
+                respuestasP2 = respuestaP2                
             };
-            valores.lstCalificacionesP2.Add((suma+sumaVuelta2P2));
+            valores.lstCalificacionesP2.Add((suma + sumaVuelta2P2));
             var Deluxe = new Deluxe();
             Deluxe.BindingContext = valores;
             if (suma == 0 || sumaP2 == 0)
             {
-               await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
             }
             await Navigation.PushAsync(Deluxe);
         }
+
     }
 }
