@@ -34,7 +34,7 @@
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout>
                         <Label Text="Entrena" />
-                        <Image Source="Clocki.png" WidthRequest="150" HeightRequest="150" />
+                        <ImageButton Source="Clocki.png" WidthRequest="150" HeightRequest="150" Clicked="OnEntrenaClicked" />
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0">
