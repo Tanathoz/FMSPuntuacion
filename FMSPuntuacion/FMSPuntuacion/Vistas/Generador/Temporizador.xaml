@@ -2,8 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Generador.Temporizador"
+             xmlns:controls="clr-namespace:MyTripCOuntdown.Controls"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:skor="clr-namespace:Skor.Controls;assembly=Skor.Controls"
+             BackgroundColor="{StaticResource WhiteColor}"
              Title="Temporizador"
              >
     <ContentPage.Content>
@@ -15,6 +18,15 @@
                         <fftransformations:CircleTransformation />
                     </ffimageloading:CachedImage.Transformations>
             </ffimageloading:CachedImage>
+            <controls:CircleCountdown 
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Progress="{Binding Progress}"
+                ProgressStartColor="{StaticResource ProgressPinkColor}"
+                ProgressEndColor="{StaticResource ProgressBlueColor}"
+                StrokeWidth="10"/>
+
+
         </ScrollView>
 
         <!--<StackLayout>
