@@ -6,10 +6,10 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Windows.Input;
-
+using FMSPuntuacion.Models.Base;
 namespace FMSPuntuacion.Models
 {
-    public class MyCountDownModel:BaseViewModel
+    public class MyCountDownModel: BaseModel
     {
         private CountDown _countdown;
         private int _days;
@@ -45,6 +45,41 @@ namespace FMSPuntuacion.Models
             set => SetProperty(ref _progress, value);
         }
 
-        
+        public ICommand RestartCommand => new Command(Restart);
+
+        public override Task LoadAsync()
+        {
+            _countdown.EndDate = DateTime.Now.AddMinutes(1);
+            _countdown.Start();
+            _countdown.Ticked += OnCountdownTicked;
+            _countdown.Completed += OnCountdownCompleted;
+
+            return base.LoadAsync();
+        }
+
+
+        void OnCountdownTicked()
+        {
+            Days = _countdown.RemainTime.Days;
+            Hours = _countdown.RemainTime.Hours;
+            Minutes = _countdown.RemainTime.Minutes;
+            var totalSeconds = (DateTime.Now.AddMinutes(1) - DateTime.Now).TotalSeconds;
+            var remainSeconds = _countdown.RemainTime.TotalSeconds;
+            Progress = remainSeconds / totalSeconds;
+        }
+
+        void OnCountdownCompleted()
+        {
+            Days = 0;
+            Hours = 0;
+            Minutes = 0;
+            Progress = 0;
+        }
+
+        void Restart()
+        {
+            Debug.WriteLine("Restart");
+        }
+
     }
 }
