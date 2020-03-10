@@ -7,6 +7,8 @@ namespace FMSPuntuacion.Models.Base
     public abstract class BaseModel: ExtendedBindableObject
     {
         private bool _isBusy;
+        
+
         public bool IsBusy
         {
             get

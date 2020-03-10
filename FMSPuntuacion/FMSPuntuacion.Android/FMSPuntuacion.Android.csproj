@@ -65,6 +65,8 @@
     <Compile Include="SQLiteDB.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\KeeponTruckin.ttf" />
+    <AndroidAsset Include="Assets\sourcesanspro-semibold.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

@@ -26,7 +26,13 @@
         x:TypeArguments="x:String"
         iOS="KelsonSans-Regular"
         Android="sourcesanspro-regular.ttf#Source Sans" />
-    
+    <OnPlatform
+        x:Key="SourceKeepon"
+        x:TypeArguments ="x:String"
+        iOS="KeeponTruckin"
+        Android="KeeponTruckin.tff#KeeponTruckin"/>
+
+
     <!-- Font Sizes -->
     <x:Double x:Key="FontSize10"> 10</x:Double>
     <x:Double x:Key="FontSize12">12</x:Double>
