@@ -10,6 +10,7 @@ using FMSPuntuacion.Models.Base;
 using FMSPuntuacion.Vistas.Generador;
 using System.IO;
 using System.Reflection;
+using System.Collections;
 
 namespace FMSPuntuacion.Models
 {
@@ -66,7 +67,7 @@ namespace FMSPuntuacion.Models
             set => SetProperty(ref flagPalabra, value);
         }
 
-        public ICommand RestartCommand => new Command<bool>(Restart);
+        public ICommand RestartCommand => new Command<int>(Restart);
 
         public override Task LoadAsync()
         {         
@@ -83,10 +84,10 @@ namespace FMSPuntuacion.Models
             if (flagPalabra)
             {              
                 if (Segundos == 58 || Segundos == 49 || Segundos == 39 || Segundos == 29 || Segundos == 19 || Segundos == 9)
-                {
-                   
+                {                  
                     Debug.WriteLine("Segundos" + lstPalabra[count]);
-                    count++;
+                    Palabra = lstPalabra[count];
+                    count++;                  
                 }                  
             }
             Minutes = _countdown.RemainTime.Minutes;
@@ -110,30 +111,27 @@ namespace FMSPuntuacion.Models
             var assembly = Assembly.GetExecutingAssembly();
             var resourceName = "FMSPuntuacion.Recursos.Palabras.txt";
             string result = string.Empty;
-            //  Stream stream = assembly.GetManifestResourceStream("FMSPuntuacion.Palabras.txt");
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             using (StreamReader reader = new StreamReader(stream))
             {
                  result= reader.ReadToEnd();              
             }
             string[] words = result.Split('\n');
-            Console.WriteLine("ld"+ words[0]);
             return words;
         }
 
-        public void Restart(bool flag)
+        public void Restart(int Opciones)
         {
-            
-            if (flag)
+            if (Opciones >=0)
+            //if (flag)
             {
                 flagPalabra = true;
                 string[] palabras=LeerArchivo();
                 lstPalabra=RandomNumber(palabras);
             }
-            else
-                _countdown.Flag = false;
-                LoadAsync();
-                Debug.WriteLine("Restart"+flagPalabra);
+            //else
+            //    _countdown.Flag = false;
+                LoadAsync();                
         }
 
         private static List<string> RandomNumber(string[] palabras)
@@ -141,7 +139,7 @@ namespace FMSPuntuacion.Models
             Random rnd = new Random();
             List<string> lstPalabras = new List<string>();          
             //DecimalFormat df = new DecimalFormat("#.00");
-            for (int i =0; i<5; i++)
+            for (int i =0; i<6; i++)
             {
                 int num = rnd.Next(0,900);
                 lstPalabras.Add(palabras[num]);

@@ -4,6 +4,7 @@
              x:Class="FMSPuntuacion.Vistas.Generador.Temporizador"
              xmlns:check="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:controls="clr-namespace:FMSPuntuacion.Controls"
+             xmlns:radio="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              BackgroundColor="{StaticResource WhiteColor}"
@@ -38,11 +39,11 @@
 
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-    
-    
+
+
+
     <ContentPage.Content>
-        <!--<ScrollView>-->
+        <ScrollView>
         <Grid x:Name="Main" RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -51,36 +52,30 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-           
-            <Label Grid.Row="0"
-              x:Name="LL" Text="{Binding Palabra}"
-                />
+
+            <Label Grid.Row="0"  x:Name="LL" Text="{Binding Palabra}" Style="{StaticResource TripTitleStyle}" />
 
             <Grid Grid.Row="1" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="48" />
-                </Grid.RowDefinitions>
-
+                
                 <ffimageloading:CachedImage 
                     Aspect="AspectFit"
                     Source="lobo.jpg"
                     HorizontalOptions="Center"
-                    Grid.Row="0"                  
-                    Margin="12">
+                    Margin="12"                 
+                    >
                     <ffimageloading:CachedImage.Transformations>
                         <fftransformations:CircleTransformation />
                     </ffimageloading:CachedImage.Transformations>
                 </ffimageloading:CachedImage>
 
                 <controls:CircleCountdown 
-                    Grid.Row="0"
+                   
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     Progress="{Binding Progress}"
                     ProgressStartColor="{StaticResource ProgressPinkColor}"
                     ProgressEndColor="{StaticResource ProgressBlueColor}"
-                    StrokeWidth="10"
+                    StrokeWidth="15"
                     />
 
                 <Label HorizontalOptions="Center"
@@ -88,25 +83,29 @@
                        Text="{Binding Segundos}"
                        Style="{StaticResource BigCountdownStyle}"
                        TextColor="Black"
-                       Grid.Row="0"
+                      
                        />
-                <Grid Grid.Row="1">
-                    
+                
+            </Grid>
+
+            <Grid Grid.Row="2" RowSpacing="0" Margin="60, 34">
+                <Grid Grid.Row="0" Grid.Column="0" >
+                    <check:CheckBox x:Name="palabras"  DefaultText="Palabras"   HorizontalOptions="FillAndExpand"  CheckedChanged="CambioBandera" />
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <check:BindableRadioGroup x:Name="RadioBtn" SelectedIndex="{Binding ItemSelected}" VerticalOptions="End"  />
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="2">
-                <check:CheckBox x:Name="palabras"  DefaultText="Palabras"   HorizontalOptions="FillAndExpand"  CheckedChanged="CambioBandera"/>
-            </Grid>
-            
             <StackLayout Grid.Row="3" Margin="0, 0, 0, 48">
                 <Grid Margin="84, 12">
                     <Button   
                         HeightRequest="60"      
                         CornerRadius="96"
-                        CommandParameter= "{Binding Source={x:Reference palabras}, Path=Checked}"
+                        CommandParameter= "{Binding Source={x:Reference RadioBtn}, Path=SelectedIndex}"
                         Command="{Binding RestartCommand}"
-                        
+                       
                          />
                     <Label  
                         Text="Inicio"  
@@ -114,12 +113,12 @@
                         TextColor="{StaticResource WhiteColor}"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        InputTransparent="False" /> 
+                        InputTransparent="False" />
                 </Grid>
             </StackLayout>
 
         </Grid>
-        <!--</ScrollView>-->
+        </ScrollView>
 
         <!--<StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"

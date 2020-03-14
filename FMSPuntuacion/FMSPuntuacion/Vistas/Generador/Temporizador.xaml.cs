@@ -15,7 +15,6 @@ namespace FMSPuntuacion.Vistas.Generador
 	{
         public Command OnCheckedChanged { get; set; }
         public bool flagy;
-
         public bool Flagy
         {
             get
@@ -33,14 +32,20 @@ namespace FMSPuntuacion.Vistas.Generador
 			InitializeComponent ();
             BindingContext = new MyCountDownModel();
             flagy = true;
+            RadioBtn.ItemsSource = new[]
+            {
+                "5 Segundos", "10 Segundos"
+            };
+
+             
            // OnCheckedChanged = new Command(OnCheckBoxChanged);
 		}
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            var vm = BindingContext as BaseModel;    
-            
+            var vm = BindingContext as BaseModel;
+          
             //await vm?.LoadAsync();
         }
 
@@ -51,25 +56,23 @@ namespace FMSPuntuacion.Vistas.Generador
             await vm?.UnloadAsync();
         }
 
-        //public void OnCheckBoxChanged()
+        //private void Seleccionar(object sender, int e)
         //{
-        //    MyCountDownModel objCountDown = new MyCountDownModel();
-        //    if (palabras.Checked)
-        //        objCountDown.Flag = true;
-        //    else
-        //        objCountDown.Flag = false;
+        //    var radio = sender as CustomRadioButton;
+        //    if (radio == null || radio.Id == -1)
+        //    {
+        //        return;
+        //    }
         //}
 
         async void CambioBandera(object sender, EventArgs e)
         {
-            MyCountDownModel objCount = new MyCountDownModel();
-            bool fly = true;
-
-            if (palabras.Checked)
+            int iyn = RadioBtn.SelectedIndex;
+            bool segu = RadioBtn.Items[1].Checked;
+            if (RadioBtn.Items[0].Checked)
                 Flagy = true;
             else
                 Flagy = false;
-
             // objCountDown.Restart();
         }
 
