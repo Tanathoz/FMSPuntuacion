@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 namespace FMSPuntuacion.Vistas.Generador
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,6 +14,8 @@ namespace FMSPuntuacion.Vistas.Generador
 	{
         public Command OnCheckedChanged { get; set; }
         public bool flagy;
+        
+        
         public bool Flagy
         {
             get
@@ -30,16 +31,16 @@ namespace FMSPuntuacion.Vistas.Generador
         public Temporizador ()
 		{
 			InitializeComponent ();
-            BindingContext = new MyCountDownModel();
-            flagy = true;
+            BindingContext = new MyCountDownModel();       
             RadioBtn.ItemsSource = new[]
             {
                 "5 Segundos", "10 Segundos"
             };
 
-             
-           // OnCheckedChanged = new Command(OnCheckBoxChanged);
-		}
+            RadioBtn.IsVisible = false;
+            
+            // OnCheckedChanged = new Command(OnCheckBoxChanged);
+        }
 
         protected override async void OnAppearing()
         {
@@ -67,12 +68,16 @@ namespace FMSPuntuacion.Vistas.Generador
 
         async void CambioBandera(object sender, EventArgs e)
         {
-            int iyn = RadioBtn.SelectedIndex;
-            bool segu = RadioBtn.Items[1].Checked;
-            if (RadioBtn.Items[0].Checked)
-                Flagy = true;
+
+            if (palabras.Checked)
+            {
+                RadioBtn.IsVisible = true;
+            }       
             else
-                Flagy = false;
+            {
+                RadioBtn.IsVisible = false;
+            }
+                
             // objCountDown.Restart();
         }
 

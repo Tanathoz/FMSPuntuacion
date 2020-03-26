@@ -9,7 +9,7 @@ namespace FMSPuntuacion.Models
     {
         TimeSpan _remainTime;
         public string _palabra;
-        public int count = 0;
+     
         public event Action Completed;
         public event Action Ticked;
         public DateTime EndDate { get; set; }
@@ -59,22 +59,20 @@ namespace FMSPuntuacion.Models
                 
                 if (ticked)
                 {
-                    count++;
-                  
-                        
+                                    
                     Ticked?.Invoke();
                 }
                 else
                 {
                     Completed?.Invoke();
-                    count = 0;
+                   // count = 0;
                 }
 
                 return ticked;
             });
         }
 
-        public List<string> lstPalabras = new List<string>();
+      
         
     }
 }

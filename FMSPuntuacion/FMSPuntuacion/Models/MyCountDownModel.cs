@@ -11,6 +11,8 @@ using FMSPuntuacion.Vistas.Generador;
 using System.IO;
 using System.Reflection;
 using System.Collections;
+using System.Collections.ObjectModel;
+using FMSPuntuacion.Models.Base;
 
 namespace FMSPuntuacion.Models
 {
@@ -24,14 +26,18 @@ namespace FMSPuntuacion.Models
         private string _palabra;
         private double _progress;
         public int count = 0;
+        public int frecuencia = 0;
         public bool flagPalabra;
+        public bool otroF;
         public List<string> lstPalabra { get; set; }
+        public List<int> lstSegundos10 = new List<int>() { 58, 49, 39, 29,19,9 };
+        public List<int> lstSegundos5 = new List<int>() { 58,54, 49,44, 39,34, 29,24, 19,14 ,9,4 };
 
         //COMENTARIO ES MEJOR PASAR ACA LO DE LAS PALABRAS QUE EN LA CLASE COUNTDOWN
         public MyCountDownModel()
         {
             _countdown = new CountDown();
-            
+           
         }
        
         public int Frecuencia
@@ -67,7 +73,8 @@ namespace FMSPuntuacion.Models
             set => SetProperty(ref flagPalabra, value);
         }
 
-        public ICommand RestartCommand => new Command<int>(Restart);
+        
+        public ICommand RestartCommand => new Command<XLabs.Forms.Controls.BindableRadioGroup>(Restart);
 
         public override Task LoadAsync()
         {         
@@ -78,23 +85,40 @@ namespace FMSPuntuacion.Models
             return base.LoadAsync();
         }
 
+        //public override Task UnloadAsync()
+        //{
+        //    _countdown.Ticked -= OnCountdownTicked;
+        //    _countdown.Completed -= OnCountdownCompleted;
+        //    return base.UnloadAsync();
+        //}
+
         void OnCountdownTicked()
         {
-           
-            if (flagPalabra)
-            {              
-                if (Segundos == 58 || Segundos == 49 || Segundos == 39 || Segundos == 29 || Segundos == 19 || Segundos == 9)
-                {                  
-                    Debug.WriteLine("Segundos" + lstPalabra[count]);
-                    Palabra = lstPalabra[count];
-                    count++;                  
-                }                  
-            }
+
             Minutes = _countdown.RemainTime.Minutes;
             Segundos = _countdown.RemainTime.Seconds;
             var totalSeconds = (DateTime.Now.AddMinutes(1) - DateTime.Now).TotalSeconds;
-            var remainSeconds = _countdown.RemainTime.TotalSeconds;          
+            var remainSeconds = _countdown.RemainTime.TotalSeconds;
             Progress = remainSeconds / totalSeconds;
+            if (flagPalabra)
+            {              
+                if (lstSegundos10.Contains(Segundos))
+                {                  
+                    Debug.WriteLine("sder"  +Segundos +"palabra" + lstPalabra[count]);
+                   
+                    Palabra = lstPalabra[count];
+                    count++;                  
+                }                  
+            }else if ( otroF )
+            {
+                if (lstSegundos5.Contains(Segundos))
+                {
+                    Debug.WriteLine("Segundos 5S" + Segundos + "palabra" + lstPalabra[count] + " COUNT " + count);
+                    Palabra = lstPalabra[count]; ;
+                    count++;
+                }
+            }
+           
         }
 
         void OnCountdownCompleted()
@@ -103,6 +127,11 @@ namespace FMSPuntuacion.Models
             Segundos = 0;
             Progress = 0;
             count = 0;
+            Palabra = "Tiempo!!";
+            lstPalabra.Clear();
+            _countdown.Ticked -= OnCountdownTicked;
+            _countdown.Completed -= OnCountdownCompleted;
+            // UnloadAsync();
         }
 
         public string[] LeerArchivo()
@@ -120,26 +149,33 @@ namespace FMSPuntuacion.Models
             return words;
         }
 
-        public void Restart(int Opciones)
+        public void Restart(XLabs.Forms.Controls.BindableRadioGroup Opciones)
         {
-            if (Opciones >=0)
-            //if (flag)
+            if (Opciones.Items[1].Checked && Opciones.IsVisible)
             {
                 flagPalabra = true;
+                otroF = false;
+                frecuencia = 2;
                 string[] palabras=LeerArchivo();
-                lstPalabra=RandomNumber(palabras);
+                lstPalabra=RandomNumber(palabras, 6);
+            }else if(Opciones.Items[0].Checked && Opciones.IsVisible)
+            {
+                otroF = true;
+                flagPalabra = false;
+                frecuencia = 1;
+                string[] palabras = LeerArchivo();
+                lstPalabra = RandomNumber(palabras,12); 
             }
-            //else
-            //    _countdown.Flag = false;
+                
                 LoadAsync();                
         }
 
-        private static List<string> RandomNumber(string[] palabras)
+        private static List<string> RandomNumber(string[] palabras, int numero)
         {
             Random rnd = new Random();
             List<string> lstPalabras = new List<string>();          
             //DecimalFormat df = new DecimalFormat("#.00");
-            for (int i =0; i<6; i++)
+            for (int i =0; i<numero; i++)
             {
                 int num = rnd.Next(0,900);
                 lstPalabras.Add(palabras[num]);

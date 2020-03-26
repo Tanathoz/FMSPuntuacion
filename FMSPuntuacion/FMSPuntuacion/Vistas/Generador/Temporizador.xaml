@@ -97,15 +97,20 @@
                     <check:BindableRadioGroup x:Name="RadioBtn" SelectedIndex="{Binding ItemSelected}" VerticalOptions="End"  />
                 </Grid>
             </Grid>
-
+                <!-- {Binding Source={x:Reference RadioBtn}, Path=Items} -->
             <StackLayout Grid.Row="3" Margin="0, 0, 0, 48">
                 <Grid Margin="84, 12">
                     <Button   
+                        BorderRadius ="50"
+                        FontAttributes="Bold"
+                        BackgroundColor="#44c767"
+                        FontSize="Large"
+                        TextColor="White"
                         HeightRequest="60"      
-                        CornerRadius="96"
-                        CommandParameter= "{Binding Source={x:Reference RadioBtn}, Path=SelectedIndex}"
+                        CornerRadius="96"         
+                        CommandParameter= "{Binding Source={x:Reference RadioBtn}}"
                         Command="{Binding RestartCommand}"
-                       
+                        Text="Iniciar" 
                          />
                     <Label  
                         Text="Inicio"  
