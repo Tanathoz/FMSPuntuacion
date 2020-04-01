@@ -24,9 +24,9 @@
             </Style>
 
             <Style x:Key="BigCountdownStyle" TargetType="Label">
-                <Setter Property="FontFamily" Value="{StaticResource SourceKeepon}" />
-                <Setter Property="FontSize" Value="{StaticResource FontSize60}" />
-                <Setter Property="TextColor" Value="{StaticResource TextGrayColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource SourceSansSemiBold}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize120}" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
@@ -40,7 +40,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-
+    <!--El margin es así Value=48,0,48,12   1=left, 2=top, 3=Right, 4=Bottom   -->
 
     <ContentPage.Content>
         <ScrollView>
@@ -50,6 +50,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
 
@@ -59,9 +60,10 @@
                 
                 <ffimageloading:CachedImage 
                     Aspect="AspectFit"
-                    Source="lobo.jpg"
+                    Source="ebay.jpg"
+                    VerticalOptions="Center"
                     HorizontalOptions="Center"
-                    Margin="12"                 
+                    Margin="18"                 
                     >
                     <ffimageloading:CachedImage.Transformations>
                         <fftransformations:CircleTransformation />
@@ -88,22 +90,22 @@
                 
             </Grid>
 
-            <Grid Grid.Row="2" RowSpacing="0" Margin="60, 34">
+            <Grid Grid.Row="2" RowSpacing="0" Margin="60, 24">
                 <Grid Grid.Row="0" Grid.Column="0" >
                     <check:CheckBox x:Name="palabras"  DefaultText="Palabras"   HorizontalOptions="FillAndExpand"  CheckedChanged="CambioBandera" />
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="1">
-                    <check:BindableRadioGroup x:Name="RadioBtn" SelectedIndex="{Binding ItemSelected}" VerticalOptions="End"  />
+                    <check:BindableRadioGroup x:Name="RadioBtn"  SelectedIndex="{Binding ItemSelected}" VerticalOptions="End"  />
                 </Grid>
             </Grid>
-                <!-- {Binding Source={x:Reference RadioBtn}, Path=Items} -->
-            <StackLayout Grid.Row="3" Margin="0, 0, 0, 48">
-                <Grid Margin="84, 12">
-                    <Button   
+                <!-- {Binding Source={x:Reference RadioBtn}, Path=Items} #44c767-->
+                <StackLayout Grid.Row="3" Margin="0, 0, 0, 0">
+                    <Grid Grid.Row="0"  Margin="84, 6">
+                        <Button   
                         BorderRadius ="50"
                         FontAttributes="Bold"
-                        BackgroundColor="#44c767"
+                        BackgroundColor="{Binding Color}"
                         FontSize="Large"
                         TextColor="White"
                         HeightRequest="60"      
@@ -111,18 +113,28 @@
                         CommandParameter= "{Binding Source={x:Reference RadioBtn}}"
                         Command="{Binding RestartCommand}"
                         Text="Iniciar" 
-                         />
-                    <Label  
-                        Text="Inicio"  
-                        FontSize="{StaticResource FontSize24}" 
-                        TextColor="{StaticResource WhiteColor}"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        InputTransparent="False" />
-                </Grid>
-            </StackLayout>
+                        IsEnabled="{Binding Activar}"
+                        />
+                    </Grid>
+                </StackLayout>
 
-        </Grid>
+                    <Grid Grid.Row="4"  Margin="84, 12">
+                        <Button   
+                        BorderRadius ="50"
+                        FontAttributes="Bold"
+                        BackgroundColor="{Binding ColorCancelar}"
+                        FontSize="Large"
+                        TextColor="White"
+                        HeightRequest="60"      
+                        CornerRadius="96"         
+                        Command="{Binding CancelCommand}"
+                        Text="Cancelar" 
+                        IsEnabled="{Binding ActivarCancelar}"
+                        />
+                    </Grid>
+                
+
+            </Grid>
         </ScrollView>
 
         <!--<StackLayout>

@@ -48,6 +48,6 @@
     <x:Double x:Key="FontSize40">40</x:Double>
     <x:Double x:Key="FontSize44">44</x:Double>
     <x:Double x:Key="FontSize60">60</x:Double>
-
+    <x:Double x:Key="FontSize120">120</x:Double>
     
 </ResourceDictionary>

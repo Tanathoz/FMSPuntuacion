@@ -12,7 +12,8 @@ using System.IO;
 using System.Reflection;
 using System.Collections;
 using System.Collections.ObjectModel;
-using FMSPuntuacion.Models.Base;
+using Xamarin.Essentials;
+using System.Threading;
 
 namespace FMSPuntuacion.Models
 {
@@ -28,16 +29,22 @@ namespace FMSPuntuacion.Models
         public int count = 0;
         public int frecuencia = 0;
         public bool flagPalabra;
-        public bool otroF;
+        public bool activar;
+        public bool activarCancelar;
+        public string color;
+        public string colorCancelar;
         public List<string> lstPalabra { get; set; }
-        public List<int> lstSegundos10 = new List<int>() { 58, 49, 39, 29,19,9 };
-        public List<int> lstSegundos5 = new List<int>() { 58,54, 49,44, 39,34, 29,24, 19,14 ,9,4 };
+        public List<int> lstSegundos10 = new List<int>() { 59, 49, 39, 29,19,9 };
+        public List<int> lstSegundos5 = new List<int>() { 59,54, 49,44, 39,34, 29,24, 19,14 ,9,4 };
 
         //COMENTARIO ES MEJOR PASAR ACA LO DE LAS PALABRAS QUE EN LA CLASE COUNTDOWN
         public MyCountDownModel()
         {
             _countdown = new CountDown();
-           
+            _segundos = 59;
+            activar = true;
+            color = "#44c767";
+            colorCancelar = "LightGray";
         }
        
         public int Frecuencia
@@ -67,21 +74,45 @@ namespace FMSPuntuacion.Models
             set => SetProperty(ref _palabra, value);
         }
 
+        public string Color
+        {
+            get => color;
+            set => SetProperty(ref color, value);
+        }
+
+        public string ColorCancelar
+        {
+            get => colorCancelar;
+            set => SetProperty(ref colorCancelar, value);
+        }
+
         public bool Flag
         {
             get => flagPalabra;
             set => SetProperty(ref flagPalabra, value);
         }
 
+        public bool Activar
+        {
+            get => activar;
+            set => SetProperty(ref activar, value);
+        }
         
+        public bool ActivarCancelar
+        {
+            get => activarCancelar;
+            set => SetProperty(ref activarCancelar, value);
+        }
         public ICommand RestartCommand => new Command<XLabs.Forms.Controls.BindableRadioGroup>(Restart);
+        public ICommand CancelCommand => new Command(Cancel);
 
         public override Task LoadAsync()
         {         
             _countdown.EndDate = DateTime.Now.AddMinutes(1);
             _countdown.Start();
             _countdown.Ticked += OnCountdownTicked;
-            _countdown.Completed += OnCountdownCompleted;         
+            _countdown.Completed += OnCountdownCompleted;
+            _countdown.Cancel += OnCountdownCancel;
             return base.LoadAsync();
         }
 
@@ -100,21 +131,23 @@ namespace FMSPuntuacion.Models
             var totalSeconds = (DateTime.Now.AddMinutes(1) - DateTime.Now).TotalSeconds;
             var remainSeconds = _countdown.RemainTime.TotalSeconds;
             Progress = remainSeconds / totalSeconds;
-            if (flagPalabra)
+            //La pantalla no se bloqueara hasta finalizado el tiempo
+            DeviceDisplay.KeepScreenOn = true;
+          
+            if (frecuencia == 2)
             {              
                 if (lstSegundos10.Contains(Segundos))
                 {                  
                     Debug.WriteLine("sder"  +Segundos +"palabra" + lstPalabra[count]);
-                   
-                    Palabra = lstPalabra[count];
+                    Palabra = Capitalizar(lstPalabra[count]);                    
                     count++;                  
                 }                  
-            }else if ( otroF )
+            }else if ( frecuencia == 1 )
             {
                 if (lstSegundos5.Contains(Segundos))
                 {
                     Debug.WriteLine("Segundos 5S" + Segundos + "palabra" + lstPalabra[count] + " COUNT " + count);
-                    Palabra = lstPalabra[count]; ;
+                    Palabra = Capitalizar(lstPalabra[count]);
                     count++;
                 }
             }
@@ -122,16 +155,42 @@ namespace FMSPuntuacion.Models
         }
 
         void OnCountdownCompleted()
-        {         
+        {
+           
             Minutes = 0;
             Segundos = 0;
             Progress = 0;
             count = 0;
             Palabra = "Tiempo!!";
-            lstPalabra.Clear();
+           // lstPalabra.Clear();
             _countdown.Ticked -= OnCountdownTicked;
             _countdown.Completed -= OnCountdownCompleted;
+            //después de acabar el tiempo la pantalla se bloqueara en 30 seg
+            DeviceDisplay.KeepScreenOn = false;
+            Activar = true;
+            ActivarCancelar = false;                 
+            Color = "#44c767";
+            ColorCancelar = "LightGray";
             // UnloadAsync();
+        }
+
+        void OnCountdownCancel()
+        {                   
+            Minutes = 0;
+            Segundos = 0;
+            Progress = 0;
+            Palabra = string.Empty;
+            count = 0;
+            _countdown.Ticked -= OnCountdownTicked;
+            _countdown.Completed -= OnCountdownCompleted;
+            ////después de acabar el tiempo la pantalla se bloqueara en 30 seg
+            ////Utilizar el onCountDownCompleted pero disminuir los segundos para temrinar bien el proceso
+            DeviceDisplay.KeepScreenOn = false;
+            Activar = true;
+            ActivarCancelar = false;
+            Color = "#44c767";
+            ColorCancelar = "LightGray";
+
         }
 
         public string[] LeerArchivo()
@@ -151,23 +210,36 @@ namespace FMSPuntuacion.Models
 
         public void Restart(XLabs.Forms.Controls.BindableRadioGroup Opciones)
         {
-            if (Opciones.Items[1].Checked && Opciones.IsVisible)
+            Palabra = string.Empty;
+            if (Opciones.Items[1].Checked && Opciones.IsEnabled)
             {
                 flagPalabra = true;
-                otroF = false;
                 frecuencia = 2;
                 string[] palabras=LeerArchivo();
                 lstPalabra=RandomNumber(palabras, 6);
-            }else if(Opciones.Items[0].Checked && Opciones.IsVisible)
-            {
-                otroF = true;
+            }else if(Opciones.Items[0].Checked && Opciones.IsEnabled)
+            {            
                 flagPalabra = false;
                 frecuencia = 1;
                 string[] palabras = LeerArchivo();
                 lstPalabra = RandomNumber(palabras,12); 
+            }else if (!Opciones.IsEnabled)
+            {
+                frecuencia = 0;
             }
-                
-                LoadAsync();                
+
+            Activar = false;
+            ActivarCancelar = true;
+            Color = "LightGray";
+            ColorCancelar = "#44c767";
+            _countdown.Cancelar = false;
+            LoadAsync();                
+        }
+
+        public void Cancel()
+        {
+            _countdown.Cancelar = true;
+           // OnCountdownCancel();
         }
 
         private static List<string> RandomNumber(string[] palabras, int numero)
@@ -184,6 +256,16 @@ namespace FMSPuntuacion.Models
             return lstPalabras;
         }
 
+        static string Capitalizar(string s)
+        {
+            // Check for empty string.
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.
+            return char.ToUpper(s[0]) + s.Substring(1);
+        }
 
     }
 }

@@ -12,19 +12,20 @@ namespace FMSPuntuacion.Models
      
         public event Action Completed;
         public event Action Ticked;
+        public event Action Cancel;
         public DateTime EndDate { get; set; }
-        public bool flagPalabra;
-
-        public bool Flag
+        public bool  cancelar;
+        
+        public bool Cancelar
         {
             get
             {
-                return flagPalabra;
+                return cancelar;
             }
 
             set
             {
-                flagPalabra = value;
+                cancelar = value;
             }
         }
 
@@ -53,13 +54,10 @@ namespace FMSPuntuacion.Models
             
             Device.StartTimer(TimeSpan.FromSeconds(seconds), () =>
             {
-                RemainTime = (EndDate - DateTime.Now);
-                var ticked = RemainTime.TotalSeconds > 1;
-                
-                
+                RemainTime = (EndDate.AddSeconds(1) - DateTime.Now);
+                var ticked = RemainTime.TotalSeconds >= 1;                              
                 if (ticked)
-                {
-                                    
+                {                                  
                     Ticked?.Invoke();
                 }
                 else
@@ -68,10 +66,17 @@ namespace FMSPuntuacion.Models
                    // count = 0;
                 }
 
+                if (Cancelar)
+                {
+                    
+                    ticked = false;
+                    Cancel?.Invoke();
+                }
+
                 return ticked;
             });
         }
-
+        
       
         
     }

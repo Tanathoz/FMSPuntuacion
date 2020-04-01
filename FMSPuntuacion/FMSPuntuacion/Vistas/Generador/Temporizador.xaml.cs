@@ -1,20 +1,15 @@
 ﻿using FMSPuntuacion.Models;
 using FMSPuntuacion.Models.Base;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 namespace FMSPuntuacion.Vistas.Generador
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Temporizador : ContentPage
 	{
         public Command OnCheckedChanged { get; set; }
-        public bool flagy;
-        
+        public bool flagy;        
         
         public bool Flagy
         {
@@ -37,8 +32,7 @@ namespace FMSPuntuacion.Vistas.Generador
                 "5 Segundos", "10 Segundos"
             };
 
-            RadioBtn.IsVisible = false;
-            
+            RadioBtn.IsEnabled = false;          
             // OnCheckedChanged = new Command(OnCheckBoxChanged);
         }
 
@@ -71,11 +65,14 @@ namespace FMSPuntuacion.Vistas.Generador
 
             if (palabras.Checked)
             {
-                RadioBtn.IsVisible = true;
+                RadioBtn.IsEnabled = true;
+                RadioBtn.Items[0].Checked = true;
             }       
             else
             {
-                RadioBtn.IsVisible = false;
+                RadioBtn.IsEnabled = false;
+                RadioBtn.Items[0].Checked = false;
+                RadioBtn.Items[1].Checked = false;
             }
                 
             // objCountDown.Restart();
