@@ -5,7 +5,7 @@
              x:Class="FMSPuntuacion.Vistas.Sangre"
              Title="Minutos a Sangre">
     <ScrollView>
-        <Grid>
+        <Grid RowSpacing="0" BackgroundColor="White">
             <Grid.RowDefinitions>
 
                 <RowDefinition Height="Auto" />
@@ -30,14 +30,19 @@
                 <RowDefinition Height="90" />
                 <!--Segunda vuelta-->
 
-                <RowDefinition Height="80" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="10"/>
+
             </Grid.RowDefinitions>
 
             
-            <Grid Grid.Row="0" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="0" BackgroundColor="{StaticResource ColorP1}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
                 </StackLayout>
 
                 <StackLayout HorizontalOptions="Center">
@@ -242,9 +247,9 @@
 
             </Grid>
 
-            <Grid Grid.Row="4" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="4" Margin="0,10,0,0" BackgroundColor="{StaticResource ColorP2}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
+                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                 </StackLayout>
             </Grid>
             <!-- vuelta 1 player 2 -->
@@ -427,9 +432,9 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="8" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="8" Margin="0,10,0,0" BackgroundColor="{StaticResource ColorP2}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
+                    <Label Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                 </StackLayout>
             </Grid>
 
@@ -592,13 +597,13 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="12" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="12" Margin="0,10,0,0" BackgroundColor="{StaticResource ColorP1}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label  Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
+                    <Label  Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                 </StackLayout>
             </Grid>
 <!-- VUELTA 2 PLAYER 1-->
-            <Grid Grid.Row="13" BackgroundColor="#032aac" >
+            <Grid Grid.Row="13" BackgroundColor="{StaticResource ColorP1}" >
                 <StackLayout HorizontalOptions="Center">
                     <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                 </StackLayout>
@@ -777,8 +782,15 @@
 
             </Grid>
 
-            <Grid Grid.Row="16" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
+            <Grid Grid.Row="16" Margin="10,10,10,10" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button Text="Siguiente" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
+            </Grid>
+
+            <Grid Grid.Row="17" Margin="0,10,0,10" BackgroundColor="White">
+                
             </Grid>
 
         </Grid> 

@@ -54,15 +54,16 @@
                             <ViewCell.ContextActions>
                                 <!--<MenuItem Text="Delete" IsDestructive="True" 
                                           CommandParameter="{Binding .}"
-                                          Command="{Binding BindingContext.DeleteCommand,Source={x:Reference BrowseItemsPage}}" />-->
+                                          Command="{Binding BindingContext.DeleteCommand}" />-->
                             </ViewCell.ContextActions>
                             <StackLayout  Orientation="Horizontal">
                                 <Label Text="{Binding id}" IsVisible="False"/>
                                 <Label Text="{Binding player1}" Margin="10,0,0,0" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text=" VS " TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding player2}" TextColor="Black" VerticalTextAlignment="Center"/>
-                                <Label Text="{Binding totalPlayer1}" TextColor="Black" VerticalTextAlignment="Center"/>
-                                <Label Text="{Binding totalPlayer2}" TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding sitio}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Button ImageSource="Eliminar.png" BackgroundColor="#cb3234" BorderRadius="50" HorizontalOptions="EndAndExpand" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ListaResultados}}" CommandParameter="{Binding .}" />
+
                             </StackLayout>
                         </ViewCell>
                                           

@@ -7,7 +7,10 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="100" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
@@ -16,9 +19,63 @@
                     <Label Text="Menu" FontAttributes="Bold" FontSize="Large" TextColor="White" />
                 </StackLayout>
             </Grid>
-           
 
-            <Grid Grid.Row="1">
+            <!--<Grid Grid.Row="1" Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout>
+                        <Button Text="Califica" BorderRadius="25" BorderColor="White" BorderWidth="5"  BackgroundColor="{StaticResource ColorBoton}" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+            </Grid>-->
+
+            <Grid Grid.Row="1" Margin="10,10,10,0" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+
+                    <!--<Button
+                    WidthRequest      ="120"
+                    HeightRequest     ="120"
+                    CornerRadius      ="60"
+                    VerticalOptions   ="Center"
+                    HorizontalOptions ="Center"
+                    BackgroundColor   ="{StaticResource ColorBoton}"
+                    ImageSource="Brain.png"
+                    Text="Entre"
+                    ContentLayout="Top,0"
+                    FontSize="Large" 
+                    FontAttributes="Bold"    
+                    TextColor="White"    
+                    />-->
+                <Button Text=" Califica" ContentLayout="right,0"  ImageSource="Califica.png" BorderRadius="80" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="OnCalificaClicked" BorderColor="#3ba3f7" BorderWidth="10"/>
+                <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
+            </Grid>
+
+
+
+            <Grid Grid.Row="2" Margin="10,10,10,0" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Button Text=" Entrena" ContentLayout="right,0"  ImageSource="Brain.png" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="OnEntrenaClicked" BorderColor="#454545" BorderWidth="10" />
+
+                <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
+            </Grid>
+
+            <Grid Grid.Row="3" Margin="10,10,10,0" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Button Text=" Consulta" ContentLayout="right,0"  ImageSource="Consulta.png" BorderRadius="80" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="OnConsultarClicked" BorderColor="#5bde9c" BorderWidth="10"/>
+                <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
+            </Grid>
+
+            <!--<Grid Grid.Row="4">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -27,14 +84,14 @@
                 <Grid Grid.Row="0" Grid.Column="0" >
                     <StackLayout>
                         <Label Text="Califica" />
-                        <ImageButton Source="notes.png" WidthRequest="150" HeightRequest="150" BackgroundColor="Coral" Clicked="OnCalificaClicked"/>
+                        <ImageButton Source="notes.png" WidthRequest="150" HeightRequest="150"    BackgroundColor="Coral" Clicked="OnCalificaClicked"/>
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout>
                         <Label Text="Entrena" />
-                        <ImageButton Source="Clocki.png" WidthRequest="150" HeightRequest="150" Clicked="OnEntrenaClicked" />
+                        <ImageButton Source="Brain.png" WidthRequest="150" HeightRequest="150" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0">
@@ -51,17 +108,10 @@
                     </StackLayout>
                 </Grid>
 
-            </Grid>
+            </Grid>-->
             
         </Grid>
         
     </ScrollView>
     
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
 </ContentPage>

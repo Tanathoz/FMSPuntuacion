@@ -4,7 +4,7 @@
              x:Class="FMSPuntuacion.HardMode"
              Title="Hard Mode">
     <ScrollView>
-        <Grid>
+        <Grid RowSpacing="0" BackgroundColor="White" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -14,28 +14,27 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
-                <RowDefinition Height="80" />
+                <RowDefinition Height="90" />
             </Grid.RowDefinitions>
 
 
-            <Grid Grid.Row="0" >
-               
-                
-                    <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac" />
-                    </StackLayout>
-              
-                
-                    <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                    </StackLayout>
-                
-               
-                    <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                    </StackLayout>
-                
+            <Grid Grid.Row="0" BackgroundColor="{StaticResource ColorP1}" >
 
+                <StackLayout HorizontalOptions="Center"  >
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+                               
+                <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
             </Grid>
 
 
@@ -208,16 +207,10 @@
 
             </Grid>
 
-            <Grid Grid.Row="4" BackgroundColor="WhiteSmoke">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" >
-                    <StackLayout HorizontalOptions="Center" >
-                        <Label x:Name="Player2" Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold"  TextColor="#ff0000" />
-                    </StackLayout>
-                </Grid>
+            <Grid Grid.Row="4" Margin="0,10,0,0" BackgroundColor="{StaticResource ColorP2}">
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold"  TextColor="White" />
+                </StackLayout>
             </Grid>
 
             <Grid Grid.Row="5" BackgroundColor="#ff0000" >
@@ -387,9 +380,12 @@
 
 
             </Grid>
-            
-            <Grid Grid.Row="8" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarHardMode"    BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
+
+            <Grid Grid.Row="8" Margin="10,10,10,0" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button Text="Siguiente" Clicked="GuardarHardMode"    BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
             </Grid>
            
         </Grid>

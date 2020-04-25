@@ -14,15 +14,26 @@ namespace FMSPuntuacion.Vistas
 	public partial class ResultadoDetailPage : ContentPage
 	{
         ItemDetailViewModel resultadoModel;
-		public ResultadoDetailPage ()
+        ResultadoViewModel resultadoViewModel;
+        public ResultadoDetailPage ()
 		{
 			InitializeComponent ();
-		}
+           
+        }
 
         public ResultadoDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
+            
             BindingContext = this.resultadoModel = viewModel;
         }
-	}
+
+        async void Regresar(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Consultar
+            {
+
+            });
+        }
+    }
 }

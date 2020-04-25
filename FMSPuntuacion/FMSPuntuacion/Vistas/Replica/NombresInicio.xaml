@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Replica.NombresInicio"
+             Title="Selecciona">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="85" />
+
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" BackgroundColor="#810c96" >
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Label HorizontalOptions="Center" Text="Ingresa competidores" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" FontFamily="{StaticResource SourceKeepon}" TextColor="White" />
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="0,0,0,12" BackgroundColor="#032aac">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" RowSpacing="0" BackgroundColor="#032aac">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#032aac">
+                        <Entry x:Name="Player1" Placeholder="Tocar para Player1"  PlaceholderColor="White"
+                                Text="{Binding Text}" TextColor="White" FontSize="{StaticResource FontSize36}" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="#ff0000">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Entry x:Name="Player2" Placeholder="Tocar para Player2 " PlaceholderColor="White"
+                                Text="{Binding Text}"  TextColor="White" FontSize="{StaticResource FontSize36}" FontFamily="{StaticResource SourceKeepon}"
+                                />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="3" BackgroundColor="{StaticResource ColorBoton}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Entry x:Name="Sitio" Placeholder="Lugar del evento" PlaceholderColor="White"
+                                Text="{Binding Text}"  TextColor="White" FontSize="{StaticResource FontSize28}" FontFamily="{StaticResource SourceKeepon}"
+                                />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="4" BackgroundColor="#810c96" >
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Selecciona formato" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{StaticResource SourceSansSemiBold}" />
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="5" Margin="10, 0, 10, 0" BackgroundColor="White">
+                <Button Text="Minuto clásico "  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="IniciarMinutos" />
+            </Grid>
+
+            <Grid Grid.Row="6" Margin="10, 0, 10, 0" BackgroundColor="White">
+                <Button Text="4 X 4 "  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="IniciarPatrones"/>
+            </Grid>
+
+            <Grid Grid.Row="7" Margin="10, 0,10, 0" BackgroundColor="White">
+                <Button Text="Formato FMS" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="IniciarFMS" />
+            </Grid>
+
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>

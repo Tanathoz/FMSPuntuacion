@@ -4,7 +4,7 @@
              x:Class="FMSPuntuacion.Vistas.Deluxe"
              Title=" Deluxe ">
     <ScrollView>
-        <Grid>
+        <Grid  RowSpacing="0" BackgroundColor="White">
             <Grid.RowDefinitions>
 
                 <RowDefinition Height="Auto" />
@@ -24,7 +24,8 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="80" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="10" />
             </Grid.RowDefinitions>
 
 
@@ -32,17 +33,22 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" BackgroundColor="#810c96" >
+                <Grid Grid.Row="0" BackgroundColor="{StaticResource ColorBoton}" >
                     <StackLayout HorizontalOptions="Center">
                         <Label Text="Patrones Acapela" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                     </StackLayout>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1"  BackgroundColor="{StaticResource ColorP1}" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                 </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
                 <StackLayout HorizontalOptions="Center">
                     <Label x:Name="SumaSangre" Text="{Binding sumaTotalP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
                 </StackLayout>
@@ -150,9 +156,9 @@
 
             </Grid>
 
-            <Grid Grid.Row="3"  >
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
+            <Grid Grid.Row="3" Margin="0,10,0,0" BackgroundColor="{StaticResource ColorP2}"  >
+                <StackLayout HorizontalOptions="Center" >
+                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                 </StackLayout>
             </Grid>
 
@@ -204,21 +210,16 @@
                 </Grid>
 
             </Grid>
-            <Grid Grid.Row="5" BackgroundColor="#810c96" >
+            <Grid Grid.Row="5" BackgroundColor="{StaticResource ColorBoton}" >
                 <StackLayout HorizontalOptions="Center">
                     <Label Text="Patrones Con Base" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                 </StackLayout>
             </Grid>
 
-            <Grid Grid.Row="6" BackgroundColor="WhiteSmoke">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <StackLayout HorizontalOptions="Center">
-                        <Label  Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
-                    </StackLayout>
-                </Grid>
+            <Grid Grid.Row="6" BackgroundColor="{StaticResource ColorP1}">
+                <StackLayout HorizontalOptions="Center">
+                    <Label  Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                </StackLayout>
             </Grid>
 
 
@@ -345,13 +346,13 @@
                 
             </Grid>
 
-            <Grid Grid.Row="8" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="8" BackgroundColor="{StaticResource ColorP2}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
+                        <Label  Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                     </StackLayout>
                 </Grid>
             </Grid> 
@@ -477,19 +478,19 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="10" BackgroundColor="#810c96" >
+            <Grid Grid.Row="10" BackgroundColor="{StaticResource ColorBoton}" >
                 <StackLayout HorizontalOptions="Center">
                     <Label Text="Habilidades" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                 </StackLayout>
             </Grid>
 
-            <Grid Grid.Row="11" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="11"  BackgroundColor="{StaticResource ColorP1}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
+                        <Label  Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -552,16 +553,15 @@
                 <Grid Grid.Row="2"  Grid.Column="1">
                     <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
                 </Grid>
-
             </Grid>
 
-            <Grid Grid.Row="13" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="13" Margin="0,10,0,0" BackgroundColor="{StaticResource ColorP2}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
+                        <Label  Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -627,8 +627,15 @@
             </Grid>
 
 
-            <Grid Grid.Row="15" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarDeluxe" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" />
+            <Grid Grid.Row="15" Margin="10,10,10,10" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button Text="Siguiente" Clicked="GuardarDeluxe" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" />
+            </Grid>
+
+            <Grid Grid.Row="16" Margin="0,10,0,10"  BackgroundColor="White">
+                
             </Grid>
 
         </Grid>

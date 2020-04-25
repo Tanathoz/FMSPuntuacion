@@ -19,6 +19,7 @@ namespace FMSPuntuacion.Models
         public ObservableRangeCollection<Resultados> Items { get; set; }
         public Command LoadResultadoCommand { get; set; }
         public Command DeleteCommand { get; set; }
+        public Command AddCommand { get; set; }
 
         public ResultadoViewModel()
         {
@@ -26,22 +27,28 @@ namespace FMSPuntuacion.Models
             Items = new ObservableRangeCollection<Resultados>();
             LoadResultadoCommand = new Command(async () => await ExecuteLoadItemsCommand());
             DeleteCommand = new Command<Resultados>(DelteItem);
-
-            MessagingCenter.Subscribe<Resultado, Resultados>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as Resultados;
-                Items.Add(_item);
-                await DataStore.AddResultadoAsync(_item);
-            });
+            AddCommand = new Command<Resultados>(AddItem);            
         }
+
+        public async void AddItem(Resultados item)
+        {
+            Items.Add(item);
+            await DataStore.AddResultadoAsync(item);
+            //MessagingCenter.Subscribe<Resultado, Resultados>(this, "AddItem", async (obj, item2) =>
+            //{
+            //    var _item = item2 as Resultados;
+            //    Items.Add(_item);
+            //    await DataStore.AddResultadoAsync(_item);
+            //});
+        }
+
 
         private async void DelteItem(Resultados item)
         {
-            var confirm = await App.Current.MainPage.DisplayAlert("Delete item", "Are you sure?", "Delete it", "Cancel");
+            var confirm = await App.Current.MainPage.DisplayAlert("Borrar registro", "¿Estás seguro?", "Borrar", "Cancelar");
             if (!confirm) return;
 
             await DataStore.DeleteResultadoAsync(item);
-
             await ExecuteLoadItemsCommand();
         }
 
@@ -51,7 +58,6 @@ namespace FMSPuntuacion.Models
                 return;
 
             IsBusy = true;
-
             try
             {
                 Items.Clear();
@@ -64,7 +70,7 @@ namespace FMSPuntuacion.Models
                 MessagingCenter.Send(new MessagingCenterAlert
                 {
                     Title = "Error",
-                    Message = "Unable to load items.",
+                    Message = "No sé puede cargar los resultados.",
                     Cancel = "OK"
                 }, "message");
             }

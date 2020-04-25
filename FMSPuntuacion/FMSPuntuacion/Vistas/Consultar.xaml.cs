@@ -68,6 +68,13 @@ namespace FMSPuntuacion.Vistas
             ListaResultados.SelectedItem = null;
         }
 
+
+        public async void EliminarRegistro(object sender, SelectableItemsView args)
+        {
+            var item = args.SelectedItem as Resultados;
+            await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Estas seguro que quieres eliminar "+item.player2, "OK");
+        }
+
         private void SearchItem(object senderm, EventArgs e)
         {
             string keyword = SearchBar.Text.ToLower();
@@ -80,7 +87,7 @@ namespace FMSPuntuacion.Vistas
             {
                 foreach (Resultados resul in resultadoViewModel.Items)
                 {
-                    if (resul.player1.ToLower().Contains(keyword))
+                    if (resul.player1.ToLower().Contains(keyword) || resul.player2.ToLower().Contains(keyword) )
                     {
                         Items.Add(resul);
                     }

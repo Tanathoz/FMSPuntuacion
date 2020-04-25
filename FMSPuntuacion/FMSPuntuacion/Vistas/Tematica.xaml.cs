@@ -84,6 +84,7 @@ namespace FMSPuntuacion.Vistas
             {
                 player1 = Player1.Text,
                 player2 = Player2.Text,
+                sitio = Sitio.Text,
                 sumaTotalP1 = Convert.ToInt32(SumaHard.Text)+sumaVuelta2,
                 sumaTotalP2 = Convert.ToInt32(SumaHardP2.Text)+sumaVuelta2P2,
                 sumaTematicaP1 = sumaVuelta2,

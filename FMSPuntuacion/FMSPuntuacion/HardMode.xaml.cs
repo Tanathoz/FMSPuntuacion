@@ -59,6 +59,7 @@ namespace FMSPuntuacion
             {
                 player1 = Player1.Text,
                 player2 = Player2.Text,
+                sitio = Sitio.Text,
                 sumaTotalP1 = Convert.ToInt32(SumaEasy.Text)+ sumaHard,
                 sumaTotalP2 = Convert.ToInt32(SumaEasyP2.Text)+ sumaHardP2,
                 suma=Convert.ToInt32(SumaEasy.Text),

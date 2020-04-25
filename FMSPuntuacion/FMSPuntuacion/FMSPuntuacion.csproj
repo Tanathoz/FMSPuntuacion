@@ -11,10 +11,11 @@
 
   <ItemGroup>
     <None Remove="Palabras.txt" />
+    <None Remove="Recursos\arregloPalabras.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Recursos\Palabras.txt" />
+    <EmbeddedResource Include="Recursos\arregloPalabras.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -76,7 +77,13 @@
     <EmbeddedResource Update="Vistas\Personajes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Replica\CuatroX4.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Replica\Minutos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Replica\NombresInicio.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Resultado.xaml">

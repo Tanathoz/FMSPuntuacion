@@ -58,7 +58,7 @@ namespace FMSPuntuacion.Services
         {
             return await _platform.GetAsyncConnection().Table<Resultados>().ToListAsync();
         }
-
+      
        
     }
 }

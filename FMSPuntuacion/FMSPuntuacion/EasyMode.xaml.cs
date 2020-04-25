@@ -12,7 +12,7 @@ namespace FMSPuntuacion
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class EasyMode : ContentPage
 	{
-        public int suma =0;
+        public int suma = 0;
         public int sumaP2 = 0;
 		public EasyMode ()
 		{
@@ -59,6 +59,7 @@ namespace FMSPuntuacion
             {
                 player1 = Player1.Text,
                 player2 = Player2.Text,
+                sitio = Sitio.Text,
                 suma = suma,
                 sumaP2=sumaP2             
             };

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FMSPuntuacion.Models;
 using FMSPuntuacion.Vistas;
 using FMSPuntuacion.Vistas.Generador;
+using FMSPuntuacion.Vistas.Replica;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,20 +21,16 @@ namespace FMSPuntuacion
         }
         async void OnCalificaClicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new Example
-            //{
-            //    BindingContext = new Criterios()
-            //});
-            await Navigation.PushAsync(new EasyMode
+           
+            await Navigation.PushAsync(new NombresInicio
             {
                 BindingContext = new Criterios()
-             
-             });
+            });
         }
 
         async void OnRegistrarClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Example
+            await Navigation.PushAsync(new NombresInicio
             {
                 BindingContext = new Criterios()
             });

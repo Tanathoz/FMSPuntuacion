@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Class="FMSPuntuacion.Vistas.Replica.Minutos"
-             Title="60 Segundos"
+             Title="Minutos "
              >
     <ScrollView>
-        <Grid>
+        <Grid RowSpacing="0" BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -30,21 +30,16 @@
                 <RowDefinition Height="90" />
                 <!--Segunda vuelta-->
 
-                <RowDefinition Height="80" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="90" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" BackgroundColor="WhiteSmoke">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <StackLayout HorizontalOptions="Center">
-                        <Entry x:Name="Player1" Placeholder="Ingresa nombre de Player uno" 
-                                Text="{Binding Text}"/>
-                    </StackLayout>
-                </Grid>
+            <Grid Grid.Row="0"  RowSpacing="0" BackgroundColor="#032aac">
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                </StackLayout>
             </Grid>
 
             <!-- Vuelta 1 player 1-->
@@ -53,6 +48,8 @@
                     <Label Text="Patrones " FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                 </StackLayout>
             </Grid>
+            
+            
             <Grid Grid.Row="2" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -204,19 +201,13 @@
 
             </Grid>
 
-            <Grid Grid.Row="4" BackgroundColor="WhiteSmoke">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <StackLayout HorizontalOptions="Center">
-                        <Entry x:Name="Player2" Placeholder="Ingresa nombre de Player dos" 
-                                Text="{Binding Text}"
-                                />
-                    </StackLayout>
-                </Grid>
+            <Grid Grid.Row="4"  Margin="0,10,0,0" RowSpacing="0" BackgroundColor="#ff0000">
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                </StackLayout>
+
             </Grid>
+
             <!-- vuelta 1 player 2 -->
             <Grid Grid.Row="5" BackgroundColor="#ff0000" >
                 <StackLayout HorizontalOptions="Center">
@@ -396,18 +387,21 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="8" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="8" Margin="0,10,0,0" BackgroundColor="#ff0000">
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="#ff0000"/>
+                    <Label x:Name="LBN2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
                 </StackLayout>
+
             </Grid>
 
             <!-- Vuelta 2 Player 2-->
-            <Grid Grid.Row="9" BackgroundColor="#ff0000" >
+            <Grid Grid.Row="9"   BackgroundColor="#ff0000" >
                 <StackLayout HorizontalOptions="Center">
                     <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
                 </StackLayout>
             </Grid>
+
+            
 
             <Grid Grid.Row="10" BackgroundColor="White" >
                 <Grid.RowDefinitions>
@@ -501,7 +495,7 @@
 
             </Grid>
 
-            <Grid Grid.Row="11" BackgroundColor="White" >
+            <Grid Grid.Row="11"  BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="40" />
@@ -562,17 +556,18 @@
 
             </Grid>
 
-            <Grid Grid.Row="12" BackgroundColor="WhiteSmoke">
+            <Grid Grid.Row="12"  Margin="0,10,0,0" BackgroundColor="#032aac">
                 <StackLayout HorizontalOptions="Center">
-                    <Label  Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="#032aac"/>
+                    <Label  Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                 </StackLayout>
             </Grid>
 
             <!-- VUELTA 2 PLAYER 1-->
-            <Grid Grid.Row="13" BackgroundColor="#032aac" >
+            <Grid Grid.Row="13"  RowSpacing="0" BackgroundColor="#032aac">
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
+                    <Label  Text="Patrones vuelta 2" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
                 </StackLayout>
+
             </Grid>
 
             <Grid Grid.Row="14" BackgroundColor="White" >
@@ -687,7 +682,7 @@
 
             </Grid>
 
-            <Grid Grid.Row="15" BackgroundColor="White" >
+            <Grid Grid.Row="15"  BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="40" />
@@ -747,12 +742,74 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="16" BackgroundColor="White">
-                <Button Text="Guardar" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
+           
+
+            <Grid Grid.Row="16" BackgroundColor="#810c96">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label  Text="Player" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label  Text="Puntos" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label  x:Name="P1" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label  x:Name="P2" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="TotalFinal"  FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="TotalFinalP2"  FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="Ganador :" FontSize="Medium" FontAttributes="Bold" TextColor="Gold"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="GanadorTexto" Text="{Binding ganador}" FontAttributes="Bold" FontSize="Medium" TextColor="Gold"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="17"  Margin="10,10,10,0" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button Text="Aceptar" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
             </Grid>
 
         </Grid>
-
+        
         
         
     </ScrollView>

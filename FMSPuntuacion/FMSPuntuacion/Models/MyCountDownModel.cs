@@ -177,7 +177,7 @@ namespace FMSPuntuacion.Models
         void OnCountdownCancel()
         {                   
             Minutes = 0;
-            Segundos = 0;
+            Segundos = 59;
             Progress = 0;
             Palabra = string.Empty;
             count = 0;
@@ -197,14 +197,14 @@ namespace FMSPuntuacion.Models
         {
           //  string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Palabras.txt");
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = "FMSPuntuacion.Recursos.Palabras.txt";
+            var resourceName = "FMSPuntuacion.Recursos.arregloPalabras.txt";
             string result = string.Empty;
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             using (StreamReader reader = new StreamReader(stream))
             {
                  result= reader.ReadToEnd();              
             }
-            string[] words = result.Split('\n');
+            string[] words = result.Split(',');
             return words;
         }
 

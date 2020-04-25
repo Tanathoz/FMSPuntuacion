@@ -66,7 +66,7 @@ namespace FMSPuntuacion.Droid
         //{
         //    return _database.DeleteAsync(resultado);
         //}
-
+       
         public SQLiteConnection GetConnection()
         {
             return new SQLiteConnection(GetPath());

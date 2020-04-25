@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Resultado"
-             Title="Resultado Obtenido ">
+             Title="Resultado ">
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -10,7 +10,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
@@ -18,23 +18,24 @@
             </Grid.RowDefinitions>
 
 
-            <Grid Grid.Row="0" BackgroundColor="#032aac">
+            <Grid Grid.Row="0" BackgroundColor="{StaticResource ColorP1}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  Text="Player 1 :" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                        <Label  Text="Player 1 :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
                     </StackLayout>
                 </Grid>
-
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label x:Name="Player1" Text="{Binding player1}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label x:Name="Player1" Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                     </StackLayout>
                 </Grid>
+
+                
                 <Grid Grid.Row="1" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
                         <Label  Text="Puntos Totales :" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
@@ -61,6 +62,16 @@
                
 
                 <!-- Los campos para guardar en la base los datos-->
+
+               
+
+
+                
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
                 <StackLayout HorizontalOptions="Center">
                     <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
                 </StackLayout>
@@ -111,7 +122,7 @@
             </Grid>
 
 
-            <Grid Grid.Row="1" BackgroundColor="#ff0000" >
+            <Grid Grid.Row="1" BackgroundColor="{StaticResource ColorP2}" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -119,13 +130,13 @@
                 <Grid Grid.Row="0">
                     <Grid Grid.Row="0" Grid.Column="0">
                         <StackLayout HorizontalOptions="Center">
-                            <Label  Text="Player 2 :" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                            <Label  Text="Player 2 :" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                         </StackLayout>
                     </Grid>
 
                     <Grid Grid.Row="0" Grid.Column="1">
                         <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label x:Name="Player2" Text="{Binding player2}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                            <Label x:Name="Player2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
                         </StackLayout>
                     </Grid>
 
@@ -161,16 +172,19 @@
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Row="0" Grid.Column="1">    
-                    <StackLayout HorizontalOptions="Center">
+                    <StackLayout HorizontalOptions="Start">
                         <Label x:Name="GanadorTexto" Text="{Binding ganador}" FontAttributes="Bold" FontSize="Medium" TextColor="Gold"/>
                     </StackLayout>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="3" BackgroundColor="White">
+            <Grid Grid.Row="3" BackgroundColor="White" Margin="10,10,10,0">
                 <Button Text="Guardar" Clicked="registrarResultado"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" />
             </Grid>
 
+            <Grid Grid.Row="4" BackgroundColor="White" Margin="10,10,10,0">
+                <Button Text="Salir" Clicked="salir" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{StaticResource ColorBoton}" FontSize="Large" TextColor="White" />
+            </Grid>
         </Grid>
 
     </ScrollView>

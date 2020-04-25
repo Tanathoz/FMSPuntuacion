@@ -19,6 +19,10 @@ namespace FMSPuntuacion.Vistas.Replica
         public int sumaVuelta2P2 = 0;
         public int respuestaP1 = 0;
         public int respuestaP2 = 0;
+        public int sumaTotalP1 = 0;
+        public int sumaTotalP2 = 0;
+        public string ganadorr = string.Empty;
+
         public Minutos ()
 		{
 			InitializeComponent ();
@@ -101,29 +105,30 @@ namespace FMSPuntuacion.Vistas.Replica
                     respuestaP1++;
                 Total4.Text += sumaVuelta2.ToString() + "+ " + respuestaP1;
             }
+
+            sumaTotalP1 = suma + sumaVuelta2+respuestaP1;
+            sumaTotalP2 = sumaP2 + sumaVuelta2P2+respuestaP2;
+            P1.Text = Player1.Text;
+            P2.Text = LBN2.Text;
+            TotalFinal.Text = sumaTotalP1.ToString();
+            TotalFinalP2.Text = sumaTotalP2.ToString(); 
+
+            if ((sumaTotalP1 - sumaTotalP2 ) > 4)
+            {
+                GanadorTexto.Text = Player1.Text;
+            }else if ((sumaTotalP2 - sumaTotalP1) > 4)
+            {
+                GanadorTexto.Text = LBN2.Text;
+            }else
+            {
+                GanadorTexto.Text = "Réplica, Diferencia de " + Math.Abs(sumaTotalP1 - sumaTotalP2) + " Puntos";
+            }
+            
         }
 
         async void GuardarSangre(object sender, EventArgs e)
-        {
-            var valores = new Criterios
-            {
-                player1 = Player1.Text,
-                player2 = Player2.Text,
-                sumaTotalP1 = suma + sumaVuelta2,
-                sumaTotalP2 = sumaP2 + sumaVuelta2P2,
-                sumaSangreP1 = suma + sumaVuelta2,
-                sumaSangreP2 = sumaP2 + sumaVuelta2P2,
-                respuestasP1 = respuestaP1,
-                respuestasP2 = respuestaP2                
-            };
-            valores.lstCalificacionesP2.Add((suma + sumaVuelta2P2));
-            var Deluxe = new Deluxe();
-            Deluxe.BindingContext = valores;
-            if (suma == 0 || sumaP2 == 0)
-            {
-                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
-            }
-            await Navigation.PushAsync(Deluxe);
+        {            
+                await Navigation.PopToRootAsync();        
         }
 
     }

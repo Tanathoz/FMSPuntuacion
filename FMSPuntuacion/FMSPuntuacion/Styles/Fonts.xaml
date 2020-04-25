@@ -49,5 +49,10 @@
     <x:Double x:Key="FontSize44">44</x:Double>
     <x:Double x:Key="FontSize60">60</x:Double>
     <x:Double x:Key="FontSize120">120</x:Double>
-    
+
+    <!-- Colores -->
+    <Color x:Key="ColorP1">#032aac</Color>
+    <Color x:Key="ColorP2">#ff0000</Color>
+    <Color x:Key="ColorBoton">#44c767 </Color>
+    <Color x:Key="ColorSeparador">#810c96 </Color>
 </ResourceDictionary>

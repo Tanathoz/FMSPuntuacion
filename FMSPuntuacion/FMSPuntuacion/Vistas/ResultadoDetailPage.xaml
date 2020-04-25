@@ -2,16 +2,372 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.ResultadoDetailPage"
-             Title="{Binding Title}">
-    
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="{Binding Resultado.ganador}" FontSize="Medium" />
-        <Label Text="{Binding Resultado.sitio}" FontSize="Small" />
-        <Label Text="{Binding Resultado.fecha}" FontSize="Small" />
-        <Label Text="{Binding Resultado.player1}" FontSize="Small" />
-        <Label Text="{Binding Resultado.player2}" FontSize="Small" />
+             Title="{Binding Resultado.sitio}">
+    <ScrollView>
 
-    
-    </StackLayout>
-    
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"  BackgroundColor="{StaticResource ColorBoton}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Start">
+                        <Label Margin="5,0,0,0" Text="Ganador :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="{Binding Resultado.ganador}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Start">
+                        <Label Margin="5,0,0,0" Text="Fecha :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="{Binding Resultado.fecha}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            
+            <Grid Grid.Row="1"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Player 1 :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Puntos totales:" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.totalPlayer1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="3" BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Puntos Easy:" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.EasyTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="4"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Margin="5,0,0,0" Text="Hard Mode:" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.HardTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="5"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Temática :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.TematicaTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="6"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Personajes :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.PersonajesTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="7"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Sangre :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.SangreTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="8"  BackgroundColor="{StaticResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Deluxe :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.DeluxeTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="9" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Player 2 :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.player2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="10" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Puntos totales:" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.totalPlayer2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="11" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Easy Mode:" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.EasyTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="12" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Hard Mode:" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.HardTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="13" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Temática :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="{Binding Resultado.TematicaTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="14" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Personajes :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="{Binding Resultado.PersonajesTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="15" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Sangre :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="{Binding Resultado.SangreTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="16" BackgroundColor="{StaticResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Margin="5,0,0,0" Text="Deluxe :" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Resultado.DeluxeTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="17"  Margin="10,10,10,0" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button Text="Aceptar" Clicked="Regresar" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
+            </Grid>
+        </Grid>
+
+    </ScrollView>
+
 </ContentPage>
