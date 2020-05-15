@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FMSPuntuacion.Tablas;
 using FMSPuntuacion.Models;
+using FMSPuntuacion.Controls;
 
 namespace FMSPuntuacion.Vistas
 {
@@ -20,9 +21,11 @@ namespace FMSPuntuacion.Vistas
         public int totalP2 { get; set; }
         public Resultados Resultados { get; set; }
         public ResultadoViewModel resultadoViewModel;
+        IAdVideoInterstitial adVideo;
         public Resultado()
         {
             InitializeComponent();
+            adVideo = DependencyService.Get<IAdVideoInterstitial>();
             BindingContext = resultadoViewModel = new ResultadoViewModel();
             Resultados = new Resultados();
             // CalculaGanador();
@@ -60,6 +63,7 @@ namespace FMSPuntuacion.Vistas
 
             resultadoViewModel.AddItem(Resultados);
             // MessagingCenter.Send(this, "AddItem", Resultados);
+            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
             await Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
 
 
@@ -70,6 +74,7 @@ namespace FMSPuntuacion.Vistas
 
         async void salir(object sender, EventArgs args)
         {
+            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
             await Navigation.PopToRootAsync();
         }
 

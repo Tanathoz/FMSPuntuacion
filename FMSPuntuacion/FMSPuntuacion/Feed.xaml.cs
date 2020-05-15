@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FMSPuntuacion.Controls;
 using FMSPuntuacion.Models;
 using FMSPuntuacion.Vistas;
 using FMSPuntuacion.Vistas.Generador;
@@ -16,9 +17,11 @@ namespace FMSPuntuacion
     public partial class Feed : ContentPage
     {
         public Feed()
-        {
-            InitializeComponent();
+        {        
+            InitializeComponent();        
         }
+       
+
         async void OnCalificaClicked(object sender, EventArgs e)
         {
            
@@ -46,7 +49,11 @@ namespace FMSPuntuacion
 
         async void OnEntrenaClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Temporizador{
+            
+            
+            await Navigation.PushAsync(new Temporizador()
+            {
+                
             });
         }
     }

@@ -8,12 +8,12 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              BackgroundColor="{StaticResource WhiteColor}"
-             Title="Temporizador"
+             Title="Entrena"
              >
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="TripTitleStyle" TargetType="Label">
-                <Setter Property="FontFamily" Value="{StaticResource SourceSansSemiBold}" />
+                <Setter Property="FontFamily"  Value="{StaticResource SourceSansSemiBold}" />
                 <Setter Property="FontSize" Value="{StaticResource FontSize40}"/>
                 <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -54,13 +54,13 @@
             </Grid.RowDefinitions>
 
 
-            <Label Grid.Row="0"  x:Name="LL" Text="{Binding Palabra}" Style="{StaticResource TripTitleStyle}" />
+            <Label Grid.Row="0"  x:Name="LL" Text="{Binding Palabra}" Style="{StaticResource TripTitleStyle}"  />
 
             <Grid Grid.Row="1" >
                 
                 <ffimageloading:CachedImage 
                     Aspect="AspectFit"
-                    Source="ebay.jpg"
+                    Source="{DynamicResource ImageIcon}"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     Margin="18"                 
@@ -75,8 +75,8 @@
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     Progress="{Binding Progress}"
-                    ProgressStartColor="{StaticResource ProgressPinkColor}"
-                    ProgressEndColor="{StaticResource ProgressBlueColor}"
+                    ProgressStartColor="{DynamicResource ColorP1}"
+                    ProgressEndColor="{DynamicResource ColorP2}"
                     StrokeWidth="15"
                     />
 
@@ -84,8 +84,8 @@
                        VerticalOptions="Center"
                        Text="{Binding Segundos}"
                        Style="{StaticResource BigCountdownStyle}"
-                       TextColor="Black"
-                      
+                       TextColor="{DynamicResource TextoContador}"
+                       FontFamily="{DynamicResource Fuente}"
                        />
                 
             </Grid>
@@ -107,13 +107,15 @@
                         FontAttributes="Bold"
                         BackgroundColor="{Binding Color}"
                         FontSize="Large"
-                        TextColor="White"
+                        TextColor="{DynamicResource TextoColor}"
+                        BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
                         HeightRequest="60"      
                         CornerRadius="96"         
                         CommandParameter= "{Binding Source={x:Reference RadioBtn}}"
                         Command="{Binding RestartCommand}"
                         Text="Iniciar" 
                         IsEnabled="{Binding Activar}"
+                        FontFamily="{DynamicResource Fuente}"
                         />
                     </Grid>
                 </StackLayout>
@@ -124,12 +126,14 @@
                         FontAttributes="Bold"
                         BackgroundColor="{Binding ColorCancelar}"
                         FontSize="Large"
-                        TextColor="White"
+                        BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
                         HeightRequest="60"      
                         CornerRadius="96"         
                         Command="{Binding CancelCommand}"
                         Text="Cancelar" 
+                        TextColor="{DynamicResource TextoColor}"    
                         IsEnabled="{Binding ActivarCancelar}"
+                        FontFamily="{DynamicResource Fuente}"
                         />
                     </Grid>
                 

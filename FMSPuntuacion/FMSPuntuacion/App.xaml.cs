@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FMSPuntuacion.Helpers;
+using FMSPuntuacion.Vistas;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,8 +15,10 @@ namespace FMSPuntuacion
         public App()
         {
             InitializeComponent();
-
+            Settings.LoadTheme();
             MainPage = new MenuOpciones();
+          
+
         }
 
         protected override void OnStart()

@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Replica.NombresInicio"
-             Title="Selecciona">
+             Title="Selecciona Formato">
     <ScrollView>
-        <Grid>
+        <Grid BackgroundColor="{DynamicResource PageBGColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="70" />
@@ -18,66 +18,66 @@
             </Grid.RowDefinitions>
 
 
-            <Grid Grid.Row="0" BackgroundColor="#810c96" >
+            <Grid Grid.Row="0" BackgroundColor="{DynamicResource SeparadorColor}" >
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-                    <Label HorizontalOptions="Center" Text="Ingresa competidores" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" FontFamily="{StaticResource SourceKeepon}" TextColor="White" />
+                    <Label HorizontalOptions="Center" Text="Ingresa competidores" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" FontFamily="{DynamicResource Fuente}" TextColor="White" />
                 </StackLayout>
             </Grid>
 
-            <Grid Grid.Row="1" Margin="0,0,0,12" BackgroundColor="#032aac">
+            <Grid Grid.Row="1" Margin="0,0,0,0" BackgroundColor="{DynamicResource ColorP1}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70" />
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" RowSpacing="0" BackgroundColor="#032aac">
-                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#032aac">
+                <Grid Grid.Row="0" RowSpacing="0" >
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
                         <Entry x:Name="Player1" Placeholder="Tocar para Player1"  PlaceholderColor="White"
-                                Text="{Binding Text}" TextColor="White" FontSize="{StaticResource FontSize36}" />
+                                Text="{Binding Text}" TextColor="White" FontSize="{StaticResource FontSize36}" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="2" BackgroundColor="#ff0000">
+            <Grid Grid.Row="2" BackgroundColor="{DynamicResource ColorP2}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                         <Entry x:Name="Player2" Placeholder="Tocar para Player2 " PlaceholderColor="White"
-                                Text="{Binding Text}"  TextColor="White" FontSize="{StaticResource FontSize36}" FontFamily="{StaticResource SourceKeepon}"
+                                Text="{Binding Text}"  TextColor="White" FontSize="{StaticResource FontSize36}" FontFamily="{DynamicResource Fuente}"
                                 />
                     </StackLayout>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="3" BackgroundColor="{StaticResource ColorBoton}">
+            <Grid Grid.Row="3" BackgroundColor="{DynamicResource ColorBoton}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                        <Entry x:Name="Sitio" Placeholder="Lugar del evento" PlaceholderColor="White"
-                                Text="{Binding Text}"  TextColor="White" FontSize="{StaticResource FontSize28}" FontFamily="{StaticResource SourceKeepon}"
+                        <Entry x:Name="Sitio" Placeholder="Lugar del evento" PlaceholderColor="{DynamicResource TextoColor}" 
+                                Text="{Binding Text}"  TextColor="{DynamicResource TextoColor}" FontSize="{StaticResource FontSize28}" FontFamily="{DynamicResource Fuente}"
                                 />
                     </StackLayout>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="4" BackgroundColor="#810c96" >
+            <Grid Grid.Row="4" BackgroundColor="{DynamicResource SeparadorColor}" >
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Selecciona formato" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{StaticResource SourceSansSemiBold}" />
+                    <Label Text="Selecciona formato" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                 </StackLayout>
             </Grid>
 
-            <Grid Grid.Row="5" Margin="10, 0, 10, 0" BackgroundColor="White">
-                <Button Text="Minuto clásico "  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="IniciarMinutos" />
+            <Grid Grid.Row="5" Margin="10, 0, 10, 0" BackgroundColor="{DynamicResource PageBGColor}">
+                <Button Text="Minuto clásico "  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="IniciarMinutos" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
 
-            <Grid Grid.Row="6" Margin="10, 0, 10, 0" BackgroundColor="White">
-                <Button Text="4 X 4 "  BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="IniciarPatrones"/>
+            <Grid Grid.Row="6" Margin="10, 0, 10, 0" BackgroundColor="{DynamicResource PageBGColor}">
+                <Button Text="4 X 4 "  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="IniciarPatrones" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
 
-            <Grid Grid.Row="7" Margin="10, 0,10, 0" BackgroundColor="White">
-                <Button Text="Formato FMS" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="IniciarFMS" />
+            <Grid Grid.Row="7" Margin="10, 0,10, 0" BackgroundColor="{DynamicResource PageBGColor}">
+                <Button Text="Formato FMS" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="IniciarFMS" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
 
         </Grid>

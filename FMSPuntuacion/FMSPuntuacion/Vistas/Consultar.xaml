@@ -6,7 +6,7 @@
              >
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Agregar" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
     <!--<Grid Grid.Row="0" Grid.Column="0" >
@@ -37,12 +37,12 @@
         </Frame>
     </NavigationPage.TitleView>-->
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Transparent" Padding="20">
+        <StackLayout BackgroundColor="White" Padding="20">
             <SearchBar x:Name="SearchBar" TextChanged="SearchItem"/>
             <ListView x:Name="ListaResultados" 
                       ItemsSource="{Binding Items}"                
                       RefreshCommand="{Binding LoadResultadoCommand}"
-                      BackgroundColor="Transparent"
+                      BackgroundColor="White"
                       VerticalOptions="FillAndExpand"
                       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                       CachingStrategy="RecycleElement"
@@ -62,7 +62,7 @@
                                 <Label Text=" VS " TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding player2}" TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding sitio}" TextColor="Black" VerticalTextAlignment="Center"/>
-                                <Button ImageSource="Eliminar.png" BackgroundColor="#cb3234" BorderRadius="50" HorizontalOptions="EndAndExpand" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ListaResultados}}" CommandParameter="{Binding .}" />
+                                <Button ImageSource="Eliminar.png" BackgroundColor="{DynamicResource ColorBoton}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="5" BorderRadius="50" HorizontalOptions="EndAndExpand" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ListaResultados}}" CommandParameter="{Binding .}" />
 
                             </StackLayout>
                         </ViewCell>

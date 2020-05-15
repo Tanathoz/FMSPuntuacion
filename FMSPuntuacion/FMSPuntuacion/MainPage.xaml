@@ -2,14 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FMSPuntuacion"
-             x:Class="FMSPuntuacion.MainPage">
+             x:Class="FMSPuntuacion.MainPage"
+             Title="Inicio">
 
-    <StackLayout>
+  <Grid>
+    
+   
         <!-- Place new controls here -->
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+      
+      
+        <!--<Grid>
+            <Image x:Name="notes"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="icon.png" />
+        </Grid>-->
 
-    </StackLayout>
+    <Grid  x:Name="SplashGrid" BackgroundColor="{StaticResource colorPrimary}" >
+      <Image  x:Name="notes" HorizontalOptions="Center" Source="icon" VerticalOptions="Center"  >
+        <Image.TranslationY>
+          <OnPlatform x:TypeArguments="x:Double">
+                 <On Platform="Android"> -12 </On>
+          </OnPlatform>
+        </Image.TranslationY>
+        
+      </Image>
+    </Grid>
+    
+  </Grid>
+    
 
 </ContentPage>

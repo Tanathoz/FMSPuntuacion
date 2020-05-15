@@ -1,4 +1,5 @@
-﻿using FMSPuntuacion.Models;
+﻿using FMSPuntuacion.Controls;
+using FMSPuntuacion.Models;
 using FMSPuntuacion.Models.Base;
 using System;
 using Xamarin.Forms;
@@ -9,8 +10,8 @@ namespace FMSPuntuacion.Vistas.Generador
 	public partial class Temporizador : ContentPage
 	{
         public Command OnCheckedChanged { get; set; }
-        public bool flagy;        
-        
+        public bool flagy;
+       // IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
         public bool Flagy
         {
             get
@@ -23,9 +24,10 @@ namespace FMSPuntuacion.Vistas.Generador
                 flagy = value;
             }
         }
-        public Temporizador ()
+        public Temporizador()
 		{
 			InitializeComponent ();
+           
             BindingContext = new MyCountDownModel();       
             RadioBtn.ItemsSource = new[]
             {
@@ -40,12 +42,14 @@ namespace FMSPuntuacion.Vistas.Generador
         {
             base.OnAppearing();
             var vm = BindingContext as BaseModel;
-          
+            
+            
             //await vm?.LoadAsync();
         }
 
         protected override async void OnDisappearing()
         {
+           // adInterstitial.showAd();
             base.OnDisappearing();
             var vm = BindingContext as BaseModel;
             await vm?.UnloadAsync();

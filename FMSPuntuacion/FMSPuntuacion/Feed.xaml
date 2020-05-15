@@ -1,22 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:ads="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
+             mc:Ignorable="d"             
              x:Class="FMSPuntuacion.Feed">
 
     <ScrollView>
         <Grid>
+
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" BackgroundColor="#04a5e0" Padding="0,50,0,0">
+            <Grid Grid.Row="0" BackgroundColor="{DynamicResource ColorP1}" Padding="0,0,0,0">
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Menu" FontAttributes="Bold" FontSize="Large" TextColor="White" />
+                    <Label Text="Menú" FontAttributes="Bold"  TextColor="White"  FontFamily="{DynamicResource Fuente}" FontSize="{StaticResource  FontSize36}"/>
                 </StackLayout>
             </Grid>
 
@@ -52,7 +59,7 @@
                     FontAttributes="Bold"    
                     TextColor="White"    
                     />-->
-                <Button Text=" Califica" ContentLayout="right,0"  ImageSource="Califica.png" BorderRadius="80" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="OnCalificaClicked" BorderColor="#3ba3f7" BorderWidth="10"/>
+                <Button Text=" Califica" ContentLayout="right,0"  ImageSource="Califica.png" BorderRadius="80" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="OnCalificaClicked" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8"  FontFamily="{DynamicResource Fuente}" />
                 <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
             </Grid>
 
@@ -62,7 +69,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="90"/>
                 </Grid.RowDefinitions>
-                <Button Text=" Entrena" ContentLayout="right,0"  ImageSource="Brain.png" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="OnEntrenaClicked" BorderColor="#454545" BorderWidth="10" />
+                <Button Text=" Entrena" ContentLayout="right,0"  ImageSource="Brain.png" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="OnEntrenaClicked" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
 
                 <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
             </Grid>
@@ -71,7 +78,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="90"/>
                 </Grid.RowDefinitions>
-                <Button Text=" Consulta" ContentLayout="right,0"  ImageSource="Consulta.png" BorderRadius="80" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White" Clicked="OnConsultarClicked" BorderColor="#5bde9c" BorderWidth="10"/>
+                <Button Text=" Consulta" ContentLayout="right,0"  ImageSource="Consulta.png" BorderRadius="80" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="OnConsultarClicked" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
                 <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
             </Grid>
 
@@ -109,7 +116,11 @@
                 </Grid>
 
             </Grid>-->
-            
+
+            <ads:AdControlView BackgroundColor="red" Grid.Row="4" />
+
+            <!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-3940256099942544/6300978111" />-->
+            <!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-6499029686626513/8551506037" />-->
         </Grid>
         
     </ScrollView>

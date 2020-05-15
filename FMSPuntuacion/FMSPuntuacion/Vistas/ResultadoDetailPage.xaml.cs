@@ -1,4 +1,5 @@
-﻿using FMSPuntuacion.Models;
+﻿using FMSPuntuacion.Controls;
+using FMSPuntuacion.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace FMSPuntuacion.Vistas
 	public partial class ResultadoDetailPage : ContentPage
 	{
         ItemDetailViewModel resultadoModel;
-        ResultadoViewModel resultadoViewModel;
+        
+        IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
         public ResultadoDetailPage ()
 		{
 			InitializeComponent ();
@@ -30,6 +32,8 @@ namespace FMSPuntuacion.Vistas
 
         async void Regresar(object sender, EventArgs e)
         {
+
+            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
             await Navigation.PushAsync(new Consultar
             {
 

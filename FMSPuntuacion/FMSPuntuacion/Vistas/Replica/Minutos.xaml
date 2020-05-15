@@ -6,7 +6,7 @@
              Title="Minutos "
              >
     <ScrollView>
-        <Grid RowSpacing="0" BackgroundColor="White">
+        <Grid RowSpacing="0" BackgroundColor="{DynamicResource PageBGColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -36,16 +36,16 @@
                 <RowDefinition Height="90" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0"  RowSpacing="0" BackgroundColor="#032aac">
+            <Grid Grid.Row="0"  RowSpacing="0" BackgroundColor="{DynamicResource ColorP1}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource  FontSize30}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
 
             <!-- Vuelta 1 player 1-->
-            <Grid Grid.Row="1" BackgroundColor="#032aac" >
+            <Grid Grid.Row="1" BackgroundColor="{DynamicResource ColorP1}" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones " FontAttributes="Bold" FontSize="Medium" TextColor="White" />
+                    <Label Text="Patrones " FontAttributes="Bold" FontSize="{StaticResource  FontSize30}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
             
@@ -196,22 +196,22 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
+                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"  />
                 </Grid>
 
             </Grid>
 
-            <Grid Grid.Row="4"  Margin="0,10,0,0" RowSpacing="0" BackgroundColor="#ff0000">
+            <Grid Grid.Row="4"  Margin="0,10,0,0" RowSpacing="0" BackgroundColor="{DynamicResource ColorP2}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="{StaticResource  FontSize30}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
 
             </Grid>
 
             <!-- vuelta 1 player 2 -->
-            <Grid Grid.Row="5" BackgroundColor="#ff0000" >
+            <Grid Grid.Row="5" BackgroundColor="{DynamicResource ColorP2}" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones " FontAttributes="Bold" FontSize="Medium" TextColor="White" />
+                    <Label Text="Patrones " FontAttributes="Bold" FontSize="{StaticResource  FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
 
@@ -330,8 +330,8 @@
             <Grid Grid.Row="7" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="60" />
-                    <RowDefinition Height="20" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout >
@@ -383,21 +383,21 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}" />
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="8" Margin="0,10,0,0" BackgroundColor="#ff0000">
+            <Grid Grid.Row="8" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP2}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="LBN2" Text="{Binding player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" />
+                    <Label x:Name="LBN2" Text="{Binding player2}" FontSize="{StaticResource  FontSize30}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                 </StackLayout>
 
             </Grid>
 
             <!-- Vuelta 2 Player 2-->
-            <Grid Grid.Row="9"   BackgroundColor="#ff0000" >
+            <Grid Grid.Row="9"   BackgroundColor="{DynamicResource ColorP2}" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="Medium" TextColor="White" />
+                    <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="{StaticResource  FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                 </StackLayout>
             </Grid>
 
@@ -551,21 +551,21 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total3" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
+                    <Label x:Name="Total3" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
 
             </Grid>
 
-            <Grid Grid.Row="12"  Margin="0,10,0,0" BackgroundColor="#032aac">
+            <Grid Grid.Row="12"  Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP1}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label  Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                    <Label  Text="{Binding player1}" FontSize="{StaticResource  FontSize30}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                 </StackLayout>
             </Grid>
 
             <!-- VUELTA 2 PLAYER 1-->
-            <Grid Grid.Row="13"  RowSpacing="0" BackgroundColor="#032aac">
+            <Grid Grid.Row="13"  RowSpacing="0" BackgroundColor="{DynamicResource ColorP1}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label  Text="Patrones vuelta 2" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                    <Label  Text="Patrones vuelta 2" FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                 </StackLayout>
 
             </Grid>
@@ -737,14 +737,14 @@
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-                <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total4" Text="Total :" FontAttributes="Bold" FontSize="Medium" />
+                <Grid Grid.Row="2"  Grid.Column="1" >
+                    <Label x:Name="Total4" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
             </Grid>
 
-           
 
-            <Grid Grid.Row="16" BackgroundColor="#810c96">
+
+            <Grid Grid.Row="16" BackgroundColor="{DynamicResource SeparadorColor}" Margin="0,10,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -754,58 +754,58 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  Text="Player" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                        <Label  Text="Player" FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  Text="Puntos" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                        <Label  Text="Puntos" FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  x:Name="P1" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label  x:Name="P1" FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="2" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label  x:Name="P2" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label  x:Name="P2" FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="1">
                     <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="TotalFinal"  FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label x:Name="TotalFinal"  FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="2" Grid.Column="1">
                     <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="TotalFinalP2"  FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label x:Name="TotalFinalP2"  FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="3" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
-                        <Label Text="Ganador :" FontSize="Medium" FontAttributes="Bold" TextColor="Gold"/>
+                        <Label Text="Ganador :" FontSize="{StaticResource  FontSize28}" FontAttributes="Bold" TextColor="Gold" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="3" Grid.Column="1">
                     <StackLayout HorizontalOptions="Center">
-                        <Label x:Name="GanadorTexto" Text="{Binding ganador}" FontAttributes="Bold" FontSize="Medium" TextColor="Gold"/>
+                        <Label x:Name="GanadorTexto" Text="{Binding ganador}" FontAttributes="Bold" FontSize="{StaticResource  FontSize28}" TextColor="Gold" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="17"  Margin="10,10,10,0" BackgroundColor="White">
+            <Grid Grid.Row="17"  Margin="10,10,10,0" BackgroundColor="{DynamicResource PageBGColor}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="90" />
                 </Grid.RowDefinitions>
-                <Button Text="Aceptar" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="#44c767" FontSize="Large" TextColor="White"/>
+                <Button Text="Aceptar" Clicked="GuardarSangre" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}" />
             </Grid>
 
         </Grid>

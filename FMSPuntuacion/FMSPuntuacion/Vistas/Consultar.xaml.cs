@@ -11,6 +11,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using FMSPuntuacion.Models;
 using FMSPuntuacion.Helpers;
+using FMSPuntuacion.Vistas.Replica;
 
 namespace FMSPuntuacion.Vistas
 {
@@ -99,7 +100,7 @@ namespace FMSPuntuacion.Vistas
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Example());
+            await Navigation.PushAsync(new NombresInicio());
         }
 
         public async void Restulado_OnClicked()

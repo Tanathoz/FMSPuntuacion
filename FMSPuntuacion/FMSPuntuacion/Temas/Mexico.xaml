@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Temas.Mexico">
+
+    <!--Green-->
+    <Color x:Key="PrimaryColor">#006847</Color>
+
+    <Color x:Key="ColorP1">#006847</Color>
+    <!--Dark Green-->
+    <Color x:Key="ColorP2">#CE1126</Color>
+
+    <Color x:Key="ColorBoton">#ffffff</Color>
+    <!--White-->
+    <Color x:Key="ColorContorno">#008f15</Color>
+    <!--White-->
+    <Color x:Key="PageBGColor">#ffffff</Color>
+    <!--Green-->
+    <Color x:Key="SeparadorColor">#000000</Color>
+    <!--Dark Grey-->
+    <Color x:Key="TextoColor">#008f15</Color>
+    <!--Mid Grey-->
+    <Color x:Key="TextoContador">#ffffff</Color>
+    <!--Mid-Light Grey-->
+    <Color x:Key="SubTextColor">#969696</Color>
+    <!--White-->
+    <Color x:Key="OverlayTextColor">#FFFFFF</Color>
+    <!--Transperant Black-->
+    <Color x:Key="TransperantBackgroundColor">#56000000</Color>
+    <!--Silver Light Grey-->
+    <Color x:Key="SeparatorLineColor">#ececec</Color>
+
+    <!-- Font Sizes -->
+    <x:Double x:Key="FontSize10">10</x:Double>
+    <x:Double x:Key="FontSize12">12</x:Double>
+    <x:Double x:Key="FontSize13">13</x:Double>
+    <x:Double x:Key="FontSize14">14</x:Double>
+    <x:Double x:Key="FontSize16">16</x:Double>
+    <x:Double x:Key="FontSize18">18</x:Double>
+    <x:Double x:Key="FontSize20">20</x:Double>
+    <x:Double x:Key="FontSize24">24</x:Double>
+    <x:Double x:Key="FontSize26">26</x:Double>
+    <x:Double x:Key="FontSize28">28</x:Double>
+    <x:Double x:Key="FontSize36">36</x:Double>
+    <x:Double x:Key="FontSize40">40</x:Double>
+    <x:Double x:Key="FontSize44">44</x:Double>
+    <x:Double x:Key="FontSize60">60</x:Double>
+    <x:Double x:Key="FontSize120">120</x:Double>
+
+    <OnPlatform
+        x:Key="SourceKeepon"
+        x:TypeArguments ="x:String"
+        iOS="KeeponTruckin"
+        Android="KeeponTruckin.tff#KeeponTruckin"/>
+
+
+    <!-- Imagen-->
+    <x:String x:Key="ImageIcon">Mex.png</x:String>
+
+    <!--<OnPlatform 
+        x:Key="Fuente"
+        x:TypeArguments="x:String"
+        iOS="SunnyCloudy"
+        Android="SunnyCloudy.ttf#Sunny Cloudy" />-->
+
+    <OnPlatform 
+        x:Key="Fuente"
+        x:TypeArguments="x:String"
+        iOS="Bubble Bobble"
+        Android="Bubble Bobble.ttf#Bubble Bobble" />
+
+</ResourceDictionary>

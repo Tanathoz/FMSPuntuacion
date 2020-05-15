@@ -4,8 +4,13 @@
              xmlns:styles="clr-namespace:FMSPuntuacion.Styles"
              x:Class="FMSPuntuacion.App">
     <Application.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary >
+            <Style ApplyToDerivedTypes="true" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource ColorP1}"/>
+               
+            </Style>
             <ResourceDictionary.MergedDictionaries>
+
                 <styles:Colors/>
                 <styles:Fonts/>
             </ResourceDictionary.MergedDictionaries>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FMSPuntuacion.Vistas;
+using FMSPuntuacion.Vistas.Opciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +18,21 @@ namespace FMSPuntuacion
 		{
 			InitializeComponent ();
             MyMenu();
-		}
+           
+        }
+
+        //protected override async void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //    //wait some time 
+        //    await notes.ScaleTo(0.5, 500, Easing.CubicInOut);
+        //    var animationTasks = new[]{
+        //    notes.ScaleTo(100.0, 1000, Easing.CubicInOut),
+        //    notes.FadeTo(0, 700, Easing.CubicInOut)
+        //    };
+        //    await Task.WhenAll(animationTasks);
+
+        //}
 
         public void MyMenu()
         {
@@ -25,10 +41,10 @@ namespace FMSPuntuacion
             {
                 new Menu {Page = new Feed(),  MenuTitle = "My Profile", MenuDetail="Mi perfil", icon="User.png"},
                 new Menu {Page = new Feed(), MenuTitle = "Messages", MenuDetail="Practicar", icon="clock.png" },
-                new Menu {Page = new Feed(), MenuTitle="Ajustes", MenuDetail="Contactos", icon="Setting.png" },
+                new Menu {Page = new SeleccionaTema(), MenuTitle="Personalizar", MenuDetail="Temas", icon="Mediapaint.png" },
                 new Menu {Page = new Feed(), MenuTitle="Contactos", MenuDetail="Plao", icon="contacts.png"}
             };
-
+            
             ListMenu.ItemsSource = menu;
         }
 

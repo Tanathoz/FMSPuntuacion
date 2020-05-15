@@ -14,6 +14,7 @@ using System.Collections;
 using System.Collections.ObjectModel;
 using Xamarin.Essentials;
 using System.Threading;
+using FMSPuntuacion.Controls;
 
 namespace FMSPuntuacion.Models
 {
@@ -33,9 +34,12 @@ namespace FMSPuntuacion.Models
         public bool activarCancelar;
         public string color;
         public string colorCancelar;
+        public Color colorRGB;
         public List<string> lstPalabra { get; set; }
         public List<int> lstSegundos10 = new List<int>() { 59, 49, 39, 29,19,9 };
         public List<int> lstSegundos5 = new List<int>() { 59,54, 49,44, 39,34, 29,24, 19,14 ,9,4 };
+        IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
+        IAdVideoInterstitial adVideo = DependencyService.Get<IAdVideoInterstitial>();
 
         //COMENTARIO ES MEJOR PASAR ACA LO DE LAS PALABRAS QUE EN LA CLASE COUNTDOWN
         public MyCountDownModel()
@@ -43,7 +47,8 @@ namespace FMSPuntuacion.Models
             _countdown = new CountDown();
             _segundos = 59;
             activar = true;
-            color = "#44c767";
+            colorRGB = (Color)Application.Current.Resources["ColorBoton"];
+            color = colorRGB.ToHex(); 
             colorCancelar = "LightGray";
         }
        
@@ -168,9 +173,12 @@ namespace FMSPuntuacion.Models
             //después de acabar el tiempo la pantalla se bloqueara en 30 seg
             DeviceDisplay.KeepScreenOn = false;
             Activar = true;
-            ActivarCancelar = false;                 
-            Color = "#44c767";
+            ActivarCancelar = false;
+            colorRGB = (Color)Application.Current.Resources["ColorBoton"];
+            Color = colorRGB.ToHex();
             ColorCancelar = "LightGray";
+            //adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
             // UnloadAsync();
         }
 
@@ -188,9 +196,11 @@ namespace FMSPuntuacion.Models
             DeviceDisplay.KeepScreenOn = false;
             Activar = true;
             ActivarCancelar = false;
-            Color = "#44c767";
+            colorRGB = (Color)Application.Current.Resources["ColorBoton"];
+            Color = colorRGB.ToHex();
             ColorCancelar = "LightGray";
-
+            //adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
         }
 
         public string[] LeerArchivo()
@@ -231,7 +241,8 @@ namespace FMSPuntuacion.Models
             Activar = false;
             ActivarCancelar = true;
             Color = "LightGray";
-            ColorCancelar = "#44c767";
+            colorRGB = (Color)Application.Current.Resources["ColorBoton"];
+            ColorCancelar = colorRGB.ToHex();
             _countdown.Cancelar = false;
             LoadAsync();                
         }

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Opciones.SeleccionaTema"
+             Title="Selecciona"
+             >
+    <ContentPage.Content>
+        <ScrollView Padding="20, 10">
+            <!--<Grid RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="170" />
+                    <RowDefinition Height="170" />
+                    <RowDefinition Height="170" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Source="flag.png" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                        <Label Text="Predeterminado" FontAttributes="Bold" HorizontalTextAlignment="Center"  TextColor="{DynamicResource ColorP2}"/>
+                        <Button Text="Aplicar" WidthRequest="100" HorizontalOptions="Center" Clicked="DefaultTeme" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Source="spain.png" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                        <Label Text="España" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{DynamicResource colorPrimary}" />
+                        <Button Text="Aplicar" WidthRequest="100" HorizontalOptions="Center" Clicked="SpainTheme" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="2" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Source="mexico.png" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                        <BoxView IsVisible="True" CornerRadius="10" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{DynamicResource PrimaryColor}"/>
+                        <Label Text="Mexico" FontAttributes="Bold" HorizontalTextAlignment="Center"  TextColor="{DynamicResource ColorP2}"/>
+                        <Button Text="Aplicar" WidthRequest="100" HorizontalOptions="Center" Clicked="MexicoTeme" />
+                    </StackLayout>
+                </Grid>
+
+            </Grid>-->
+
+
+           
+                <ListView ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" RowHeight="70"  Footer="">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                        
+                        <ViewCell>
+                                
+                                <Grid Margin="10" VerticalOptions="Center">
+                                    <Label >
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding Title}"/>
+                                                <Span Text="&#x0a;"/>
+                                              
+                                           
+                                        </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                <Image Source="{Binding icon}"></Image>
+                                <BoxView IsVisible="{Binding IsSelected, Mode=TwoWay}" CornerRadius="10" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{DynamicResource PrimaryColor}"/>
+                                </Grid>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            
+
+
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

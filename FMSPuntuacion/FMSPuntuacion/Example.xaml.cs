@@ -16,7 +16,6 @@ namespace FMSPuntuacion
 	{
         public int suma = 0;
         public int sumaP2 = 0;
-        private SQLiteAsyncConnection connex;
         public Resultados Resultados { get; set; }
 
         //public ResultadoViewModel resul = new ResultadoViewModel();
@@ -99,7 +98,7 @@ namespace FMSPuntuacion
         protected void GuardarResultodo (object sender, EventArgs e)
         {
             var Datos = new Resultados { player1 = Player1.Text, player2 = Player2.Text, totalPlayer1 = suma, totalPlayer2 = sumaP2, ganador = "Fulanito", sitio = "Malaga", fecha = DateTime.Now.ToString() };
-            connex.InsertAsync(Datos);
+          //  connex.InsertAsync(Datos);
             limpiarFormulario();
             Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
 
