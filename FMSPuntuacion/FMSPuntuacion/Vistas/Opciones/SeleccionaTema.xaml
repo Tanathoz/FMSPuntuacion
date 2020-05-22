@@ -2,10 +2,63 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Opciones.SeleccionaTema"
+             xmlns:local="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
+           
              Title="Selecciona"
              >
     <ContentPage.Content>
-        <ScrollView Padding="20, 10">
+        <ScrollView Padding="20, 10" BackgroundColor="White" >
+            <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" BackgroundColor="White">
+                    <ListView ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" RowHeight="70"  Footer="">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+
+                                <ViewCell>
+
+                                    <Grid Margin="10" VerticalOptions="Center">
+                                        <Label >
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Title}"/>
+                                                    <Span Text="&#x0a;"/>
+
+
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Image Source="{Binding icon}"></Image>
+                                        <BoxView IsVisible="{Binding IsSelected, Mode=TwoWay}" CornerRadius="10" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{DynamicResource PrimaryColor}"/>
+                                    </Grid>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </Grid>
+               
+                <!--<Grid Grid.Row="1" Margin="10,10,10,0" BackgroundColor="White" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+                    <Button Text=" Volver"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="salir" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+
+                    --><!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>--><!--
+                </Grid>-->
+             
+                <!--<ads:AdControlView BackgroundColor="red"  Grid.Row="2" />--> 
+            </Grid>
+
+            
+
             <!--<Grid RowSpacing="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="170" />
@@ -54,35 +107,10 @@
 
 
            
-                <ListView ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" RowHeight="70"  Footer="">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                        
-                        <ViewCell>
-                                
-                                <Grid Margin="10" VerticalOptions="Center">
-                                    <Label >
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding Title}"/>
-                                                <Span Text="&#x0a;"/>
-                                              
-                                           
-                                        </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                <Image Source="{Binding icon}"></Image>
-                                <BoxView IsVisible="{Binding IsSelected, Mode=TwoWay}" CornerRadius="10" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{DynamicResource PrimaryColor}"/>
-                                </Grid>
-                                
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+              
+
+         
             
-
-
-
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

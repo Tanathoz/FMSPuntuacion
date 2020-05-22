@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSPuntuacion.Android", "FM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSPuntuacion.iOS", "FMSPuntuacion\FMSPuntuacion.iOS\FMSPuntuacion.iOS.csproj", "{8392729C-C9A2-4669-8D7A-5202D74241C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSPuntuacion", "FMSPuntuacion\FMSPuntuacion\FMSPuntuacion.csproj", "{6885B0C5-C894-4038-99B9-4F999632EFB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FMSPuntuacion", "FMSPuntuacion\FMSPuntuacion\FMSPuntuacion.csproj", "{6885B0C5-C894-4038-99B9-4F999632EFB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

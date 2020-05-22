@@ -1,4 +1,5 @@
-﻿using FMSPuntuacion.Models;
+﻿using FMSPuntuacion.Controls;
+using FMSPuntuacion.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace FMSPuntuacion.Vistas.Replica
         public int sumaTotalP1 = 0;
         public int sumaTotalP2 = 0;
         public string ganadorr = string.Empty;
-
+        IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
         public Minutos ()
 		{
 			InitializeComponent ();
@@ -127,7 +128,8 @@ namespace FMSPuntuacion.Vistas.Replica
         }
 
         async void GuardarSangre(object sender, EventArgs e)
-        {            
+        {
+                adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
                 await Navigation.PopToRootAsync();        
         }
 

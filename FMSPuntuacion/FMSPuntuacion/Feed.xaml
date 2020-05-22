@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
-             xmlns:ads="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
-             mc:Ignorable="d"             
+              xmlns:ads="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
+             xmlns:local="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
+             mc:Ignorable="d"   
+             
              x:Class="FMSPuntuacion.Feed">
 
     <ScrollView>
@@ -19,6 +20,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" BackgroundColor="{DynamicResource ColorP1}" Padding="0,0,0,0">
@@ -27,18 +29,7 @@
                 </StackLayout>
             </Grid>
 
-            <!--<Grid Grid.Row="1" Margin="10,10,10,10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <StackLayout>
-                        <Button Text="Califica" BorderRadius="25" BorderColor="White" BorderWidth="5"  BackgroundColor="{StaticResource ColorBoton}" TextColor="White" />
-                    </StackLayout>
-                </Grid>
 
-            </Grid>-->
 
             <Grid Grid.Row="1" Margin="10,10,10,0" BackgroundColor="White" >
                 <Grid.RowDefinitions>
@@ -82,45 +73,13 @@
                 <!--<ImageButton Source="Brain.png" WidthRequest="200"  HeightRequest="90" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>-->
             </Grid>
 
-            <!--<Grid Grid.Row="4">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0" Grid.Column="0" >
-                    <StackLayout>
-                        <Label Text="Califica" />
-                        <ImageButton Source="notes.png" WidthRequest="150" HeightRequest="150"    BackgroundColor="Coral" Clicked="OnCalificaClicked"/>
-                    </StackLayout>
-                </Grid>
 
-                <Grid Grid.Row="0" Grid.Column="1">
-                    <StackLayout>
-                        <Label Text="Entrena" />
-                        <ImageButton Source="Brain.png" WidthRequest="150" HeightRequest="150" Clicked="OnEntrenaClicked" BackgroundColor="Chocolate" CornerRadius="50"/>
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="0">
-                    <StackLayout>
-                        <Label Text="Inventario" />
-                        <ImageButton Source="music.png" WidthRequest="150" HeightRequest="150" BackgroundColor="Firebrick" Clicked="OnRegistrarClicked" />
-                    </StackLayout>
-                </Grid>
 
-                <Grid Grid.Row="1" Grid.Column="1">
-                    <StackLayout>
-                        <Label Text="Estadisticas" />
-                        <ImageButton Source="fb.png" WidthRequest="150" HeightRequest="150" BackgroundColor="Indigo" Clicked="OnConsultarClicked" />
-                    </StackLayout>
-                </Grid>
-
-            </Grid>-->
-
-            <ads:AdControlView BackgroundColor="red" Grid.Row="4" />
-
-            <!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-3940256099942544/6300978111" />-->
-            <!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-6499029686626513/8551506037" />-->
+            <local:AdBaner Size="MediumRectangle"  VerticalOptions="EndAndExpand" Grid.Row="4"/>
+            <ads:AdControlView BackgroundColor="red"  Grid.Row="5" />
+            <!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-3940256099942544/6300978111" />
+            --><!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-6499029686626513/8551506037" />-->
         </Grid>
         
     </ScrollView>

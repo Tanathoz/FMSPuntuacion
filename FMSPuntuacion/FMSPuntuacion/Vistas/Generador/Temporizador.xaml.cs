@@ -11,7 +11,7 @@ namespace FMSPuntuacion.Vistas.Generador
 	{
         public Command OnCheckedChanged { get; set; }
         public bool flagy;
-       // IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
+    
         public bool Flagy
         {
             get

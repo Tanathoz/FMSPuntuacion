@@ -55,7 +55,7 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron1" Title="Tocar" >
+                    <Picker x:Name="patron1" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -70,7 +70,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron2"
-                            Title="Tocar">
+                            Title="Patrón2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
                                 <x:Int32>0</x:Int32>
@@ -84,7 +84,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron3" Title="Tocar">
+                    <Picker x:Name="patron3" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -98,7 +98,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron4" Title="Tocar">
+                    <Picker x:Name="patron4" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -112,7 +112,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron5" Title="Tocar">
+                    <Picker x:Name="patron5" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -126,7 +126,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron6" Title="Tocar" >
+                    <Picker x:Name="patron6" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -222,7 +222,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron7" Title="Tocar" >
+                    <Picker x:Name="patron7" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -237,7 +237,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron8"
-                            Title="Tocar"
+                            Title="Patrón2"
                            >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
@@ -252,7 +252,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron9" Title="Tocar">
+                    <Picker x:Name="patron9" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -266,7 +266,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron10" Title="Tocar">
+                    <Picker x:Name="patron10" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -280,7 +280,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron11" Title="Tocar">
+                    <Picker x:Name="patron11" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -294,7 +294,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron12" Title="Tocar" >
+                    <Picker x:Name="patron12" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -409,7 +409,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron13" Title="Tocar" >
+                    <Picker x:Name="patron13" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -424,7 +424,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron14"
-                            Title="Tocar">
+                            Title="Patrón2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
                                 <x:Int32>0</x:Int32>
@@ -438,7 +438,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron15" Title="Tocar">
+                    <Picker x:Name="patron15" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -452,7 +452,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron16" Title="Tocar">
+                    <Picker x:Name="patron16" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -466,7 +466,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron17" Title="Tocar">
+                    <Picker x:Name="patron17" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -480,7 +480,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron18" Title="Tocar" >
+                    <Picker x:Name="patron18" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -577,7 +577,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron19" Title="Tocar" >
+                    <Picker x:Name="patron19" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -592,7 +592,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron20"
-                            Title="Tocar">
+                            Title="Patrón2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
                                 <x:Int32>0</x:Int32>
@@ -606,7 +606,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron21" Title="Tocar">
+                    <Picker x:Name="patron21" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -620,7 +620,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron22" Title="Tocar">
+                    <Picker x:Name="patron22" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -634,7 +634,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron23" Title="Tocar">
+                    <Picker x:Name="patron23" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -648,7 +648,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron24" Title="Tocar" >
+                    <Picker x:Name="patron24" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>

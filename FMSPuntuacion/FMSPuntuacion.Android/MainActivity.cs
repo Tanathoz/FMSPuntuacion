@@ -44,7 +44,7 @@ namespace FMSPuntuacion.Droid
             //Sample AdMob App ID: ca - app - pub - 3940256099942544~3347511713
             // MobileAds.Initialize(ApplicationContext, "ca-app-pub-3940256099942544/1033173712");
             //MobileAds.Initialize(ApplicationContext, "ca-app-pub-6499029686626513~8551506037");
-            MobileAds.Initialize(ApplicationContext, "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy");
+           // MobileAds.Initialize(ApplicationContext, "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             
             //  this.Window.SetFlags(WindowManagerFlags.KeepScreenOn, WindowManagerFlags.KeepScreenOn);

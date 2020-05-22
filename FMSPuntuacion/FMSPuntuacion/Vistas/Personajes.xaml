@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Class="FMSPuntuacion.Vistas.Personajes"
              Title=" Personajes Contrapuestos">
 
@@ -10,11 +11,11 @@
 
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="90" />
 
@@ -87,11 +88,11 @@
             <Grid Grid.Row="2" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
-
+                    <RowDefinition Height="30" />
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron1" Title="Tocar" >
+                    <Picker x:Name="patron1" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -106,7 +107,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron2"
-                            Title="Tocar">
+                            Title="Patrón2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
                                 <x:Int32>0</x:Int32>
@@ -120,7 +121,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron3" Title="Tocar">
+                    <Picker x:Name="patron3" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -134,7 +135,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron4" Title="Tocar">
+                    <Picker x:Name="patron4" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -148,7 +149,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron5" Title="Tocar">
+                    <Picker x:Name="patron5" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -162,7 +163,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron6" Title="Tocar" >
+                    <Picker x:Name="patron6" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -175,6 +176,24 @@
                     </Picker>
                 </Grid>
 
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <controls:CheckBox x:Name="respuesta" DefaultText="" HorizontalOptions="FillAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <controls:CheckBox x:Name="respuesta2" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <controls:CheckBox x:Name="respuesta3" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <controls:CheckBox x:Name="respuesta4" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="4">
+                    <controls:CheckBox x:Name="respuesta5" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <controls:CheckBox x:Name="respuesta6" HorizontalOptions="EndAndExpand" />
+                </Grid>
             </Grid>
 
             <Grid Grid.Row="3" BackgroundColor="White" >
@@ -260,10 +279,11 @@
             <Grid Grid.Row="6" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="30" />
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron7" Title="Tocar" >
+                    <Picker x:Name="patron7" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -278,7 +298,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron8"
-                            Title="Tocar"
+                            Title="Patrón2"
                            >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
@@ -293,7 +313,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron9" Title="Tocar">
+                    <Picker x:Name="patron9" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -307,7 +327,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron10" Title="Tocar">
+                    <Picker x:Name="patron10" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -321,7 +341,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron11" Title="Tocar">
+                    <Picker x:Name="patron11" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -335,7 +355,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron12" Title="Tocar" >
+                    <Picker x:Name="patron12" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -346,6 +366,25 @@
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <controls:CheckBox x:Name="respuesta7" DefaultText="" HorizontalOptions="FillAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <controls:CheckBox x:Name="respuesta8" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <controls:CheckBox x:Name="respuesta9" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <controls:CheckBox x:Name="respuesta10" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="4">
+                    <controls:CheckBox x:Name="respuesta11" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <controls:CheckBox x:Name="respuesta12" HorizontalOptions="EndAndExpand" />
                 </Grid>
 
             </Grid>

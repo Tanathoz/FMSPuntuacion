@@ -2,40 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Consultar"
+             NavigationPage.HasBackButton="False"
+          
              Title="Historial"      
              >
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Agregar" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Calificar" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Menú" Clicked="Volver" />
     </ContentPage.ToolbarItems>
 
-    <!--<Grid Grid.Row="0" Grid.Column="0" >
-        <StackLayout>
-            <Label Text="Califica" />
-            <Button  WidthRequest="150" HeightRequest="150" BackgroundColor="Coral" Clicked="Resultado_OnClicked"/>
-        </StackLayout>
-    </Grid>-->
-    <!--<NavigationPage.TitleView>
-        <Frame
-          CornerRadius="{OnPlatform 12, UWP=1}"
-          BackgroundColor="{OnPlatform Transparent, Android={StaticResource WhiteColor}}"
-          HasShadow="False"
-          IsClippedToBounds="True"
-          Padding="0">
-            <Frame.Content>
-                <SearchBar
-                    x:Name="SearchBar"
-                    Placeholder="Search movie..."
-                    HorizontalOptions="FillAndExpand"
-                    SearchCommand="{Binding SearchCommand}"
-                    SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}">
-                    <SearchBar.Behaviors>
-                        <behaviors:SearchTextChangedBehavior />
-                    </SearchBar.Behaviors>
-                </SearchBar>
-            </Frame.Content>
-        </Frame>
-    </NavigationPage.TitleView>-->
+ 
     <ContentPage.Content>
         <StackLayout BackgroundColor="White" Padding="20">
             <SearchBar x:Name="SearchBar" TextChanged="SearchItem"/>
@@ -61,6 +38,7 @@
                                 <Label Text="{Binding player1}" Margin="10,0,0,0" TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text=" VS " TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding player2}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text=" - " TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding sitio}" TextColor="Black" VerticalTextAlignment="Center"/>
                                 <Button ImageSource="Eliminar.png" BackgroundColor="{DynamicResource ColorBoton}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="5" BorderRadius="50" HorizontalOptions="EndAndExpand" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ListaResultados}}" CommandParameter="{Binding .}" />
 
@@ -71,5 +49,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+        
+       
     </ContentPage.Content>
 </ContentPage>

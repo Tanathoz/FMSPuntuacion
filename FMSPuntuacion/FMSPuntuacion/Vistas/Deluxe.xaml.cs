@@ -84,17 +84,20 @@ namespace FMSPuntuacion.Vistas
 
             };
 
-            if ((valores.sumaTotalP1 - valores.sumaTotalP2) > 5)
+            if ((valores.sumaTotalP1 - valores.sumaTotalP2) >= 5)
             {
                 valores.ganador = Player1.Text;
+                valores.replica = false;
             }
-            else if ((valores.sumaTotalP2 - valores.sumaTotalP1) > 5)
+            else if ((valores.sumaTotalP2 - valores.sumaTotalP1) >= 5)
             {
                 valores.ganador = Player2.Text;
+                valores.replica = false;
             }
             else
             {
-                valores.ganador= "Réplica, Diferencia de " + Math.Abs(valores.sumaTotalP1 - valores.sumaTotalP2) + " Puntos";
+                valores.ganador = "Réplica, Diferencia de " + Math.Abs(valores.sumaTotalP1 - valores.sumaTotalP2) + " Puntos";
+                valores.replica = true;
             }
 
             valores.lstCalificacionesP2.Add(sumaP2);
@@ -103,7 +106,7 @@ namespace FMSPuntuacion.Vistas
            // if (suma == 0 || sumaP2 == 0)
            // {
            //     await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
-          //  }
+          //  }else{}
 
             await Navigation.PushAsync(Resultado);
         }

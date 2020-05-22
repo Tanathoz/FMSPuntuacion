@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Opciones.About">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+             
+
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"  Margin="10,10,10,0">
+                <Label HorizontalOptions="Center" Text="Esta aplicación es para amantes de freestyle espero que sea de tu agrado. Puedes dejar comentarios sobre mejoras o errores en la playstore para perfeccionar la app. Si quieres apoyarme viendo un video da clic al botón de abajo. Saludos"
+                FontAttributes="Bold" FontSize="{StaticResource FontSize24}" FontFamily="{DynamicResource Fuente}" TextColor="Black" />
+                            
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="10,10,10,0" BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Button Text="Ver video"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="salir" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

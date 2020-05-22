@@ -103,9 +103,13 @@ namespace FMSPuntuacion.Vistas
             await Navigation.PushAsync(new NombresInicio());
         }
 
-        public async void Restulado_OnClicked()
+        public async void Volver(object sender, EventArgs e) {
+
+            await Navigation.PopToRootAsync();
+        }
+        public void Restulado_OnClicked()
         {
-            await Navigation.PushAsync(new Example()); 
+             Navigation.PushAsync(new Example()); 
         }
 
 	}

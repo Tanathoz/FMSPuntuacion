@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FMSPuntuacion.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace FMSPuntuacion.Vistas.Replica
         public int sumaP2 = 0;
         public int sumaVuelta2 = 0;
         public int sumaVuelta2P2 = 0;
+        IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
         public CuatroX4 ()
 		{
 			InitializeComponent ();
@@ -65,6 +67,7 @@ namespace FMSPuntuacion.Vistas.Replica
 
         async void salir(object sender, EventArgs args)
         {
+            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
             await Navigation.PopToRootAsync();
         }
 

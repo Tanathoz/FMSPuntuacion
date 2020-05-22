@@ -1,4 +1,5 @@
-﻿using FMSPuntuacion.Helpers;
+﻿using FMSPuntuacion.Controls;
+using FMSPuntuacion.Helpers;
 using FMSPuntuacion.Models;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,11 @@ namespace FMSPuntuacion.Vistas.Opciones
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SeleccionaTema : ContentPage
 	{
-		public SeleccionaTema ()
+       
+        public SeleccionaTema ()
 		{
 			InitializeComponent ();
-            BindingContext = new TemaViewModel();
+            BindingContext = new TemaViewModel();        
         }
 
         private void SpainTheme(object sender, EventArgs e)
@@ -33,6 +35,15 @@ namespace FMSPuntuacion.Vistas.Opciones
         private void DefaultTeme(object sender, EventArgs e)
         {
             Settings.SetTheme(Helpers.Settings.Tema.Defecto);
+        }
+
+       async void salir(object sender, EventArgs args)
+        {
+            //NavigationPage nav = new NavigationPage(new Feed() );
+            //Application.Current.MainPage = navPage;
+          
+            await Navigation.PopAsync();
+
         }
     }
 }

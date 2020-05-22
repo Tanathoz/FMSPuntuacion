@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.EasyMode"
+             xmlns:ads="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
              Title="Easy Mode">
 
     <ScrollView>
@@ -16,6 +17,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
 
             </Grid.RowDefinitions>
@@ -54,7 +56,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron1" Title="Tocar" >
+                    <Picker x:Name="patron1" Title="Patrón1"  >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -69,7 +71,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron2"
-                            Title="Tocar"
+                            Title="Patrón2"
                            >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
@@ -84,7 +86,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron3" Title="Tocar">
+                    <Picker x:Name="patron3" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -98,7 +100,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron4" Title="Tocar">
+                    <Picker x:Name="patron4" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -112,7 +114,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron5" Title="Tocar">
+                    <Picker x:Name="patron5" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -126,7 +128,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron6" Title="Tocar" >
+                    <Picker x:Name="patron6" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -228,7 +230,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron7" Title="Tocar" >
+                    <Picker x:Name="patron7" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -243,7 +245,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron8"
-                            Title="Tocar"
+                            Title="Patrón2"
                            >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
@@ -258,7 +260,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron9" Title="Tocar">
+                    <Picker x:Name="patron9" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -272,7 +274,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron10" Title="Tocar">
+                    <Picker x:Name="patron10" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -286,7 +288,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron11" Title="Tocar">
+                    <Picker x:Name="patron11" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -300,7 +302,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron12" Title="Tocar" >
+                    <Picker x:Name="patron12" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -381,7 +383,9 @@
                 </Grid.RowDefinitions>
                 <Button Text="Siguiente" Clicked="GuardarEsayMode" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
-        
+
+            <ads:AdControlView BackgroundColor="red"  Grid.Row="9" />
+
         </Grid>
     </ScrollView>
   

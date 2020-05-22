@@ -39,10 +39,10 @@ namespace FMSPuntuacion
             Detail = new NavigationPage(new Feed());
             List<Menu> menu = new List<Menu>
             {
-                new Menu {Page = new Feed(),  MenuTitle = "My Profile", MenuDetail="Mi perfil", icon="User.png"},
-                new Menu {Page = new Feed(), MenuTitle = "Messages", MenuDetail="Practicar", icon="clock.png" },
+                //new Menu {Page = new Feed(),  MenuTitle = "My Profile", MenuDetail="Mi perfil", icon="User.png"},
+                new Menu {Page = new Feed(), MenuTitle = "Menú", MenuDetail="Inicio", icon="home.png" },
                 new Menu {Page = new SeleccionaTema(), MenuTitle="Personalizar", MenuDetail="Temas", icon="Mediapaint.png" },
-                new Menu {Page = new Feed(), MenuTitle="Contactos", MenuDetail="Plao", icon="contacts.png"}
+                new Menu {Page = new About(), MenuTitle="Acerca de", MenuDetail="info", icon="info.png"}
             };
             
             ListMenu.ItemsSource = menu;

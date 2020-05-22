@@ -35,62 +35,17 @@
 
             </Grid.RowDefinitions>
 
-            
-            <Grid Grid.Row="0" BackgroundColor="{DynamicResource ColorP1}">
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
-                </StackLayout>
 
+            <Grid Grid.Row="0"  BackgroundColor="{DynamicResource ColorP2}">
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                    <Label Text="{Binding player2}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaPersonajes" Text="{Binding sumaTotalP1}" FontSize="Medium" FontAttributes="Bold"  IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaPersonajesP2" Text="{Binding sumaTotalP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="TematicaP1" Text="{Binding sumaTematicaP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="TematicaP2" Text="{Binding sumaTematicaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="PersonajesP1" Text="{Binding sumaPersonajesP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="PersonajesP2" Text="{Binding sumaPersonajesP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
-                </StackLayout>
-
             </Grid>
 
-            <!-- Vuelta 1 player 1-->
-            <Grid Grid.Row="1" BackgroundColor="{DynamicResource ColorP1}" >
+            <!-- Vuelta 2 Player 2-->
+            <Grid Grid.Row="1" BackgroundColor="{DynamicResource ColorP2}" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones " FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    <Label Text="Minuto Libre" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
 
@@ -100,7 +55,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron1" Title="Tocar" >
+                    <Picker x:Name="patron13" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -114,8 +69,8 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="1">
-                    <Picker x:Name="patron2"
-                            Title="Tocar">
+                    <Picker x:Name="patron14"
+                            Title="Patrón2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
                                 <x:Int32>0</x:Int32>
@@ -129,7 +84,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron3" Title="Tocar">
+                    <Picker x:Name="patron15" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -143,7 +98,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron4" Title="Tocar">
+                    <Picker x:Name="patron16" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -157,7 +112,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron5" Title="Tocar">
+                    <Picker x:Name="patron17" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -171,7 +126,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron6" Title="Tocar" >
+                    <Picker x:Name="patron18" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -187,357 +142,6 @@
             </Grid>
 
             <Grid Grid.Row="3" BackgroundColor="White" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <StackLayout >
-                        <Label Text="Escena" HorizontalTextAlignment="Center"  />
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="1">
-                    <StackLayout >
-                        <Label Text="Skill's" HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="2">
-                    <StackLayout>
-                        <Label Text="Flow" HorizontalTextAlignment="Center" />
-                    </StackLayout>
-                </Grid>
-
-                <Grid Grid.Row="1" Grid.Column="0">
-                    <Picker x:Name="escena" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="1">
-                    <Picker x:Name="skill" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="2">
-                    <Picker x:Name="flow" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-                <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
-                </Grid>
-
-            </Grid>
-
-            <Grid Grid.Row="4" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP2}">
-                <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
-                </StackLayout>
-            </Grid>
-            <!-- vuelta 1 player 2 -->
-            <Grid Grid.Row="5" BackgroundColor="{DynamicResource ColorP2}" >
-                <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones " FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Grid.Row="6" BackgroundColor="White" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="30" />
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron7" Title="Tocar" >
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="1">
-                    <Picker x:Name="patron8"
-                            Title="Tocar"
-                           >
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}" >
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron9" Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron10" Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron11" Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron12" Title="Tocar" >
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="1" Grid.Column="0">
-                    <controls:CheckBox x:Name="respuesta"  DefaultText="" HorizontalOptions="FillAndExpand" />
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="1">
-                    <controls:CheckBox x:Name="respuesta2" HorizontalOptions="EndAndExpand" />
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="2">
-                    <controls:CheckBox x:Name="respuesta3" HorizontalOptions="EndAndExpand" />
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="3">
-                    <controls:CheckBox x:Name="respuesta4" HorizontalOptions="EndAndExpand" />
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="4">
-                    <controls:CheckBox x:Name="respuesta5" HorizontalOptions="EndAndExpand" />
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="5">
-                    <controls:CheckBox x:Name="respuesta6" HorizontalOptions="EndAndExpand" />
-                </Grid>
-
-            </Grid>
-
-            <Grid Grid.Row="7" BackgroundColor="White" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <StackLayout >
-                        <Label Text="Escena" HorizontalTextAlignment="Center"  />
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="1">
-                    <StackLayout >
-                        <Label Text="Skill's" HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="2">
-                    <StackLayout>
-                        <Label Text="Flow" HorizontalTextAlignment="Center" />
-                    </StackLayout>
-                </Grid>
-
-                <Grid Grid.Row="1" Grid.Column="0">
-                    <Picker x:Name="escenaP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="1">
-                    <Picker x:Name="skillP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="2">
-                    <Picker x:Name="flowP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-                <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
-                </Grid>
-            </Grid>
-
-            <Grid Grid.Row="8" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP2}">
-                <StackLayout HorizontalOptions="Center">
-                    <Label Text="{Binding player2}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
-                </StackLayout>
-            </Grid>
-
-<!-- Vuelta 2 Player 2-->
-            <Grid Grid.Row="9" BackgroundColor="{DynamicResource ColorP2}" >
-                <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Grid.Row="10" BackgroundColor="White" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron13" Title="Tocar" >
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="1">
-                    <Picker x:Name="patron14"
-                            Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}" >
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron15" Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron16" Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron17" Title="Tocar">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-                <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron18" Title="Tocar" >
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:Int32}">
-                                <x:Int32>0</x:Int32>
-                                <x:Int32>1</x:Int32>
-                                <x:Int32>2</x:Int32>
-                                <x:Int32>3</x:Int32>
-                                <x:Int32>4</x:Int32>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </Grid>
-
-            </Grid>
-
-            <Grid Grid.Row="11" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="40" />
@@ -597,26 +201,26 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="12" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP1}">
+            <Grid Grid.Row="4" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP1}">
                 <StackLayout HorizontalOptions="Center">
                     <Label  Text="{Binding player1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
-<!-- VUELTA 2 PLAYER 1-->
-            <Grid Grid.Row="13" BackgroundColor="{DynamicResource ColorP1}" >
+            <!-- VUELTA 2 PLAYER 1-->
+            <Grid Grid.Row="5" BackgroundColor="{DynamicResource ColorP1}" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Patrones vuelta 2" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    <Label Text="Minuto Respuesta" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
 
-            <Grid Grid.Row="14" BackgroundColor="White" >
+            <Grid Grid.Row="6" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="30" />
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron19" Title="Tocar" >
+                    <Picker x:Name="patron19" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -631,7 +235,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Picker x:Name="patron20"
-                            Title="Tocar">
+                            Title="Patrón2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}" >
                                 <x:Int32>0</x:Int32>
@@ -645,7 +249,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron21" Title="Tocar">
+                    <Picker x:Name="patron21" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -659,7 +263,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron22" Title="Tocar">
+                    <Picker x:Name="patron22" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -673,7 +277,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron23" Title="Tocar">
+                    <Picker x:Name="patron23" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -687,7 +291,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron24" Title="Tocar" >
+                    <Picker x:Name="patron24" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Int32}">
                                 <x:Int32>0</x:Int32>
@@ -721,7 +325,7 @@
 
             </Grid>
 
-            <Grid Grid.Row="15" BackgroundColor="White" >
+            <Grid Grid.Row="7" BackgroundColor="White" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="40" />
@@ -782,6 +386,405 @@
 
             </Grid>
 
+
+            <Grid Grid.Row="8" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP1}">
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaPersonajes" Text="{Binding sumaTotalP1}" FontSize="Medium" FontAttributes="Bold"  IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaPersonajesP2" Text="{Binding sumaTotalP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP1" Text="{Binding sumaTematicaP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP2" Text="{Binding sumaTematicaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP1" Text="{Binding sumaPersonajesP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP2" Text="{Binding sumaPersonajesP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+            </Grid>
+
+            <!-- Vuelta 1 player 1-->
+            <Grid Grid.Row="9" BackgroundColor="{DynamicResource ColorP1}" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Minuto Libre" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="10" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron1" Title="Patrón1" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron2"
+                            Title="Patrón2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}" >
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Picker x:Name="patron3" Title="Patrón3">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="patron4" Title="Patrón4">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Picker x:Name="patron5" Title="Patrón5">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Picker x:Name="patron6" Title="Patrón6" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="11" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout >
+                        <Label Text="Escena" HorizontalTextAlignment="Center"  />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout >
+                        <Label Text="Skill's" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <StackLayout>
+                        <Label Text="Flow" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Picker x:Name="escena" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Picker x:Name="skill" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Picker x:Name="flow" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <Grid Grid.Row="2"  Grid.Column="1">
+                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="12" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP2}">
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Player2" Text="{Binding player2}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+            <!-- vuelta 1 player 2 -->
+            <Grid Grid.Row="13" BackgroundColor="{DynamicResource ColorP2}" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Minuto Respuesta" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="14" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron7" Title="Patrón1" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron8"
+                            Title="Patrón2"
+                           >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}" >
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Picker x:Name="patron9" Title="Patrón3">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="patron10" Title="Patrón4">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Picker x:Name="patron11" Title="Patrón5">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Picker x:Name="patron12" Title="Patrón6" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <controls:CheckBox x:Name="respuesta"  DefaultText="" HorizontalOptions="FillAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <controls:CheckBox x:Name="respuesta2" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <controls:CheckBox x:Name="respuesta3" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <controls:CheckBox x:Name="respuesta4" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="4">
+                    <controls:CheckBox x:Name="respuesta5" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <controls:CheckBox x:Name="respuesta6" HorizontalOptions="EndAndExpand" />
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="15" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout >
+                        <Label Text="Escena" HorizontalTextAlignment="Center"  />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout >
+                        <Label Text="Skill's" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <StackLayout>
+                        <Label Text="Flow" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Picker x:Name="escenaP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Picker x:Name="skillP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Picker x:Name="flowP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Int32}">
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>1</x:Int32>
+                                <x:Int32>2</x:Int32>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                <Grid Grid.Row="2"  Grid.Column="1">
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                </Grid>
+            </Grid>
+
+           
+           
             <Grid Grid.Row="16" Margin="10,10,10,10" BackgroundColor="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="90" />

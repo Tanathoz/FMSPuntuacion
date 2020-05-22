@@ -109,7 +109,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Puntos Easy:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Easy Mode:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -146,7 +146,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Temática :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Temática:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -164,7 +164,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Personajes :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Personajes:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -182,7 +182,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Sangre :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Minutos:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -193,6 +193,8 @@
                 </Grid>
             </Grid>
 
+           
+
 
             <Grid Grid.Row="8"  BackgroundColor="{DynamicResource ColorP1}">
                 <Grid.RowDefinitions>
@@ -201,7 +203,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Deluxe :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Deluxe:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -294,7 +296,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Temática :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Temática:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -312,7 +314,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Personajes :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Personajes:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -330,7 +332,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Sangre :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Minutos:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -349,7 +351,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="0">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Margin="5,0,0,0" Text="Deluxe :" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Margin="5,0,0,0" Text="Deluxe:" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 

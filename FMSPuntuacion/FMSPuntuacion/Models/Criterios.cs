@@ -26,6 +26,7 @@ namespace FMSPuntuacion.Models
         public int respuestasP2 { get; set; }
         public string ganador { get; set; }
         public string sitio { get; set; }
+        public bool replica { get; set; }
         public int[] lstCalificacionesP1 = new int[5];
         public List<int> lstCalificacionesP2 = new List<int>();      
     }

@@ -17,8 +17,13 @@ namespace FMSPuntuacion
     public partial class Feed : ContentPage
     {
         public Feed()
-        {        
-            InitializeComponent();        
+        {
+           // NavigationPage.SetHasBackButton(this, false);
+            
+            InitializeComponent();
+            
+            
+            //NavigationPage.SetHasNavigationBar(this, true);
         }
        
 

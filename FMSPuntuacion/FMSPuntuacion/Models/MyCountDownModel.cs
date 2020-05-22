@@ -39,7 +39,7 @@ namespace FMSPuntuacion.Models
         public List<int> lstSegundos10 = new List<int>() { 59, 49, 39, 29,19,9 };
         public List<int> lstSegundos5 = new List<int>() { 59,54, 49,44, 39,34, 29,24, 19,14 ,9,4 };
         IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
-        IAdVideoInterstitial adVideo = DependencyService.Get<IAdVideoInterstitial>();
+       
 
         //COMENTARIO ES MEJOR PASAR ACA LO DE LAS PALABRAS QUE EN LA CLASE COUNTDOWN
         public MyCountDownModel()
@@ -177,8 +177,8 @@ namespace FMSPuntuacion.Models
             colorRGB = (Color)Application.Current.Resources["ColorBoton"];
             Color = colorRGB.ToHex();
             ColorCancelar = "LightGray";
-            //adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
-            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
+            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+         
             // UnloadAsync();
         }
 
@@ -199,8 +199,8 @@ namespace FMSPuntuacion.Models
             colorRGB = (Color)Application.Current.Resources["ColorBoton"];
             Color = colorRGB.ToHex();
             ColorCancelar = "LightGray";
-            //adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
-            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
+            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+           
         }
 
         public string[] LeerArchivo()

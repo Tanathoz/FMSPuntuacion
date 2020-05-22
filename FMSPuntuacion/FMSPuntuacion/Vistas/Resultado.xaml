@@ -4,14 +4,14 @@
              x:Class="FMSPuntuacion.Vistas.Resultado"
              Title="Resultado ">
     <ScrollView>
-        <Grid>
+        <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="Auto" />
@@ -37,18 +37,18 @@
 
                 
                 <Grid Grid.Row="1" Grid.Column="0">
-                    <StackLayout HorizontalOptions="Center">
+                    <StackLayout HorizontalOptions="StartAndExpand">
                         <Label  Text="Puntos Totales :" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="1">
-                    <StackLayout HorizontalOptions="Start">
+                    <StackLayout HorizontalOptions="StartAndExpand">
                         <Label x:Name="TotalFinal" Text="{Binding sumaTotalP1}" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
-                <Grid Grid.Row="2" Grid.Column="0">
+                <!--<Grid Grid.Row="2" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
                         <Label Text="Respuestas :" FontSize="Medium" FontAttributes="Bold" TextColor="White" IsVisible="False" />
                     </StackLayout>
@@ -57,7 +57,7 @@
                     <StackLayout HorizontalOptions="Start">
                         <Label x:Name="Respuestas" Text="{Binding respuestasP1}" FontSize="Medium" FontAttributes="Bold" TextColor="White" IsVisible="False" />
                     </StackLayout>
-                </Grid>
+                </Grid>-->
 
                
 
@@ -151,7 +151,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid Grid.Row="2" Grid.Column="0">
+                    <!--<Grid Grid.Row="2" Grid.Column="0">
                     <StackLayout HorizontalOptions="Center">
                             <Label Text="Respuestas :" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" IsVisible="False" />
                     </StackLayout>
@@ -160,7 +160,7 @@
                     <StackLayout HorizontalOptions="Start">
                             <Label x:Name="RespuestaP2" Text="{Binding respuestasP2}" FontSize="Medium" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" IsVisible="False" />
                     </StackLayout>
-                </Grid>
+                </Grid>-->
 
             </Grid>
          </Grid>
@@ -184,6 +184,10 @@
 
             <Grid Grid.Row="4" BackgroundColor="White" Margin="10,10,10,0">
                 <Button Text="Salir" Clicked="salir" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+            <Grid Grid.Row="5" BackgroundColor="White" Margin="10,10,10,0">
+                <Button Text="Réplica" Clicked="Votar" BorderRadius="50" IsEnabled="{Binding replica}" IsVisible="{Binding replica}" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
         </Grid>
 

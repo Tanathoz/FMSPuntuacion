@@ -20,7 +20,7 @@ namespace FMSPuntuacion.Droid.Helpers
     public class AdViewRenderer: ViewRenderer <Controls.AdControlView, AdView>
     {
         string adUnit = "ca-app-pub-3940256099942544/6300978111";
-        AdSize adSize = AdSize.SmartBanner;
+        AdSize adSize = AdSize.Banner;
         AdView adView;
 
         AdView CreateAdView()
