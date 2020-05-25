@@ -97,13 +97,16 @@ namespace FMSPuntuacion.Vistas
             valores.lstCalificacionesP2.Add(sumaPersonajesP2);
             var Sangre = new Sangre();
             Sangre.BindingContext = valores;
-           // if (suma == 0 || sumaP2 == 0)
-           // {
-             //   await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
-           // }else {}
+            if (sumaPersonajes == 0 || sumaPersonajesP2 == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }
+            else {
+                await Navigation.PushAsync(Sangre);
+            }
 
 
-            await Navigation.PushAsync(Sangre);
+           
         }
     }
 }

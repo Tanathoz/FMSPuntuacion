@@ -101,9 +101,12 @@ namespace FMSPuntuacion.Vistas
             if (sumaVuelta2 == 0 || sumaVuelta2P2 == 0)
             {
                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }else
+            {
+                await Navigation.PushAsync(personajes);
             }
 
-            await Navigation.PushAsync(personajes);
+            
         }
     }
 }

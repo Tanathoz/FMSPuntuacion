@@ -134,8 +134,11 @@ namespace FMSPuntuacion.Vistas
             if (suma == 0 || sumaP2 == 0)
             {
                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }else
+            {
+                await Navigation.PushAsync(Deluxe);
             }
-            await Navigation.PushAsync(Deluxe);
+            
         }
     }
 }

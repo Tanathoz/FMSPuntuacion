@@ -103,12 +103,15 @@ namespace FMSPuntuacion.Vistas
             valores.lstCalificacionesP2.Add(sumaP2);
             var Resultado = new FMSPuntuacion.Vistas.Resultado();
             Resultado.BindingContext = valores;
-           // if (suma == 0 || sumaP2 == 0)
-           // {
-           //     await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
-          //  }else{}
+            if (suma == 0 || sumaP2 == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }
+            else {
+                await Navigation.PushAsync(Resultado);
+            }
 
-            await Navigation.PushAsync(Resultado);
+            
         }
     }
 }

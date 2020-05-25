@@ -70,13 +70,16 @@ namespace FMSPuntuacion
             valores.lstCalificacionesP2.Add(sumaHardP2);
             var Tematicas = new FMSPuntuacion.Vistas.Tematica();
             Tematicas.BindingContext = valores;
-           // if (sumaHard == 0 || sumaHardP2 == 0)
-           // {
-             //   await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
-            //}else { }
+            if (sumaHard == 0 || sumaHardP2 == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+            }
+            else {
+                await Navigation.PushAsync(Tematicas);
+            }
 
 
-            await Navigation.PushAsync(Tematicas);
+            
         }
 
     }
