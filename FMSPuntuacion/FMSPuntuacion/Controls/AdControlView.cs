@@ -5,8 +5,12 @@ using Xamarin.Forms;
 
 namespace FMSPuntuacion.Controls
 {
-    public class AdControlView: View
+    public class AdControlView: ContentView
     {
+        public AdControlView()
+        {
+
+        }
         //public string AdUnitID { get; set; }
         //public AdControlView(string Adunit)
         //{

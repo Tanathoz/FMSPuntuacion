@@ -18,7 +18,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="90" />
-
+                <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
 
 
@@ -251,7 +251,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
 
 
@@ -444,7 +444,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
 
 
@@ -456,6 +456,11 @@
                 </Grid.RowDefinitions>
                 <Button Text="Siguiente" Clicked="GuardarPersonajes"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
+
+            <Grid Grid.Row="9" Margin="0,10,0,10" BackgroundColor="White">
+
+            </Grid>
+
 
         </Grid>
 

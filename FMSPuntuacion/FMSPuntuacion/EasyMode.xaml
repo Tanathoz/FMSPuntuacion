@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.EasyMode"
-             xmlns:ads="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
+             
              Title="Easy Mode">
 
     <ScrollView>
@@ -384,7 +384,7 @@
                 <Button Text="Siguiente" Clicked="GuardarEsayMode" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
             </Grid>
 
-            <ads:AdControlView BackgroundColor="red"  Grid.Row="9" />
+            <!--<ads:AdControlView BackgroundColor="red"  Grid.Row="9" />-->
 
         </Grid>
     </ScrollView>

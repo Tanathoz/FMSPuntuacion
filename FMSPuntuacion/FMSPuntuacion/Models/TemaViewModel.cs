@@ -19,7 +19,7 @@ namespace FMSPuntuacion.Models
             {
                 new AppTema() { Id = Settings.Tema.Defecto, Title = "Predeterminado", Description = "Tema por defecto", icon="flag.png" },
                 new AppTema() { Id = Settings.Tema.Spain, Title = "España", Description = "Tema con colores de la bandera ", icon="spain.png"},
-                new AppTema() { Id = Settings.Tema.Mexico, Title = "Mexico", Description = "Tema con colores mexico", icon="mexico.png" },
+                new AppTema() { Id = Settings.Tema.Mexico, Title = "México", Description = "Tema con colores mexico", icon="mexico.png" },
                 new AppTema() { Id = Settings.Tema.Argentina, Title = "Argentina", Description = "Tema con colores argentina", icon="Argflag.png" },
                 new AppTema() { Id = Settings.Tema.Chile, Title = "Chile", Description = "Tema con colores de chile", icon="Chileflag.png" },
             };

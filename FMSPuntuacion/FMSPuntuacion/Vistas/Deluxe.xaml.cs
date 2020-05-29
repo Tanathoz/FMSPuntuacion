@@ -22,7 +22,7 @@ namespace FMSPuntuacion.Vistas
 			InitializeComponent ();
 		}
 
-        async void SumaPuntosP1(object sender, EventArgs e)
+        public void SumaPuntosP1(object sender, EventArgs e)
         {
             Total.Text = "Total :";
 
@@ -41,7 +41,7 @@ namespace FMSPuntuacion.Vistas
 
         }
 
-        async void SumaPuntosP2(object sender, EventArgs e)
+        public void SumaPuntosP2(object sender, EventArgs e)
         {
             Total2.Text = "Total : ";
             if (patron4.SelectedIndex > -1 && patron5.SelectedIndex > -1 && patron6.SelectedIndex > -1 && patron15.SelectedIndex > -1 && patron16.SelectedIndex > -1 && patron17.SelectedIndex > -1

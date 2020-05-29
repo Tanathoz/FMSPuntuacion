@@ -31,7 +31,7 @@ namespace FMSPuntuacion.Vistas.Replica
             Resultados = new Resultados();
         }
 
-        async void SumaPuntosP1(object sender, EventArgs e)
+        public void SumaPuntosP1(object sender, EventArgs e)
         {
             Total.Text = "Total :";
 
@@ -63,7 +63,7 @@ namespace FMSPuntuacion.Vistas.Replica
         }
 
 
-        async void SumaPuntosP2(object sender, EventArgs e)
+        public void SumaPuntosP2(object sender, EventArgs e)
         {
             Total2.Text = "Total : ";
             if (patron9.SelectedIndex > -1 && patron10.SelectedIndex > -1 && patron11.SelectedIndex > -1 && patron12.SelectedIndex > -1 && patron13.SelectedIndex > -1 && patron14.SelectedIndex > -1
@@ -143,7 +143,7 @@ namespace FMSPuntuacion.Vistas.Replica
             await Navigation.PopToRootAsync();
         }
 
-        async void limpiar(object sender, EventArgs e)
+        public void limpiar(object sender, EventArgs e)
         {
             patron1.SelectedIndex = -1;
             patron2.SelectedIndex = -1;

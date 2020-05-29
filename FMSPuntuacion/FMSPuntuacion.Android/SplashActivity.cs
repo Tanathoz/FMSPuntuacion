@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace FMSPuntuacion.Droid
 {
-    [Activity(Label = "FMSPuntuacion", Icon = "@mipmap/ic_launcher", NoHistory =true,  Theme = "@style/SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "FreeJudge", Icon = "@mipmap/ic_launcher", NoHistory =true,  Theme = "@style/SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

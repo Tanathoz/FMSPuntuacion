@@ -13,8 +13,6 @@ using Android.Gms.Ads;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using FMSPuntuacion.Controls;
-using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
 using FMSPuntuacion.Droid.Helpers;
 
 [assembly: ExportRenderer(typeof(AdBaner), typeof(AdBannerView))]
@@ -82,7 +80,7 @@ namespace FMSPuntuacion.Droid.Helpers
                         break;
                 }
                 // TODO: change this id to your admob id  
-                adView.AdUnitId = "ca-app-pub-6499029686626513/1851200468";
+                adView.AdUnitId = "ca-app-pub-3940256099942544/6300978111";
                 var requestbuilder = new AdRequest.Builder();
                 adView.LoadAd(requestbuilder.Build());
                 SetNativeControl(adView);

@@ -8,6 +8,7 @@
     <Authors>Vz Tanathoz</Authors>
     <Company>Vz Team</Company>
     <Product>FreeJudge</Product>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -136,16 +137,43 @@
     <None Update="EasyMode.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Example.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Feed.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="HardMode.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="InitialScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="MenuOpciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Temas\Argentina.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Temas\Chile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Temas\Defecto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Temas\Mexico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Temas\Spain.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="ValoraPatron.xaml">
@@ -157,10 +185,34 @@
     <None Update="Vistas\Deluxe.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Vistas\Generador\Temporizador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Vistas\Opciones\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Vistas\Opciones\SeleccionaTema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Vistas\Personajes.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Vistas\Replica\CuatroX4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Vistas\Replica\Minutos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Vistas\Replica\NombresInicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Vistas\Replica\Replica4x.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Vistas\Resultado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Vistas\ResultadoDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Vistas\Sangre.xaml">

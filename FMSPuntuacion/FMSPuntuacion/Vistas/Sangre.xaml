@@ -381,7 +381,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total4" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                    <Label x:Name="Total4" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
 
             </Grid>
@@ -779,7 +779,7 @@
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
             </Grid>
 

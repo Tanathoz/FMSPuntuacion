@@ -38,7 +38,7 @@ namespace FMSPuntuacion.Vistas.Generador
             // OnCheckedChanged = new Command(OnCheckBoxChanged);
         }
 
-        protected override async void OnAppearing()
+        protected override  void OnAppearing()
         {
             base.OnAppearing();
             var vm = BindingContext as BaseModel;
@@ -64,7 +64,7 @@ namespace FMSPuntuacion.Vistas.Generador
         //    }
         //}
 
-        async void CambioBandera(object sender, EventArgs e)
+        public void CambioBandera(object sender, EventArgs e)
         {
 
             if (palabras.Checked)

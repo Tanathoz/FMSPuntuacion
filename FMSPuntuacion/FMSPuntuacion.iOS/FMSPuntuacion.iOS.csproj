@@ -157,9 +157,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\FMSPuntuacion\FMSPuntuacion.csproj">
-      <Project>{92BCFCB4-C313-45E6-80D8-47AF54808B3A}</Project>
-      <Name>FMSPuntuacion</Name>
+    <ProjectReference Include="..\FMSPuntuacion\FreeJudge.csproj">
+      <Project>{6885B0C5-C894-4038-99B9-4F999632EFB3}</Project>
+      <Name>FreeJudge</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

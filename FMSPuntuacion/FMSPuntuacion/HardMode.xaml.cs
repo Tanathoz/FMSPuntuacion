@@ -26,7 +26,7 @@ namespace FMSPuntuacion
                 
 		}
 
-        async void SumaPuntosP1(object sender, EventArgs e)
+        public void SumaPuntosP1(object sender, EventArgs e)
         {
             Total.Text = "Total :";
 
@@ -41,7 +41,7 @@ namespace FMSPuntuacion
 
         }
 
-        async void SumaPuntosP2(object sender, EventArgs e)
+        public void SumaPuntosP2(object sender, EventArgs e)
         {
             TotalP2.Text = "Total : ";
             if (patron7.SelectedIndex > -1 && patron8.SelectedIndex > -1 && patron9.SelectedIndex > -1 && patron10.SelectedIndex > -1 && patron11.SelectedIndex > -1 && patron12.SelectedIndex > -1 && escenaP2.SelectedIndex > -1 && skillP2.SelectedIndex > -1 && flowP2.SelectedIndex > -1)

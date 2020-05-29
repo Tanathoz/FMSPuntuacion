@@ -24,7 +24,7 @@ namespace FMSPuntuacion.Vistas
 			InitializeComponent ();
 		}
 
-        async void SumaPuntosP1(object sender, EventArgs e)
+        public void SumaPuntosP1(object sender, EventArgs e)
         {
             Total.Text = "Total :";
 
@@ -40,7 +40,7 @@ namespace FMSPuntuacion.Vistas
 
         }
 
-        async void SumaPuntosP2(object sender, EventArgs e)
+        public void SumaPuntosP2(object sender, EventArgs e)
         {
             TotalP2.Text = "Total : ";
             respuestaP2 = 0;
@@ -61,11 +61,11 @@ namespace FMSPuntuacion.Vistas
                     respuestaP2++;
                 if (respuesta6.Checked)
                     respuestaP2++;
-                TotalP2.Text += sumaP2.ToString() + "+ "+respuestaP2;
+                TotalP2.Text += sumaP2.ToString() + "+"+respuestaP2;
             }
         }
 
-        async void SumaPuntosP2Vuelta2(object sender, EventArgs e)
+        public void SumaPuntosP2Vuelta2(object sender, EventArgs e)
         {
             Total3.Text = "Total :";
             if (patron13.SelectedIndex > -1 && patron14.SelectedIndex > -1 && patron15.SelectedIndex > -1 && patron16.SelectedIndex > -1 && patron17.SelectedIndex > -1 && patron18.SelectedIndex > -1 && escena3.SelectedIndex > -1 && skill3.SelectedIndex > -1 && flow3.SelectedIndex > -1)
@@ -78,7 +78,7 @@ namespace FMSPuntuacion.Vistas
 
         }
 
-        async void SumaPuntosP1Vuelta2(object sender, EventArgs e)
+        public void SumaPuntosP1Vuelta2(object sender, EventArgs e)
         {
             Total4.Text = "Total :";
             respuestaP1 = 0;
@@ -99,7 +99,7 @@ namespace FMSPuntuacion.Vistas
                     respuestaP1++;
                 if (respuesta12.Checked)
                     respuestaP1++;
-                Total4.Text += sumaVuelta2.ToString()+ "+ "+respuestaP1;
+                Total4.Text += sumaVuelta2.ToString()+ "+"+respuestaP1;
             }
         }
 

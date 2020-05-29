@@ -24,7 +24,7 @@ namespace FMSPuntuacion.Vistas.Opciones
 
         public async void salir(object sender, EventArgs args)
         {
-            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/5224354917");
+            adVideo.ShowAdVideo("ca-app-pub-6499029686626513/3014389692");
             contandor++;
             if (contandor == 3)
             {

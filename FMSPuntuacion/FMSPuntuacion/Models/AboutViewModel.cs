@@ -11,7 +11,7 @@ namespace FMSPuntuacion.Models
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://somostechies.com")));
+            //OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://somostechies.com")));
         }
 
         public ICommand OpenWebCommand { get; }

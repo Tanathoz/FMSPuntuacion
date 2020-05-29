@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSPuntuacion.Android", "FMSPuntuacion\FMSPuntuacion.Android\FMSPuntuacion.Android.csproj", "{36ED5071-B5AD-4654-BC67-DB13F7A19CD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeJudge.Android", "FMSPuntuacion\FMSPuntuacion.Android\FreeJudge.Android.csproj", "{36ED5071-B5AD-4654-BC67-DB13F7A19CD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSPuntuacion.iOS", "FMSPuntuacion\FMSPuntuacion.iOS\FMSPuntuacion.iOS.csproj", "{8392729C-C9A2-4669-8D7A-5202D74241C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FMSPuntuacion", "FMSPuntuacion\FMSPuntuacion\FMSPuntuacion.csproj", "{6885B0C5-C894-4038-99B9-4F999632EFB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeJudge", "FMSPuntuacion\FMSPuntuacion\FreeJudge.csproj", "{6885B0C5-C894-4038-99B9-4F999632EFB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
