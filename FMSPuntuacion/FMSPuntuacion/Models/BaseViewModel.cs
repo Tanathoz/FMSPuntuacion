@@ -1,4 +1,5 @@
 ﻿using FMSPuntuacion.Services;
+using FMSPuntuacion.Helpers;
 using FMSPuntuacion.Tablas;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using XLabs.Data;
 
 namespace FMSPuntuacion.Models
 {
-    public class BaseViewModel:ObservableObject
+    public class BaseViewModel: Helpers.ObservableObject
     {
         public IDataStore<Resultados> DataStore => DependencyService.Get<IDataStore<Resultados>>();
         bool isBusy = false;

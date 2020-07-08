@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FMSPuntuacion.Tablas;
@@ -78,7 +73,7 @@ namespace FMSPuntuacion.Vistas
 
                 resultadoViewModel.AddItem(Resultados);
                 // MessagingCenter.Send(this, "AddItem", Resultados);
-                adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
+                adVideo.ShowAdVideo("ca-app-pub-6499029686626513/3014389692");
                 await Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
 
 
@@ -90,13 +85,13 @@ namespace FMSPuntuacion.Vistas
 
         async void salir(object sender, EventArgs args)
         {
-            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
+            adVideo.ShowAdVideo("ca-app-pub-6499029686626513/3014389692");
             await Navigation.PopToRootAsync();
         }
 
         async void Votar(object sender, EventArgs args)
         {
-            adVideo.ShowAdVideo("ca-app-pub-3940256099942544/8691691433");
+            adVideo.ShowAdVideo("ca-app-pub-6499029686626513/3014389692");
             var valores = new Criterios
             {
                 player1 = Player1.Text,

@@ -23,8 +23,7 @@
 
 
             <Grid Grid.Row="0" BackgroundColor="{DynamicResource ColorP1}">
-               
-                
+                             
                     <StackLayout HorizontalOptions="Center">
                     <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>

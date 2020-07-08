@@ -55,8 +55,10 @@
 
 
     <!-- Imagen-->
-    <x:String x:Key="ImageIcon">Mex.png</x:String>
-
+    <x:String x:Key="ImageIcon">@drawable/Mex.png</x:String>
+    <x:String x:Key="StopIcon">@drawable/StopMex.png</x:String>
+    <x:String x:Key="PlayIcon">@drawable/PlayMex.png</x:String>
+    <x:String x:Key="PauseIcon">@drawable/PauseMex.png</x:String>
     <!--<OnPlatform 
         x:Key="Fuente"
         x:TypeArguments="x:String"

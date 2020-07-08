@@ -1,10 +1,5 @@
 ﻿using FMSPuntuacion.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -67,7 +62,7 @@ namespace FMSPuntuacion.Vistas.Replica
 
         async void salir(object sender, EventArgs args)
         {
-            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+            adInterstitial.showAd("ca-app-pub-6499029686626513/6617028712");
             await Navigation.PopToRootAsync();
         }
 

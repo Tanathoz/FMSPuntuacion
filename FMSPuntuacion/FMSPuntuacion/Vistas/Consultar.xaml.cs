@@ -73,7 +73,7 @@ namespace FMSPuntuacion.Vistas
         public async void EliminarRegistro(object sender, SelectableItemsView args)
         {
             var item = args.SelectedItem as Resultados;
-            await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Estas seguro que quieres eliminar "+item.player2, "OK");
+            await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Estas seguro que quieres eliminar " + item.player1 + "vs" + item.player2, "OK");
         }
 
         private void SearchItem(object senderm, EventArgs e)
@@ -107,10 +107,7 @@ namespace FMSPuntuacion.Vistas
 
             await Navigation.PopToRootAsync();
         }
-        public void Restulado_OnClicked()
-        {
-             Navigation.PushAsync(new Example()); 
-        }
+        
 
 	}
 }

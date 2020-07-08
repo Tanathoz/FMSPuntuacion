@@ -4,7 +4,7 @@
              x:Class="FMSPuntuacion.Vistas.Generador.Temporizador"
              xmlns:check="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:controls="clr-namespace:FMSPuntuacion.Controls"
-             xmlns:radio="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              BackgroundColor="{StaticResource WhiteColor}"
@@ -51,6 +51,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
 
@@ -70,8 +72,7 @@
                     </ffimageloading:CachedImage.Transformations>
                 </ffimageloading:CachedImage>
 
-                <controls:CircleCountdown 
-                   
+                <controls:CircleCountdown                 
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     Progress="{Binding Progress}"
@@ -120,8 +121,8 @@
                     </Grid>
                 </StackLayout>
 
-                    <Grid Grid.Row="4"  Margin="84, 12">
-                        <Button   
+                <Grid Grid.Row="4"  Margin="84, 12">
+                   <Button   
                         BorderRadius ="50"
                         FontAttributes="Bold"
                         BackgroundColor="{Binding ColorCancelar}"
@@ -134,9 +135,78 @@
                         TextColor="{DynamicResource TextoColor}"    
                         IsEnabled="{Binding ActivarCancelar}"
                         FontFamily="{DynamicResource Fuente}"
+                    />
+                </Grid>
+
+                <Grid Grid.Row="5"  Margin="14, 12">
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <Button   
+                        BorderRadius ="50"
+                        FontAttributes="Bold"
+                        BackgroundColor="{Binding Color}"
+                        FontSize="Large"
+                        BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
+                        HeightRequest="60"      
+                        CornerRadius="96"         
+                        Clicked="play"
+                        ImageSource="{DynamicResource PlayIcon}"
+                        TextColor="{DynamicResource TextoColor}"                         
+                        FontFamily="{DynamicResource Fuente}"
                         />
                     </Grid>
-                
+
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Button   
+                        BorderRadius ="50"
+                        FontAttributes="Bold"
+                        BackgroundColor="{Binding Color}"
+                        FontSize="Large"
+                        BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
+                        HeightRequest="30"      
+                        CornerRadius="66"         
+                        Clicked="pausa"
+                        ImageSource="{DynamicResource PauseIcon}"
+                        TextColor="{DynamicResource TextoColor}"                         
+                        FontFamily="{DynamicResource Fuente}"
+                        />
+                        
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2">
+                        <Button   
+                        BorderRadius ="50"
+                        FontAttributes="Bold"
+                        BackgroundColor="{Binding Color}"
+                        FontSize="Large"
+                        BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
+                        HeightRequest="30"      
+                        CornerRadius="66"         
+                        Clicked="stop"
+                        ImageSource="{DynamicResource StopIcon}"
+                        TextColor="{DynamicResource TextoColor}"                         
+                        FontFamily="{DynamicResource Fuente}"
+                        />
+                        
+                    </Grid>
+                    
+                </Grid>
+
+                <Grid Grid.Row="6" Margin="84,12">
+                    <StackLayout>
+                        <Button   
+                        BorderRadius ="50"
+                        FontAttributes="Bold"
+                        BackgroundColor="{Binding Color}"
+                        FontSize="Small"
+                        BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
+                        HeightRequest="35"      
+                        CornerRadius="66"         
+                        Clicked="Button_Clicked"
+                        Text="Instrumental" 
+                        TextColor="{DynamicResource TextoColor}"                         
+                         />
+                        <Label Text="File Is :" x:Name="lbl"/>
+                    </StackLayout>
+                </Grid>
 
             </Grid>
         </ScrollView>

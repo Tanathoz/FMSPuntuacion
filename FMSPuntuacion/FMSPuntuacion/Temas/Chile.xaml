@@ -31,7 +31,10 @@
     <Color x:Key="SeparatorLineColor">#ececec</Color>
 
     <!-- Imagen-->
-    <x:String x:Key="ImageIcon">Chile.png</x:String>
+    <x:String x:Key="ImageIcon">@drawable/Chile.png</x:String>
+    <x:String x:Key="StopIcon">@drawable/StopChi.png </x:String>
+    <x:String x:Key="PlayIcon">@drawable/PlayChi.png</x:String>
+    <x:String x:Key="PauseIcon">@drawable/PauseChi.png</x:String>
 
     <OnPlatform 
         x:Key="Fuente"

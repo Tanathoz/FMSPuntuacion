@@ -28,6 +28,7 @@ namespace FMSPuntuacion.Models
         private string _palabra;
         private double _progress;
         public int count = 0;
+        public int countAds = 0;
         public int frecuencia = 0;
         public bool flagPalabra;
         public bool activar;
@@ -47,6 +48,7 @@ namespace FMSPuntuacion.Models
             _countdown = new CountDown();
             _segundos = 59;
             activar = true;
+            countAds = 0;
             colorRGB = (Color)Application.Current.Resources["ColorBoton"];
             color = colorRGB.ToHex(); 
             colorCancelar = "LightGray";
@@ -110,7 +112,7 @@ namespace FMSPuntuacion.Models
         }
         public ICommand RestartCommand => new Command<XLabs.Forms.Controls.BindableRadioGroup>(Restart);
         public ICommand CancelCommand => new Command(Cancel);
-
+        public ICommand PlayCommand => new Command(reproducir);
         public override Task LoadAsync()
         {         
             _countdown.EndDate = DateTime.Now.AddMinutes(1);
@@ -142,8 +144,7 @@ namespace FMSPuntuacion.Models
             if (frecuencia == 2)
             {              
                 if (lstSegundos10.Contains(Segundos))
-                {                  
-                    Debug.WriteLine("sder"  +Segundos +"palabra" + lstPalabra[count]);
+                {                                      
                     Palabra = Capitalizar(lstPalabra[count]);                    
                     count++;                  
                 }                  
@@ -151,7 +152,6 @@ namespace FMSPuntuacion.Models
             {
                 if (lstSegundos5.Contains(Segundos))
                 {
-                    Debug.WriteLine("Segundos 5S" + Segundos + "palabra" + lstPalabra[count] + " COUNT " + count);
                     Palabra = Capitalizar(lstPalabra[count]);
                     count++;
                 }
@@ -166,6 +166,7 @@ namespace FMSPuntuacion.Models
             Segundos = 0;
             Progress = 0;
             count = 0;
+            countAds++;
             Palabra = "Tiempo!!";
            // lstPalabra.Clear();
             _countdown.Ticked -= OnCountdownTicked;
@@ -177,7 +178,11 @@ namespace FMSPuntuacion.Models
             colorRGB = (Color)Application.Current.Resources["ColorBoton"];
             Color = colorRGB.ToHex();
             ColorCancelar = "LightGray";
-            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+
+            if (countAds % 2 == 0)
+            {
+                adInterstitial.showAd("ca-app-pub-6499029686626513/6617028712");
+            }
          
             // UnloadAsync();
         }
@@ -189,6 +194,7 @@ namespace FMSPuntuacion.Models
             Progress = 0;
             Palabra = string.Empty;
             count = 0;
+            countAds++;
             _countdown.Ticked -= OnCountdownTicked;
             _countdown.Completed -= OnCountdownCompleted;
             ////después de acabar el tiempo la pantalla se bloqueara en 30 seg
@@ -199,7 +205,12 @@ namespace FMSPuntuacion.Models
             colorRGB = (Color)Application.Current.Resources["ColorBoton"];
             Color = colorRGB.ToHex();
             ColorCancelar = "LightGray";
-            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+
+            if (countAds %2 ==0 )
+            {
+                adInterstitial.showAd("ca-app-pub-6499029686626513/6617028712");
+            }
+            
            
         }
 
@@ -251,6 +262,15 @@ namespace FMSPuntuacion.Models
         {
             _countdown.Cancelar = true;
            // OnCountdownCancel();
+        }
+
+        public void reproducir()
+        {
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+            Stream audioStream = assembly.GetManifestResourceStream("FMSPuntuacion.Recursos.hitt.mp3");
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load(audioStream);
+            player.Play();
         }
 
         private static List<string> RandomNumber(string[] palabras, int numero)

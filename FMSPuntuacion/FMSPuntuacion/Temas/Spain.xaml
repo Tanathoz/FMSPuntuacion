@@ -49,8 +49,10 @@
     <x:Double x:Key="FontSize120">120</x:Double>
     
     <!-- Imagen-->
-    <x:String x:Key="ImageIcon">SPai.png </x:String>
-
+    <x:String x:Key="ImageIcon">@drawable/Esp.png</x:String>
+    <x:String x:Key="StopIcon">@drawable/StopSpain.png</x:String>
+    <x:String x:Key="PlayIcon">@drawable/PlaySpain.png</x:String>
+    <x:String x:Key="PauseIcon">@drawable/PauseSpain.png</x:String>
     <OnPlatform 
         x:Key="Fuente"
         x:TypeArguments="x:String"

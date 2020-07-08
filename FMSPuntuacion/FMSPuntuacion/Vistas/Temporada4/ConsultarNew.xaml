@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Temporada4.ConsultarNew"
+             Title="Historial">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Calificar" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Menú" Clicked="Volver" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Padding="20">
+            <SearchBar x:Name="SearchBar" TextChanged="SearchItem"/>
+            <ListView x:Name="ListaResultados" 
+                      ItemsSource="{Binding Items}"                
+                      RefreshCommand="{Binding LoadResultadoCommand}"
+                      BackgroundColor="White"
+                      VerticalOptions="FillAndExpand"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement"
+				      ItemSelected="OnItemSelected"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <!--<MenuItem Text="Delete" IsDestructive="True" 
+                                          CommandParameter="{Binding .}"
+                                          Command="{Binding BindingContext.DeleteCommand}" />-->
+                            </ViewCell.ContextActions>
+                            <StackLayout  Orientation="Horizontal">
+                                <Label Text="{Binding id}" IsVisible="False"/>
+                                <Label Text="{Binding player1}" Margin="10,0,0,0" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text=" VS " TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding player2}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text=" - " TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding sitio}" TextColor="Black" VerticalTextAlignment="Center"/>
+                                <Button ImageSource="Eliminar.png" BackgroundColor="{DynamicResource ColorBoton}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="5" BorderRadius="50" HorizontalOptions="EndAndExpand" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ListaResultados}}" CommandParameter="{Binding .}" />
+
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

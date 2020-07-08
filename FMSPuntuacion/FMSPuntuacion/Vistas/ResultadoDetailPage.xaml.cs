@@ -33,7 +33,7 @@ namespace FMSPuntuacion.Vistas
         async void Regresar(object sender, EventArgs e)
         {
 
-            adInterstitial.showAd("ca-app-pub-3940256099942544/1033173712");
+            adInterstitial.showAd("ca-app-pub-6499029686626513/6617028712");
             await Navigation.PushAsync(new Consultar
             {
 

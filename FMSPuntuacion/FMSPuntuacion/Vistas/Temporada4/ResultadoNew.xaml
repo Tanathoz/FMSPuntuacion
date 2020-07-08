@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Temporada4.ResultadoNew">
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" BackgroundColor="{DynamicResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="Player 1 :" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    </StackLayout>
+                </Grid>
+
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label  Text="Puntos Totales :" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label x:Name="TotalFinal" Text="{Binding sumaTotalP1}" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
+                    </StackLayout>
+                </Grid>
+
+                <!--<Grid Grid.Row="2" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="Respuestas :" FontSize="Medium" FontAttributes="Bold" TextColor="White" IsVisible="False" />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" >
+                    <StackLayout HorizontalOptions="Start">
+                        <Label x:Name="Respuestas" Text="{Binding respuestasP1}" FontSize="Medium" FontAttributes="Bold" TextColor="White" IsVisible="False" />
+                    </StackLayout>
+                </Grid>-->
+
+
+
+                <!-- Los campos para guardar en la base los datos-->
+
+
+
+
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP1" Text="{Binding sumaTematicaP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TematicaP2" Text="{Binding sumaTematicaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP1" Text="{Binding sumaPersonajesP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="PersonajesP2" Text="{Binding sumaPersonajesP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SangreP1" Text="{Binding sumaSangreP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SangreP2" Text="{Binding sumaSangreP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="DeluxeP1" Text="{Binding sumaDeluxeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="DeluxeP2" Text="{Binding sumaDeluxeP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid Grid.Row="1" BackgroundColor="{DynamicResource ColorP2}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label  Text="Player 2 :" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label x:Name="Player2" Text="{Binding player2}" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="0">
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label  Text="Puntos Totales :" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1" >
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label x:Name="TotalFinalP2" Text="{Binding sumaTotalP2}" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" HorizontalTextAlignment="Start" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        </StackLayout>
+                    </Grid>
+
+                    <!--<Grid Grid.Row="2" Grid.Column="0">
+                    <StackLayout HorizontalOptions="Center">
+                            <Label Text="Respuestas :" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" IsVisible="False" />
+                    </StackLayout>
+                    </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <StackLayout HorizontalOptions="Start">
+                            <Label x:Name="RespuestaP2" Text="{Binding respuestasP2}" FontSize="Medium" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" IsVisible="False" />
+                    </StackLayout>
+                </Grid>-->
+
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="{DynamicResource SeparadorColor}">
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Ganador :" FontSize="{StaticResource FontSize26}" FontAttributes="Bold" TextColor="Gold" FontFamily="{DynamicResource Fuente}" />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label x:Name="GanadorTexto" Text="{Binding ganador}" FontAttributes="Bold" FontSize="{StaticResource FontSize26}" TextColor="Gold" FontFamily="{DynamicResource Fuente}" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="3" BackgroundColor="White" Margin="10,10,10,0">
+                <Button Text="Guardar" Clicked="registrarResultado"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}"  BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+            <Grid Grid.Row="4" BackgroundColor="White" Margin="10,10,10,0">
+                <Button Text="Salir" Clicked="salir" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+            <Grid Grid.Row="5" BackgroundColor="White" Margin="10,10,10,0">
+                <Button Text="Réplica" Clicked="Votar" BorderRadius="50" IsEnabled="{Binding replica}" IsVisible="{Binding replica}" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+        </Grid>
+
+    </ScrollView>
+</ContentPage>

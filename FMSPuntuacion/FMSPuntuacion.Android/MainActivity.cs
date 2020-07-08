@@ -16,7 +16,9 @@ namespace FMSPuntuacion.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         public static MainActivity Instance = null;
-        
+
+        public static MainActivity Current = null;
+       
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -50,6 +52,7 @@ namespace FMSPuntuacion.Droid
             //  this.Window.SetFlags(WindowManagerFlags.KeepScreenOn, WindowManagerFlags.KeepScreenOn);
             LoadApplication(new App());
             Instance = this;
+            Current = this;
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Temporada4.TematicaNew">
+    <ScrollView>
+        <Grid RowSpacing="0" BackgroundColor="White">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="90"/>
+
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" BackgroundColor="{DynamicResource ColorP1}">
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaHard" Text="{Binding sumaTotalP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaHardP2" Text="{Binding sumaTotalP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasy" Text="{Binding suma}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="SumaEasyP2" Text="{Binding sumaP2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardMode" Text="{Binding sumaHardModeP1}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="HardModeP2" Text="{Binding sumaHardModep2}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                </StackLayout>
+
+
+            </Grid>
+
+
+            <Grid Grid.Row="1" BackgroundColor="{DynamicResource ColorP1}" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Primera Vuelta" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+
+
+            <Grid Grid.Row="2" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron1" Title="Patrón1" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron2"
+                            Title="Patrón2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Picker x:Name="patron3" Title="Patrón3">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="patron4" Title="Patrón4">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Picker x:Name="escena" Title="Escena" SelectedIndexChanged="SumaPuntosVuelta1P1">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Picker x:Name="skill" Title="Skill"  SelectedIndexChanged="SumaPuntosVuelta1P1">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="6">
+                    <Picker x:Name="flow" Title="Flow"  SelectedIndexChanged="SumaPuntosVuelta1P1">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="3" Margin="0,10,0,0" BackgroundColor="{DynamicResource ColorP1}" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Segunda Vuelta " FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="4" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron5" Title="Patrón1" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron6"
+                            Title="Patrón2"
+                           >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Picker x:Name="patron7" Title="Patrón3">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="patron8" Title="Patrón4">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Picker x:Name="escena2" Title="Escena"  SelectedIndexChanged="SumaPuntosVuelta2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Picker x:Name="skill2" Title="Skill" SelectedIndexChanged="SumaPuntosVuelta2" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="6">
+                    <Picker x:Name="flow2" Title="Flow" SelectedIndexChanged="SumaPuntosVuelta2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="5" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}" />
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="6" BackgroundColor="{DynamicResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="Player2" Text="{Binding player2}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="7" BackgroundColor="{DynamicResource ColorP2}" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Primera Vuelta" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+
+
+            <Grid Grid.Row="8" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron9" Title="Patrón1" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron10"
+                            Title="Patrón2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Picker x:Name="patron11" Title="Patrón3">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="patron12" Title="Patrón4">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Picker x:Name="escena3" Title="Escena" SelectedIndexChanged="SumaPuntosVuelta1P2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                             
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Picker x:Name="skill3" Title="Skill" SelectedIndexChanged="SumaPuntosVuelta1P2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="6">
+                    <Picker x:Name="flow3" Title="Flow" SelectedIndexChanged="SumaPuntosVuelta1P2" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="9" BackgroundColor="{DynamicResource ColorP2}" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Segunda Vuelta " FontAttributes="Bold" FontSize="{StaticResource FontSize28}" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="10" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron13" Title="Patrón1" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron14"
+                            Title="Patrón2"
+                           >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Picker x:Name="patron15" Title="Patrón3">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="patron16" Title="Patrón4">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Picker x:Name="escena4" Title="Escena" SelectedIndexChanged="SumaSegundaVuelta2P2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Picker x:Name="skill4" Title="Skill" SelectedIndexChanged="SumaSegundaVuelta2P2" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="6">
+                    <Picker x:Name="flow4" Title="Flow" SelectedIndexChanged="SumaSegundaVuelta2P2">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="11" >
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid Grid.Row="12" Margin="10,10,10,0" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button Text="Siguiente" Clicked="GuardarTematica" BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8"  FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+            <Grid Grid.Row="13" Margin="0,10,0,10" BackgroundColor="White">
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

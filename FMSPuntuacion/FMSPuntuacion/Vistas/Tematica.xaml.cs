@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using FMSPuntuacion.Models;
-using FMSPuntuacion.Vistas;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,7 +23,6 @@ namespace FMSPuntuacion.Vistas
         {
             
             Total.Text = "Total :";
-
             if (patron1.SelectedIndex > -1 && patron2.SelectedIndex > -1 && patron3.SelectedIndex > -1 && patron4.SelectedIndex > -1 && escena.SelectedIndex > -1 && skill.SelectedIndex > -1 && flow.SelectedIndex > -1)
             {
                 suma = Convert.ToInt32(patron1.Items[patron1.SelectedIndex]) + Convert.ToInt32(patron2.Items[patron2.SelectedIndex]) + Convert.ToInt32(patron3.Items[patron3.SelectedIndex]) +
@@ -100,7 +96,7 @@ namespace FMSPuntuacion.Vistas
 
             if (sumaVuelta2 == 0 || sumaVuelta2P2 == 0)
             {
-               await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+               await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
             }else
             {
                 await Navigation.PushAsync(personajes);

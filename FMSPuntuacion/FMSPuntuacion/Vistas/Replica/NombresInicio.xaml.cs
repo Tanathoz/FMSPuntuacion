@@ -1,9 +1,6 @@
 ﻿using FMSPuntuacion.Models;
+using FMSPuntuacion.Vistas.Temporada4;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -29,7 +26,7 @@ namespace FMSPuntuacion.Vistas.Replica
             Minutos.BindingContext = valores;
             if (valores.player1 == null || valores.player2 == null)
             {
-                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga Nombre", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga Nombre", "OK");
             }
             else
             {
@@ -48,7 +45,7 @@ namespace FMSPuntuacion.Vistas.Replica
             Patrones.BindingContext = valores;
             if (valores.player1 == null || valores.player2 == null)
             {
-                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga Nombre", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga Nombre", "OK");
             }
             else
             {
@@ -64,11 +61,11 @@ namespace FMSPuntuacion.Vistas.Replica
                 player2 = Player2.Text,
                 sitio = Sitio.Text
             };
-            var FormatoFMS = new EasyMode();
+            var FormatoFMS = new NewEasy();
             FormatoFMS.BindingContext = valores;
             if (valores.player1 == null || valores.player2 == null)
             {
-                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga Nombre", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga Nombre", "OK");
             }
             else
             {               

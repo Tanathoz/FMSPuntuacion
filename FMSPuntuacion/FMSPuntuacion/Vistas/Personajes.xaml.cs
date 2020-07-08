@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FMSPuntuacion.Vistas;
+
 using FMSPuntuacion.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -99,14 +95,11 @@ namespace FMSPuntuacion.Vistas
             Sangre.BindingContext = valores;
             if (sumaPersonajes == 0 || sumaPersonajesP2 == 0)
             {
-                await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
             }
             else {
                 await Navigation.PushAsync(Sangre);
-            }
-
-
-           
+            }           
         }
     }
 }

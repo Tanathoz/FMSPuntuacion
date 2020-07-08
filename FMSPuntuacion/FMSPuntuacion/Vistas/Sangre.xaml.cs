@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FMSPuntuacion.Models;
-using FMSPuntuacion.Vistas;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -133,7 +128,7 @@ namespace FMSPuntuacion.Vistas
             Deluxe.BindingContext = valores;
             if (suma == 0 || sumaP2 == 0)
             {
-               await Application.Current.MainPage.DisplayAlert("Mensaje de Error", "Verifica que ambos jugadores tenga calificación en total", "OK");
+               await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
             }else
             {
                 await Navigation.PushAsync(Deluxe);
