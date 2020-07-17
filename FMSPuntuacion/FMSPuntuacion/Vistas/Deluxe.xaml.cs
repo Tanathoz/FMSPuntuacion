@@ -105,9 +105,7 @@ namespace FMSPuntuacion.Vistas
             }
             else {
                 await Navigation.PushAsync(Resultado);
-            }
-
-            
+            }        
         }
     }
 }

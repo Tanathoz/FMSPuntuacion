@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace FMSPuntuacion.Models
 {
-    public class Resultado4TempViewModel:Base4Temp
+    public class Resultado4TempViewModel: Base4Temp
     {
         public ObservableRangeCollection<Resultado4Temp> Items { get; set; }
         public Command LoadResultadoCommand { get; set; }

@@ -114,21 +114,21 @@ namespace FMSPuntuacion.Vistas.Temporada4
                 sumaSangreP2 = sumaP2 + sumaVuelta2P2 + respuestaP2,
                 respuestasP1 = respuestaP1,
                 respuestasP2 = respuestaP2,
-                suma = Convert.ToInt32(SumaEasy.Text),
-                sumaP2 = Convert.ToInt32(SumaEasyP2.Text),
-                sumaHardModeP1 = Convert.ToInt32(HardMode.Text),
-                sumaHardModep2 = Convert.ToInt32(HardModeP2.Text),
-                sumaTematicaP1 = Convert.ToInt32(TematicaP1.Text),
-                sumaTematicaP2 = Convert.ToInt32(TematicaP2.Text),
-                sumaPersonajesP1 = Convert.ToInt32(PersonajesP1.Text),
-                sumaPersonajesP2 = Convert.ToInt32(PersonajesP2.Text)
+                suma = Convert.ToDouble(SumaEasy.Text),
+                sumaP2 = Convert.ToDouble(SumaEasyP2.Text),
+                sumaHardModeP1 = Convert.ToDouble(HardMode.Text),
+                sumaHardModep2 = Convert.ToDouble(HardModeP2.Text),
+                sumaTematicaP1 = Convert.ToDouble(TematicaP1.Text),
+                sumaTematicaP2 = Convert.ToDouble(TematicaP2.Text),
+                sumaPersonajesP1 = Convert.ToDouble(PersonajesP1.Text),
+                sumaPersonajesP2 = Convert.ToDouble(PersonajesP2.Text)
 
             };
-            var Deluxe = new Deluxe();
+            var Deluxe = new RondaDeluxe();
             Deluxe.BindingContext = valores;
             if (suma == 0 || sumaP2 == 0)
             {
-                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");              
             }
             else
             {

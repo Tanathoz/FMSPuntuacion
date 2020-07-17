@@ -37,6 +37,7 @@ namespace FMSPuntuacion.Models
         public string colorCancelar;
         public Color colorRGB;
         public List<string> lstPalabra { get; set; }
+        public string Tematica { get; set; }
         public List<int> lstSegundos10 = new List<int>() { 59, 49, 39, 29,19,9 };
         public List<int> lstSegundos5 = new List<int>() { 59,54, 49,44, 39,34, 29,24, 19,14 ,9,4 };
         IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
@@ -110,7 +111,9 @@ namespace FMSPuntuacion.Models
             get => activarCancelar;
             set => SetProperty(ref activarCancelar, value);
         }
-        public ICommand RestartCommand => new Command<XLabs.Forms.Controls.BindableRadioGroup>(Restart);
+
+        //public ICommand RestartCommand => new Command<XLabs.Forms.Controls.BindableRadioGroup>(Restart);
+        public ICommand RestartCommand => new Command<int>(Restart);
         public ICommand CancelCommand => new Command(Cancel);
         public ICommand PlayCommand => new Command(reproducir);
         public override Task LoadAsync()
@@ -155,6 +158,9 @@ namespace FMSPuntuacion.Models
                     Palabra = Capitalizar(lstPalabra[count]);
                     count++;
                 }
+            }else if (frecuencia == 3)
+            {
+                Palabra = Tematica;
             }
            
         }
@@ -229,22 +235,73 @@ namespace FMSPuntuacion.Models
             return words;
         }
 
-        public void Restart(XLabs.Forms.Controls.BindableRadioGroup Opciones)
+        public string[] LeerTematicas()
+        {
+            //  string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Palabras.txt");
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = "FMSPuntuacion.Recursos.arregloTematicas.txt";
+            string result = string.Empty;
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                result = reader.ReadToEnd();
+            }
+            string[] words = result.Split(',');
+            return words;
+        }
+
+        //public void Restart(XLabs.Forms.Controls.BindableRadioGroup Opciones)
+        //{
+        //    Palabra = string.Empty;
+        //    if (Opciones.Items[1].Checked && Opciones.IsEnabled)
+        //    {
+        //        flagPalabra = true;
+        //        frecuencia = 2;
+        //        string[] palabras=LeerArchivo();
+        //        lstPalabra=RandomNumber(palabras, 6);
+        //    }else if(Opciones.Items[0].Checked && Opciones.IsEnabled)
+        //    {            
+        //        flagPalabra = false;
+        //        frecuencia = 1;
+        //        string[] palabras = LeerArchivo();
+        //        lstPalabra = RandomNumber(palabras,12); 
+        //    }else if (!Opciones.IsEnabled)
+        //    {
+        //        frecuencia = 0;
+        //    }
+
+        //    Activar = false;
+        //    ActivarCancelar = true;
+        //    Color = "LightGray";
+        //    colorRGB = (Color)Application.Current.Resources["ColorBoton"];
+        //    ColorCancelar = colorRGB.ToHex();
+        //    _countdown.Cancelar = false;
+        //    LoadAsync();                
+        //}
+
+        public void Restart(int Opciones)
         {
             Palabra = string.Empty;
-            if (Opciones.Items[1].Checked && Opciones.IsEnabled)
+            if ( Opciones == 0 )
             {
                 flagPalabra = true;
                 frecuencia = 2;
-                string[] palabras=LeerArchivo();
-                lstPalabra=RandomNumber(palabras, 6);
-            }else if(Opciones.Items[0].Checked && Opciones.IsEnabled)
-            {            
+                string[] palabras = LeerArchivo();
+                lstPalabra = RandomNumber(palabras, 6);
+            }
+            else if ( Opciones == 1 )
+            {
                 flagPalabra = false;
                 frecuencia = 1;
                 string[] palabras = LeerArchivo();
-                lstPalabra = RandomNumber(palabras,12); 
-            }else if (!Opciones.IsEnabled)
+                lstPalabra = RandomNumber(palabras, 12);
+            }else if ( Opciones == 2 )
+            {
+                frecuencia = 3;
+                string[] palabras = LeerTematicas();
+                Tematica = SeleccionaTematica(palabras); 
+            }
+            else if ( Opciones == -1 )
             {
                 frecuencia = 0;
             }
@@ -255,8 +312,10 @@ namespace FMSPuntuacion.Models
             colorRGB = (Color)Application.Current.Resources["ColorBoton"];
             ColorCancelar = colorRGB.ToHex();
             _countdown.Cancelar = false;
-            LoadAsync();                
+            LoadAsync();
         }
+
+
 
         public void Cancel()
         {
@@ -280,11 +339,20 @@ namespace FMSPuntuacion.Models
             //DecimalFormat df = new DecimalFormat("#.00");
             for (int i =0; i<numero; i++)
             {
-                int num = rnd.Next(0,900);
+                int num = rnd.Next(0,(palabras.Length-1));
                 lstPalabras.Add(palabras[num]);
             }
 
             return lstPalabras;
+        }
+
+        private static string SeleccionaTematica(string[] palabras)
+        {
+            Random rnd = new Random();
+            string tema = string.Empty;
+            int num = rnd.Next(0, (palabras.Length - 1));
+            tema = palabras[num];
+            return tema;
         }
 
         static string Capitalizar(string s)

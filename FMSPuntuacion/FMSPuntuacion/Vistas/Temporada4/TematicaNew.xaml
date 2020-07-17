@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FMSPuntuacion.Vistas.Temporada4.TematicaNew">
+             x:Class="FMSPuntuacion.Vistas.Temporada4.TematicaNew"
+             Title="Temática">
     <ScrollView>
         <Grid RowSpacing="0" BackgroundColor="White">
             <Grid.RowDefinitions>
@@ -159,9 +160,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -173,9 +172,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -187,9 +184,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -287,9 +282,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -301,9 +294,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -315,9 +306,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -327,7 +316,7 @@
             </Grid>
             <Grid Grid.Row="5" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}" />
+                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}" />
                 </StackLayout>
             </Grid>
 
@@ -435,11 +424,8 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
-                             
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
@@ -450,9 +436,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -464,9 +448,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -564,9 +546,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -578,9 +558,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -592,9 +570,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -604,7 +580,7 @@
             </Grid>
             <Grid Grid.Row="11" >
                 <StackLayout HorizontalOptions="Center">
-                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}"/>
                 </StackLayout>
             </Grid>
 

@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FMSPuntuacion.Vistas.Generador.Temporizador"
              xmlns:check="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-             xmlns:controls="clr-namespace:FMSPuntuacion.Controls"
-             
+             xmlns:controls="clr-namespace:FMSPuntuacion.Controls"            
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              BackgroundColor="{StaticResource WhiteColor}"
@@ -92,13 +91,25 @@
             </Grid>
 
             <Grid Grid.Row="2" RowSpacing="0" Margin="60, 24">
-                <Grid Grid.Row="0" Grid.Column="0" >
+                    <Grid Grid.Row="0" >
+                        <Picker x:Name="estimulo" Title="Estímulo"  >
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Palabras 10 Segs</x:String>
+                                    <x:String>Palabras 5 Segs</x:String>
+                                    <x:String>Temática</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </Grid>    
+               
+                <!--<Grid Grid.Row="1" Grid.Column="0" >
                     <check:CheckBox x:Name="palabras"  DefaultText="Palabras"   HorizontalOptions="FillAndExpand"  CheckedChanged="CambioBandera" />
                 </Grid>
 
-                <Grid Grid.Row="0" Grid.Column="1">
+                <Grid Grid.Row="1" Grid.Column="1">
                     <check:BindableRadioGroup x:Name="RadioBtn"  SelectedIndex="{Binding ItemSelected}" VerticalOptions="End"  />
-                </Grid>
+                </Grid>-->
             </Grid>
                 <!-- {Binding Source={x:Reference RadioBtn}, Path=Items} #44c767-->
                 <StackLayout Grid.Row="3" Margin="0, 0, 0, 0">
@@ -112,7 +123,7 @@
                         BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
                         HeightRequest="60"      
                         CornerRadius="96"         
-                        CommandParameter= "{Binding Source={x:Reference RadioBtn}}"
+                        CommandParameter= "{Binding Source={x:Reference estimulo}, Path=SelectedIndex}"
                         Command="{Binding RestartCommand}"
                         Text="Iniciar" 
                         IsEnabled="{Binding Activar}"
@@ -143,7 +154,7 @@
                         <Button   
                         BorderRadius ="50"
                         FontAttributes="Bold"
-                        BackgroundColor="{Binding Color}"
+                        BackgroundColor="{DynamicResource ColorBoton}"
                         FontSize="Large"
                         BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
                         HeightRequest="60"      
@@ -159,7 +170,7 @@
                         <Button   
                         BorderRadius ="50"
                         FontAttributes="Bold"
-                        BackgroundColor="{Binding Color}"
+                        BackgroundColor="{DynamicResource ColorBoton}"
                         FontSize="Large"
                         BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
                         HeightRequest="30"      
@@ -175,7 +186,7 @@
                         <Button   
                         BorderRadius ="50"
                         FontAttributes="Bold"
-                        BackgroundColor="{Binding Color}"
+                        BackgroundColor="{DynamicResource ColorBoton}"
                         FontSize="Large"
                         BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
                         HeightRequest="30"      
@@ -195,16 +206,16 @@
                         <Button   
                         BorderRadius ="50"
                         FontAttributes="Bold"
-                        BackgroundColor="{Binding Color}"
+                        BackgroundColor="{DynamicResource ColorBoton}"
                         FontSize="Small"
                         BorderColor="{DynamicResource ColorContorno}" BorderWidth="5"
-                        HeightRequest="35"      
+                        HeightRequest="45"      
                         CornerRadius="66"         
                         Clicked="Button_Clicked"
-                        Text="Instrumental" 
+                        Text="Carga Instrumental" 
                         TextColor="{DynamicResource TextoColor}"                         
                          />
-                        <Label Text="File Is :" x:Name="lbl"/>
+                        <Label Text="Archivo:" x:Name="lbl"/>
                     </StackLayout>
                 </Grid>
 

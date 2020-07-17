@@ -61,7 +61,7 @@ namespace FMSPuntuacion.Vistas.Replica
                 player2 = Player2.Text,
                 sitio = Sitio.Text
             };
-            var FormatoFMS = new NewEasy();
+            var FormatoFMS = new EligeTemporada();
             FormatoFMS.BindingContext = valores;
             if (valores.player1 == null || valores.player2 == null)
             {
@@ -72,6 +72,7 @@ namespace FMSPuntuacion.Vistas.Replica
                 await Navigation.PushAsync(FormatoFMS);
             }
         }
+     
 
-	}
+    }
 }

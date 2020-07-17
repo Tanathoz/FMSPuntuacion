@@ -14,9 +14,9 @@ namespace FMSPuntuacion.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ResultadoDetailPage : ContentPage
 	{
-        ItemDetailViewModel resultadoModel;
-        
+        ItemDetailViewModel resultadoModel;       
         IAdIntestitial adInterstitial = DependencyService.Get<IAdIntestitial>();
+
         public ResultadoDetailPage ()
 		{
 			InitializeComponent ();

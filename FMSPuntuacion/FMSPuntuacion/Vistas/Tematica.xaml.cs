@@ -97,7 +97,8 @@ namespace FMSPuntuacion.Vistas
             if (sumaVuelta2 == 0 || sumaVuelta2P2 == 0)
             {
                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
-            }else
+            }
+            else
             {
                 await Navigation.PushAsync(personajes);
             }

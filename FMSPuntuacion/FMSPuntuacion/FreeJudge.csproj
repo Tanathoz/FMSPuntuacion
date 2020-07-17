@@ -19,11 +19,13 @@
   <ItemGroup>
     <None Remove="Palabras.txt" />
     <None Remove="Recursos\arregloPalabras.txt" />
+    <None Remove="Recursos\arregloTematicas.txt" />
     <None Remove="Recursos\hitt.mp3" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Recursos\arregloPalabras.txt" />
+    <EmbeddedResource Include="Recursos\arregloTematicas.txt" />
     <EmbeddedResource Include="Recursos\hitt.mp3" />
   </ItemGroup>
 
@@ -148,7 +150,7 @@
     <EmbeddedResource Update="Vistas\Temporada4\ConsultarNew.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Vistas\Temporada4\DetailPage4Temp.xaml">
+    <EmbeddedResource Update="Vistas\Temporada4\EligeTemporada.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Temporada4\HardModeNew.xaml">
@@ -160,7 +162,13 @@
     <EmbeddedResource Update="Vistas\Temporada4\PersonajesNew.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Temporada4\Resultado4TempDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Temporada4\ResultadoNew.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Temporada4\RondaDeluxe.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Temporada4\SangreNew.xaml">

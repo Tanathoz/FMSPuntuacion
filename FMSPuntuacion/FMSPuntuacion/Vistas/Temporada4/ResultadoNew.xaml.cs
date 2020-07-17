@@ -67,14 +67,12 @@ namespace FMSPuntuacion.Vistas.Temporada4
                 Resultados.PersonajesTotalP2 = Convert.ToDouble(PersonajesP2.Text);
                 Resultados.SangreTotalP2 = Convert.ToDouble(SangreP2.Text);
                 Resultados.DeluxeTotalP2 = Convert.ToDouble(DeluxeP2.Text);
-
                 Resultados.fecha = DateTime.Now.Date.ToShortDateString();
 
                 resultadoViewModel.AddItem(Resultados);
                 // MessagingCenter.Send(this, "AddItem", Resultados);
-                adVideo.ShowAdVideo("ca-app-pub-6499029686626513/3014389692");
+              //  adVideo.ShowAdVideo("ca-app-pub-6499029686626513/3014389692");
                 await Application.Current.MainPage.DisplayAlert("Exito", "Los datos se han guardado correctamente", "OK");
-
                 await Navigation.PopToRootAsync();
             }
             //  var Menu = new MenuOpciones();

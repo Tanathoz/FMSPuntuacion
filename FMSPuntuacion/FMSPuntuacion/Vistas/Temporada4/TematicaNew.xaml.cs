@@ -84,14 +84,14 @@ namespace FMSPuntuacion.Vistas.Temporada4
                 player1 = Player1.Text,
                 player2 = Player2.Text,
                 sitio = Sitio.Text,
-                sumaTotalP1 = Convert.ToInt32(SumaHard.Text) + sumaVuelta2,
-                sumaTotalP2 = Convert.ToInt32(SumaHardP2.Text) + sumaVuelta2P2,
+                sumaTotalP1 = Convert.ToDouble(SumaHard.Text) + sumaVuelta2,
+                sumaTotalP2 = Convert.ToDouble(SumaHardP2.Text) + sumaVuelta2P2,
                 sumaTematicaP1 = sumaVuelta2,
                 sumaTematicaP2 = sumaVuelta2P2,
-                suma = Convert.ToInt32(SumaEasy.Text),
-                sumaP2 = Convert.ToInt32(SumaEasyP2.Text),
-                sumaHardModeP1 = Convert.ToInt32(HardMode.Text),
-                sumaHardModep2 = Convert.ToInt32(HardModeP2.Text)
+                suma = Convert.ToDouble(SumaEasy.Text),
+                sumaP2 = Convert.ToDouble(SumaEasyP2.Text),
+                sumaHardModeP1 = Convert.ToDouble(HardMode.Text),
+                sumaHardModep2 = Convert.ToDouble(HardModeP2.Text)
             };
            
             var personajes = new PersonajesNew();
@@ -100,6 +100,7 @@ namespace FMSPuntuacion.Vistas.Temporada4
             if (sumaVuelta2 == 0 || sumaVuelta2P2 == 0)
             {
                 await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
+               
             }
             else
             {

@@ -203,10 +203,10 @@
                     <controls:CheckBox x:Name="respuesta" DefaultText="" HorizontalOptions="FillAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
-                    <controls:CheckBox x:Name="respuesta2" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta2" HorizontalOptions="FillAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="2">
-                    <controls:CheckBox x:Name="respuesta3" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta3" HorizontalOptions="FillAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="3">
                     <controls:CheckBox x:Name="respuesta4" HorizontalOptions="EndAndExpand" />
@@ -224,56 +224,94 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+
                 <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron7" Title="Patrón 7" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron8" Title="Patrón 8" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+                
+                <Grid Grid.Row="0" Grid.Column="2">
                     <StackLayout >
                         <Label Text="Escena" HorizontalTextAlignment="Center"  />
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="0" Grid.Column="1">
+                <Grid Grid.Row="0" Grid.Column="3">
                     <StackLayout >
                         <Label Text="Skill's" HorizontalTextAlignment="Center"/>
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="0" Grid.Column="2">
+                <Grid Grid.Row="0" Grid.Column="4">
                     <StackLayout>
                         <Label Text="Flow" HorizontalTextAlignment="Center" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
+                    <controls:CheckBox x:Name="respuesta7" DefaultText="" HorizontalOptions="FillAndExpand" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <controls:CheckBox x:Name="respuesta8"  HorizontalOptions="FillAndExpand" />
+                </Grid>
+                
+                <Grid Grid.Row="1" Grid.Column="2">
                     <Picker x:Name="escena" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-                <Grid Grid.Row="1" Grid.Column="1">
+                <Grid Grid.Row="1" Grid.Column="3">
                     <Picker x:Name="skill" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-                <Grid Grid.Row="1" Grid.Column="2">
+                <Grid Grid.Row="1" Grid.Column="4">
                     <Picker x:Name="flow" Title="Tocar" SelectedIndexChanged="SumaPuntosP1">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -312,7 +350,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <Picker x:Name="patron7" Title="Patrón1" >
+                    <Picker x:Name="patron9" Title="Patrón1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
@@ -330,7 +368,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="1">
-                    <Picker x:Name="patron8"
+                    <Picker x:Name="patron10"
                             Title="Patrón2"
                            >
                         <Picker.ItemsSource>
@@ -350,7 +388,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="2">
-                    <Picker x:Name="patron9" Title="Patrón3">
+                    <Picker x:Name="patron11" Title="Patrón3">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
@@ -368,7 +406,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="3">
-                    <Picker x:Name="patron10" Title="Patrón4">
+                    <Picker x:Name="patron12" Title="Patrón4">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
@@ -386,7 +424,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="4">
-                    <Picker x:Name="patron11" Title="Patrón5">
+                    <Picker x:Name="patron13" Title="Patrón5">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
@@ -404,7 +442,7 @@
                 </Grid>
 
                 <Grid Grid.Row="0" Grid.Column="5">
-                    <Picker x:Name="patron12" Title="Patrón6" >
+                    <Picker x:Name="patron14" Title="Patrón6" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
@@ -422,22 +460,22 @@
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
-                    <controls:CheckBox x:Name="respuesta7" DefaultText="" HorizontalOptions="FillAndExpand" />
+                    <controls:CheckBox x:Name="respuesta9" DefaultText="" HorizontalOptions="FillAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
-                    <controls:CheckBox x:Name="respuesta8" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta10" HorizontalOptions="FillAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="2">
-                    <controls:CheckBox x:Name="respuesta9" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta11" HorizontalOptions="FillAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="3">
-                    <controls:CheckBox x:Name="respuesta10" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta12" HorizontalOptions="EndAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="4">
-                    <controls:CheckBox x:Name="respuesta11" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta13" HorizontalOptions="EndAndExpand" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="5">
-                    <controls:CheckBox x:Name="respuesta12" HorizontalOptions="EndAndExpand" />
+                    <controls:CheckBox x:Name="respuesta14" HorizontalOptions="EndAndExpand" />
                 </Grid>
 
             </Grid>
@@ -447,56 +485,95 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+
                 <Grid Grid.Row="0" Grid.Column="0">
+                    <Picker x:Name="patron15" Title="Patrón 7" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Picker x:Name="patron16" Title="Patrón 8" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0</x:Double>
+                                <x:Double>0.5</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>1.5</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>2.5</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>3.5</x:Double>
+                                <x:Double>4</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
                     <StackLayout >
                         <Label Text="Escena" HorizontalTextAlignment="Center"  />
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="0" Grid.Column="1">
+                <Grid Grid.Row="0" Grid.Column="3">
                     <StackLayout >
                         <Label Text="Skill's" HorizontalTextAlignment="Center"/>
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="0" Grid.Column="2">
+                <Grid Grid.Row="0" Grid.Column="4">
                     <StackLayout>
                         <Label Text="Flow" HorizontalTextAlignment="Center" />
                     </StackLayout>
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
+                    <controls:CheckBox x:Name="respuesta15" DefaultText="" HorizontalOptions="FillAndExpand" />
+                </Grid>
+                
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <controls:CheckBox x:Name="respuesta16"  HorizontalOptions="FillAndExpand" />
+                </Grid>
+                
+                <Grid Grid.Row="1" Grid.Column="2">
                     <Picker x:Name="escenaP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-                <Grid Grid.Row="1" Grid.Column="1">
+                <Grid Grid.Row="1" Grid.Column="3">
                     <Picker x:Name="skillP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
-                <Grid Grid.Row="1" Grid.Column="2">
+                <Grid Grid.Row="1" Grid.Column="4">
                     <Picker x:Name="flowP2" Title="Tocar" SelectedIndexChanged="SumaPuntosP2">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>

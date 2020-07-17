@@ -4,7 +4,9 @@ using FMSPuntuacion.Tablas;
 using System;
 using System.Text;
 using Xamarin.Forms;
-using XLabs.Data;
+
+
+
 namespace FMSPuntuacion.Models
 {
     public class Base4Temp: Helpers.ObservableObject
@@ -18,6 +20,9 @@ namespace FMSPuntuacion.Models
             set { SetProperty(ref isBusy, value); }
         }
 
+        /// <summary>
+        /// Private backing field to hold the title
+        /// </summary>
         string title = string.Empty;
         /// <summary>
         /// Public property to set and get the title of the item

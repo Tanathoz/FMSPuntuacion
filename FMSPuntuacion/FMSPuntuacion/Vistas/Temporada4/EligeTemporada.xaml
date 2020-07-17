@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Vistas.Temporada4.EligeTemporada"
+             Title="Formato FMS">
+    <ScrollView>
+        <Grid BackgroundColor="{DynamicResource PageBGColor}" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="85" />
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" BackgroundColor="{DynamicResource SeparadorColor}" >
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Label HorizontalOptions="Center" Text="Selecciona Temporada" FontAttributes="Bold" FontSize="{StaticResource FontSize28}" FontFamily="{DynamicResource Fuente}" TextColor="White" />
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="0,0,0,0" BackgroundColor="{DynamicResource ColorP1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" RowSpacing="0" >
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                        <StackLayout HorizontalOptions="Center">
+                            <Label x:Name="Player1" Text="{Binding player1}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Center">
+                            <Label x:Name="Sitio" Text="{Binding sitio}" FontSize="Medium" FontAttributes="Bold" IsVisible="False"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="{DynamicResource ColorP2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label x:Name="Player2" Text="{Binding player2}" FontSize="{StaticResource FontSize28}" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="3" Margin="10, 10, 10, 0" BackgroundColor="{DynamicResource PageBGColor}">
+                <Button Text="FMS 2019"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="IniciarFMS" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+            <Grid Grid.Row="4" Margin="10, 0, 10, 0" BackgroundColor="{DynamicResource PageBGColor}">
+                <Button Text="FMS 2020"  BorderRadius="50" FontAttributes="Bold" BackgroundColor="{DynamicResource ColorBoton}" FontSize="Large" TextColor="{DynamicResource TextoColor}" Clicked="IniciarFMS2020" BorderColor="{DynamicResource ColorContorno}" BorderWidth="8" FontFamily="{DynamicResource Fuente}"/>
+            </Grid>
+
+           
+        </Grid>
+    </ScrollView>
+</ContentPage>

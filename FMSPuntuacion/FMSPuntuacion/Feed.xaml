@@ -4,19 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ads="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
-          
-             mc:Ignorable="d"   
-             
+             xmlns:local="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"
+             mc:Ignorable="d"                
              x:Class="FMSPuntuacion.Feed">
     <!--xmlns:local="clr-namespace:FMSPuntuacion.Controls;assembly=FMSPuntuacion"-->
     <ScrollView>
-        <Grid    BackgroundColor="White">
-
-            
+        <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="100" />
                 <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -76,7 +74,7 @@
 
 
 
-            <!--<local:AdBaner Size="MediumRectangle"  VerticalOptions="EndAndExpand" Grid.Row="4"/>-->
+            <!--<local:AdBaner Size="Standardbanner" BackgroundColor="Black" VerticalOptions="EndAndExpand" Grid.Row="4"/>-->
             <ads:AdControlView BackgroundColor="Black"  Grid.Row="4" />
             <!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-3940256099942544/6300978111" />
             --><!--<controls:MTAdView Grid.Row="4" AdsId="ca-app-pub-6499029686626513/8551506037" />-->

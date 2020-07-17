@@ -50,8 +50,7 @@ namespace FMSPuntuacion.Models
         }
 
         public void Start(int seconds = 1)
-        {
-            
+        {      
             Device.StartTimer(TimeSpan.FromSeconds(seconds), () =>
             {
                 RemainTime = (EndDate.AddSeconds(1) - DateTime.Now);

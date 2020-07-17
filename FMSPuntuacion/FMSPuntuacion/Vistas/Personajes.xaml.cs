@@ -96,6 +96,7 @@ namespace FMSPuntuacion.Vistas
             if (sumaPersonajes == 0 || sumaPersonajesP2 == 0)
             {
                 await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
+          
             }
             else {
                 await Navigation.PushAsync(Sangre);

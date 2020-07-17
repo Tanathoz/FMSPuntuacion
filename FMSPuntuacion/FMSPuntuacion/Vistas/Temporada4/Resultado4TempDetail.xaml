@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FMSPuntuacion.Vistas.Temporada4.DetailPage4Temp">
+             x:Class="FMSPuntuacion.Vistas.Temporada4.Resultado4TempDetail"
+              Title="{Binding Resultado4Temp.sitio}"
+             >
     <ScrollView>
-
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -45,7 +46,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label  Text="{Binding Resultado.ganador}" FontSize="Title" FontAttributes="Bold" TextColor="{DynamicResource TextoColor}" FontFamily="{DynamicResource Fuente}" />
+                        <Label  Text="{Binding Resultado4Temp.ganador}" FontSize="Title" FontAttributes="Bold" TextColor="{DynamicResource TextoColor}" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
@@ -57,7 +58,7 @@
 
                 <Grid Grid.Row="1" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label  Text="{Binding Resultado.fecha}" FontSize="Title" FontAttributes="Bold" TextColor="{DynamicResource TextoColor}" FontFamily="{DynamicResource Fuente}" />
+                        <Label  Text="{Binding Resultado4Temp.fecha}" FontSize="Title" FontAttributes="Bold" TextColor="{DynamicResource TextoColor}" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -76,7 +77,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.player1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
+                        <Label Text="{Binding Resultado4Temp.player1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
 
@@ -95,7 +96,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.totalPlayer1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.totalPlayer1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -114,7 +115,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.EasyTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
+                        <Label Text="{Binding Resultado4Temp.EasyTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -132,7 +133,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.HardTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.HardTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -151,7 +152,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.TematicaTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.TematicaTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -169,7 +170,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.PersonajesTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.PersonajesTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -187,7 +188,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.SangreTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.SangreTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -208,7 +209,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.DeluxeTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.DeluxeTotalP1}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -226,7 +227,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.player2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -245,7 +246,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.totalPlayer2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.totalPlayer2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
 
@@ -264,7 +265,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.EasyTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.EasyTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -282,7 +283,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.HardTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
+                        <Label Text="{Binding Resultado4Temp.HardTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -301,7 +302,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label  Text="{Binding Resultado.TematicaTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label  Text="{Binding Resultado4Temp.TematicaTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -319,7 +320,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label  Text="{Binding Resultado.PersonajesTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
+                        <Label  Text="{Binding Resultado4Temp.PersonajesTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White" FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -337,7 +338,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label  Text="{Binding Resultado.SangreTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
+                        <Label  Text="{Binding Resultado4Temp.SangreTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}"/>
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -356,7 +357,7 @@
 
                 <Grid Grid.Row="0" Grid.Column="1">
                     <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="{Binding Resultado.DeluxeTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}" />
+                        <Label Text="{Binding Resultado4Temp.DeluxeTotalP2}" FontSize="Title" FontAttributes="Bold" TextColor="White"  FontFamily="{DynamicResource Fuente}" />
                     </StackLayout>
                 </Grid>
             </Grid>

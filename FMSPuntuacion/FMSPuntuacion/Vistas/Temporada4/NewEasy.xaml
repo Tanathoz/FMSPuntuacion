@@ -191,9 +191,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -204,9 +202,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -217,16 +213,14 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}"/>
+                    <Label x:Name="Total" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}"/>
                 </Grid>
 
 
@@ -394,9 +388,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -407,9 +399,7 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
@@ -420,16 +410,14 @@
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0</x:Double>
-                                <x:Double>0.5</x:Double>
                                 <x:Double>1</x:Double>
-                                <x:Double>1.5</x:Double>
                                 <x:Double>2</x:Double>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
                 </Grid>
                 <Grid Grid.Row="2"  Grid.Column="1">
-                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Title" FontFamily="{DynamicResource Fuente}" />
+                    <Label x:Name="TotalP2" Text="Total :" FontAttributes="Bold" FontSize="Large" FontFamily="{DynamicResource Fuente}" />
                 </Grid>
 
             </Grid>

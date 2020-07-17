@@ -37,12 +37,12 @@ namespace FMSPuntuacion.Vistas.Generador
 			InitializeComponent ();
            
             BindingContext = new MyCountDownModel();       
-            RadioBtn.ItemsSource = new[]
-            {
-                "5 Segundos", "10 Segundos"
-            };
+            //RadioBtn.ItemsSource = new[]
+            //{
+            //    "5 Segundos", "10 Segundos"
+            //};
 
-            RadioBtn.IsEnabled = false;
+            //RadioBtn.IsEnabled = false;
             
             // OnCheckedChanged = new Command(OnCheckBoxChanged);
         }
@@ -76,28 +76,26 @@ namespace FMSPuntuacion.Vistas.Generador
         public void CambioBandera(object sender, EventArgs e)
         {
 
-            if (palabras.Checked)
-            {
-                RadioBtn.IsEnabled = true;
-                RadioBtn.Items[0].Checked = true;
-            }       
-            else
-            {
-                RadioBtn.IsEnabled = false;
-                RadioBtn.Items[0].Checked = false;
-                RadioBtn.Items[1].Checked = false;
-            }
+            //if (palabras.Checked)
+            //{
+            //    RadioBtn.IsEnabled = true;
+            //    RadioBtn.Items[0].Checked = true;
+            //}       
+            //else
+            //{
+            //    RadioBtn.IsEnabled = false;
+            //    RadioBtn.Items[0].Checked = false;
+            //    RadioBtn.Items[1].Checked = false;
+            //}
                 
             // objCountDown.Restart();
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
-        {
-            
+        {          
             try
             {
                 await RequestPermission();
-
                 FileData file = await CrossFilePicker.Current.PickFile();
                 // FileData fileData = await CrossFilePicker.Current.PickFile();
                 // string contents = System.Text.Encoding.UTF8.GetString(fileData.DataArray);
@@ -110,7 +108,7 @@ namespace FMSPuntuacion.Vistas.Generador
             }
             catch (Exception ex)
             {
-                Console.WriteLine("error" + ex.Message);
+                await Application.Current.MainPage.DisplayAlert("Error", "Asegurate de dar permisos de lectura a la App", "OK");
             }
 
 
@@ -120,10 +118,20 @@ namespace FMSPuntuacion.Vistas.Generador
         {
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             if (conu == 0)
-            {              
-                MemoryStream stream = new MemoryStream();
-                player.Load(audioStream);
-                conu++;
+            {   try
+                {
+                    MemoryStream stream = new MemoryStream();
+                    player.Load(audioStream);
+                    conu++;
+                }catch (NullReferenceException )
+                {
+                    Application.Current.MainPage.DisplayAlert("Alerta", "No se ha cargado ningún archivo", "OK");
+                }
+                catch (Exception ex)
+                {
+                    Application.Current.MainPage.DisplayAlert("Alerta", "Tipo de archivo no reconocido, debe de ser un audio", "OK");
+                }          
+                
             }        
             player.Play();
         }

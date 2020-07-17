@@ -8,6 +8,7 @@ using FMSPuntuacion.Models;
 using FMSPuntuacion.Vistas;
 using FMSPuntuacion.Vistas.Generador;
 using FMSPuntuacion.Vistas.Replica;
+using FMSPuntuacion.Vistas.Temporada4;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -49,6 +50,14 @@ namespace FMSPuntuacion
             await Navigation.PushAsync(new Consultar
             {
                 
+            });
+        }
+
+        async void OnConsultarClicked2020(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConsultarNew
+            {
+
             });
         }
 

@@ -36,8 +36,7 @@ namespace FMSPuntuacion.Vistas.Temporada4
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ResultadoDetailPage(new ItemDetailViewModel(item)));
-
+            await Navigation.PushAsync(new Resultado4TempDetail (new Item4TempVM(item)));
             // Manually deselect item
             ListaResultados.SelectedItem = null;
         }
