@@ -22,6 +22,7 @@ namespace FMSPuntuacion.Models
                 new AppTema() { Id = Settings.Tema.Mexico, Title = "México", Description = "Tema con colores mexico", icon="mexico.png" },
                 new AppTema() { Id = Settings.Tema.Argentina, Title = "Argentina", Description = "Tema con colores argentina", icon="Argflag.png" },
                 new AppTema() { Id = Settings.Tema.Chile, Title = "Chile", Description = "Tema con colores de chile", icon="Chileflag.png" },
+                new AppTema() { Id = Settings.Tema.Peru, Title = "Perú", Description = "Tema con colores de chile", icon="Peruflag.png" },
             };
 
             //Find the Current/Last selected theme, and set the IsSelected property for that specific theme item in the list.

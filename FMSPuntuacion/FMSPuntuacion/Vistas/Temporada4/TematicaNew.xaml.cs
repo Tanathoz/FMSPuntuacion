@@ -100,7 +100,7 @@ namespace FMSPuntuacion.Vistas.Temporada4
             if (sumaVuelta2 == 0 || sumaVuelta2P2 == 0)
             {
                 await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
-               
+                await Navigation.PushAsync(personajes);
             }
             else
             {

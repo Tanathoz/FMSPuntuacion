@@ -20,13 +20,11 @@
     <None Remove="Palabras.txt" />
     <None Remove="Recursos\arregloPalabras.txt" />
     <None Remove="Recursos\arregloTematicas.txt" />
-    <None Remove="Recursos\hitt.mp3" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Recursos\arregloPalabras.txt" />
     <EmbeddedResource Include="Recursos\arregloTematicas.txt" />
-    <EmbeddedResource Include="Recursos\hitt.mp3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -97,6 +95,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Temas\Mexico.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Temas\Peru.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Temas\Spain.xaml">

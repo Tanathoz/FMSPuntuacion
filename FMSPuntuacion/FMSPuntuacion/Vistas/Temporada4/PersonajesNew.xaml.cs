@@ -50,7 +50,8 @@ namespace FMSPuntuacion.Vistas.Temporada4
                     respuestaP1++;
                 if (respuesta8.Checked)
                     respuestaP1++;
-                Total.Text += sumaPersonajes.ToString() + "+" + respuestaP1.ToString();
+
+                Total.Text ="Total :"+ sumaPersonajes.ToString() + "+" + respuestaP1.ToString();
             }
 
         }
@@ -83,6 +84,7 @@ namespace FMSPuntuacion.Vistas.Temporada4
                     respuestaP2++;
                 if (respuesta16.Checked)
                     respuestaP2++;
+
                 TotalP2.Text += sumaPersonajesP2.ToString() + "+" + respuestaP2;
             }
         }

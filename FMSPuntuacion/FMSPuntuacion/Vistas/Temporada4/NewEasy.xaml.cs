@@ -64,10 +64,11 @@ namespace FMSPuntuacion.Vistas.Temporada4
             if (suma == 0 || sumaP2 == 0)
             {
                 await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
+                await Navigation.PushAsync(hardMode);
             }//else 
             else if (valores.player1 == null || valores.player2 == null)
             {
-                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga Nombre", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga Nombre", "OK");               
             }
             else
             {

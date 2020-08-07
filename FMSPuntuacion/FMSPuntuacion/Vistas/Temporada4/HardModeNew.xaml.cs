@@ -67,7 +67,7 @@ namespace FMSPuntuacion.Vistas.Temporada4
             if (sumaHard == 0 || sumaHardP2 == 0)
             {
                 await Application.Current.MainPage.DisplayAlert("Alerta", "Verifica que ambos jugadores tenga calificación en total", "OK");
-               
+                await Navigation.PushAsync(Tematicas);
             }
             else
             {

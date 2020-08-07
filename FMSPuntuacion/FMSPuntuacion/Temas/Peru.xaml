@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMSPuntuacion.Temas.Peru">
+    <!--Green-->
+    <Color x:Key="PrimaryColor">#D91023</Color>
+
+    <Color x:Key="ColorP1">#D91023</Color>
+
+    <!--Dark Green-->
+    <Color x:Key="ColorP2">#000000</Color>
+
+    <Color x:Key="ColorBoton">#ffffff</Color>
+    <!--White-->
+    <Color x:Key="ColorContorno">#000000</Color>
+    <!--White-->
+    <Color x:Key="PageBGColor">#ffffff</Color>
+    <!--Green-->
+    <Color x:Key="SeparadorColor">#000000</Color>
+    <!--Dark Grey-->
+    <Color x:Key="TextoColor">#000000</Color>
+    <!--Mid Grey-->
+    <Color x:Key="TextoContador">#FFFFFF</Color>
+    <!--Mid-Light Grey-->
+    <Color x:Key="SubTextColor">#969696</Color>
+    <!--White-->
+    <Color x:Key="OverlayTextColor">#FFFFFF</Color>
+    <!--Transperant Black-->
+    <Color x:Key="TransperantBackgroundColor">#56000000</Color>
+    <!--Silver Light Grey-->
+    <Color x:Key="SeparatorLineColor">#ececec</Color>
+
+    <!-- Imagen-->
+    <x:String x:Key="ImageIcon">@drawable/Per.png</x:String>
+    <x:String x:Key="StopIcon">@drawable/StopPer.png</x:String>
+    <x:String x:Key="PlayIcon">@drawable/PlayPer.png</x:String>
+    <x:String x:Key="PauseIcon">@drawable/PausePer.png</x:String>
+
+    <OnPlatform 
+        x:Key="Fuente"
+        x:TypeArguments="x:String"
+        iOS="Abbasy"
+        Android="Dinomouse.otf#Dinomouse" />
+</ResourceDictionary>

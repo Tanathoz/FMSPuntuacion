@@ -18,7 +18,8 @@ namespace FMSPuntuacion.Helpers
             Spain,
             Mexico,
             Argentina,
-            Chile
+            Chile,
+            Peru
         }
 
       
@@ -43,6 +44,9 @@ namespace FMSPuntuacion.Helpers
                         break;
                     case Tema.Chile:
                         mergedDictionaries.Add(new Chile());
+                        break;
+                    case Tema.Peru:
+                        mergedDictionaries.Add(new Peru());
                         break;
                     default:
                         mergedDictionaries.Add(new Defecto());

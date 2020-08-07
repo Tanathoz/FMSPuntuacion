@@ -40,8 +40,9 @@ namespace FMSPuntuacion.Droid.Helpers
             {
                 var ad = new AdView(Context)
                 {
-                    AdSize = AdSize.SmartBanner,
-                    AdUnitId = "ca-app-pub-6499029686626513/1851200468"
+                    AdSize = AdSize.MediumRectangle,
+                    AdUnitId = "ca-app-pub-3940256099942544/6300978111"
+                    // AdUnitId = "ca-app-pub-6499029686626513/1851200468"
                 };
 
                 var requestbuilder = new AdRequest.Builder();

@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.SimpleAudioPlayer;
+using Xamarin.Essentials;
+
 namespace FMSPuntuacion.Vistas.Generador
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -95,7 +97,12 @@ namespace FMSPuntuacion.Vistas.Generador
         {          
             try
             {
-                await RequestPermission();
+                var status = await CheckPermiso();
+                if (status != PermissionStatus.Granted)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Aviso", "Sin permiso de lectura no se reproducirá la instrumental", "OK");
+                }
+
                 FileData file = await CrossFilePicker.Current.PickFile();
                 // FileData fileData = await CrossFilePicker.Current.PickFile();
                 // string contents = System.Text.Encoding.UTF8.GetString(fileData.DataArray);
@@ -148,6 +155,17 @@ namespace FMSPuntuacion.Vistas.Generador
             player.Stop();
         }
 
+        public async Task<PermissionStatus> CheckPermiso()
+        {
+            var status = await Permissions.CheckStatusAsync<Permissions.StorageRead>();
+            if (status != PermissionStatus.Granted)
+            {
+                status = await Permissions.RequestAsync<Permissions.StorageRead>();
+            }
+
+
+            return status;
+        }
 
         async Task RequestPermission()
         {
